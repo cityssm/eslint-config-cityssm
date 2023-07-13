@@ -9,6 +9,8 @@
 npm install --save-dev eslint-config-cityssm
 ```
 
+In the project's .eslintrc.json file.
+
 ```json
 {
   "extends": ["eslint-config-cityssm"]
