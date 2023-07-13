@@ -9,14 +9,24 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'import', 'n', 'sonarjs', 'unicorn'],
+  plugins: [
+    '@typescript-eslint',
+    'eslint-comments',
+    'import',
+    'n',
+    'regexp',
+    'sonarjs',
+    'unicorn'
+  ],
   extends: [
     'eslint:recommended',
     'standard-with-typescript',
+    'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:n/recommended',
     'plugin:promise/recommended',
+    'plugin:regexp/recommended',
     'plugin:sonarjs/recommended',
     'plugin:unicorn/recommended',
     'plugin:@typescript-eslint/recommended'
