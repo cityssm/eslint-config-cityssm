@@ -60,7 +60,6 @@ module.exports = {
         }
       }
     ],
-    'import/no-unresolved': 'off', // false positives in Codacy, covered by n/no-missing-import
 
     'sonarjs/cognitive-complexity': ['warn', 20],
     'sonarjs/no-duplicate-string': 'warn',
