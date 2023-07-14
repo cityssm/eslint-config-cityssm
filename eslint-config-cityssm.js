@@ -44,7 +44,7 @@ module.exports = {
             }
         ],
         '@typescript-eslint/no-extra-semi': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/restrict-plus-operands': 'warn',
         '@typescript-eslint/space-before-function-paren': 'off',
