@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/filename-case, unicorn/prefer-module, eslint-comments/disable-enable-pair */
 module.exports = {
     root: true,
     env: {

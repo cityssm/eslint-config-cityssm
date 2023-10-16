@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-cityssm",
   "description": "ESLint rules used in the City of Sault Ste. Marie's TypeScript projects.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "eslint-config-cityssm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,18 +20,18 @@
   "author": "The Corporation of the City of Sault Ste. Marie",
   "license": "Unlicense",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint-config-standard-with-typescript": "^36.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint-config-standard-with-typescript": "^39.1.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-regexp": "^1.15.0",
-    "eslint-plugin-sonarjs": "^0.19.0",
-    "eslint-plugin-unicorn": "^47.0.0"
+    "eslint-plugin-sonarjs": "^0.21.0",
+    "eslint-plugin-unicorn": "^48.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2"
+    "@types/node": "^20.8.6"
   }
 }

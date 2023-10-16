@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "es2022",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "strictNullChecks": true
   },
   "compileOnSave": true,
   "buildOnSave": true,
