@@ -12,4 +12,5 @@ test
 .npmignore
 .prettierignore
 .prettierrc.json
+banner.png
 tsconfig.json
