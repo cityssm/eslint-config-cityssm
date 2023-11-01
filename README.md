@@ -1,5 +1,7 @@
 # eslint-config-cityssm
 
+[![DeepSource](https://app.deepsource.com/gh/cityssm/eslint-config-cityssm.svg/?label=active+issues&show_trend=true&token=2x51pzQmdmBmD3LNk4XgOTZC)](https://app.deepsource.com/gh/cityssm/eslint-config-cityssm/)
+
 ![Code Scanning Banner](banner.png)
 
 [ESLint](https://eslint.org/) rules used in the
