@@ -1,4 +1,4 @@
-name: Test ESLint Config
+name: Test ESLint Config (Should Fail)
 
 on: [workflow_dispatch, push, pull_request]
 
