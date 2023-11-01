@@ -1,4 +1,4 @@
-# Thank you for your interest in making elsint-config-cityssm better
+# Thank you for your interest in making this project better!
 
 Together, we can build high quality software that meets the needs of municipalities,
 while remaining open and budget conscious.
@@ -17,7 +17,7 @@ Being a very small team, contributions are greatly appreciated. How can you cont
 ## Please Read the Code of Conduct
 
 The [Code of Conduct](CODE_OF_CONDUCT.md) document describes how we should act when working together.
-Be nice! :smile:
+Be nice! 🙂
 
 ## How to report a bug or suggest an enhancement
 
@@ -25,7 +25,7 @@ Be nice! :smile:
 <corporateapps@cityssm.on.ca> instead.**
 
 For all other bug reports, feature requests, or enhancements,
-open an issue and use the closest template.
+open an issue and use the closest template available.
 
 ## Thanks Again
 
