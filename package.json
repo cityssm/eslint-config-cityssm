@@ -4,7 +4,7 @@
   "version": "0.5.1",
   "main": "eslint-config-cityssm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint test/**"
   },
   "keywords": [
     "eslint-config"
