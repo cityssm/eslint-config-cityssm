@@ -27,7 +27,6 @@ jobs:
           npm ci
           npm install -g eslint
 
-      - name: Run Coverage Testing
-        run: |
-          npm test
-          exit 0
+      - name: Run Test (Should Fail)
+        run: npm test
+
