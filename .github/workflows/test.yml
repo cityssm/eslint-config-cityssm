@@ -1,4 +1,4 @@
-name: Test ESLint Config (Should Fail)
+name: Test ESLint Config
 
 on: [workflow_dispatch, push, pull_request]
 
@@ -28,6 +28,6 @@ jobs:
       - name: Install ESLint
         run: npm install -g eslint
 
-      - name: Run Test (Should Fail)
+      - name: Run Test
         run: npm test
 

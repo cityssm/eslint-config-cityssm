@@ -21,7 +21,7 @@ module.exports = {
     'unicorn'
   ],
   extends: [
-    'eslin t:recommended',
+    'eslint:recommended',
     'standard-with-typescript',
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',

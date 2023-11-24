@@ -26,6 +26,6 @@ try {
     });
 }
 catch {
-    console.log('❗ Erorr running ESLint.');
+    console.log('❗ Error running ESLint.');
     process.exitCode = 1;
 }
