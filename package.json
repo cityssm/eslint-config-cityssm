@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "eslint-config-cityssm.js",
   "scripts": {
-    "test": "eslint test/**"
+    "test": "node ./test/runEslint.mjs"
   },
   "keywords": [
     "eslint-config"
@@ -33,5 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0"
+    "@types/node": "^20.10.0",
+    "execa": "^8.0.1"
   }
 }
