@@ -1,8 +1,10 @@
 import { type ExecaError, execa } from 'execa'
 
-// eslint-disable-next-line unicorn/prefer-top-level-await
 try {
-  await execa('npx eslint --exit-on-fatal-error test/test.ts')
+  await execa('npx eslint --exit-on-fatal-error test/test.ts', {
+    stdio: 'inherit',
+    buffer: false
+  })
 
   // Process should not finish successfully
   console.log('❗ No ESLint errors or warnings found.')
