@@ -1,22 +1,30 @@
 import { type ExecaError, execa } from 'execa'
 
-try {
-  await execa('npx eslint --exit-on-fatal-error test/test.ts', {
-    stdio: 'inherit',
-    buffer: false
-  })
+const eslintCommand = 'npx eslint --exit-on-fatal-error test/test.ts'
 
-  // Process should not finish successfully
-  console.log('❗ No ESLint errors or warnings found.')
-  process.exitCode = 1
-} catch (error) {
-  if ((error as ExecaError).exitCode === 2) {
-    console.log('❗ Broken configuration.')
-    process.exitCode = 1
-  } else {
-    console.log(
-      '✔️ ESLint errors and warnings found. Config checked successfully.'
-    )
-    process.exitCode = 0
+async function runEslint(): Promise<number> {
+  try {
+    await execa(eslintCommand, {
+      stdio: 'inherit',
+      buffer: false
+    })
+
+    // Process should not finish successfully
+    console.log('❗ No ESLint errors or warnings found.')
+    return 1
+  } catch (error) {
+    if ((error as ExecaError).exitCode === 2) {
+      console.log('❗ Broken configuration.')
+      return 1
+    } else {
+      console.log(
+        '✔️ ESLint errors and warnings found. Config checked successfully.'
+      )
+      return 0
+    }
   }
 }
+
+console.log(`Running ${eslintCommand} ...`)
+
+process.exitCode = await runEslint()
