@@ -1,6 +1,6 @@
 import { type ExecaError, execa } from 'execa'
 
-const eslintCommand = 'npx eslint --exit-on-fatal-error test/test.ts'
+const eslintCommand = 'npx eslint --exit-on-fatal-error ./test/test.ts'
 
 async function runEslint(): Promise<number> {
   try {
