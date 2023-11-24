@@ -23,9 +23,10 @@ jobs:
           cache: 'npm'
       
       - name: Install Package
-        run: |
-          npm ci
-          npm install -g eslint
+        run: npm ci
+        
+      - name: Install ESLint
+        run: npm install -g eslint
 
       - name: Run Test (Should Fail)
         run: npm test
