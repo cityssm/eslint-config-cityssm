@@ -31,6 +31,6 @@ jobs:
         run: |
           npm test
           exitcode="$?"
-          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          echo "exitcode=$exitcode"
           exit "$exitcode"
 
