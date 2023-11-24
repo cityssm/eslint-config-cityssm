@@ -1,12 +1,22 @@
-import { execa } from 'execa'
+import { type ExecaError, execa } from 'execa'
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
-execa('eslint --exit-on-fatal-error test/test.ts', { stdio: 'inherit' }).catch(
-  (error) => {
-    const exitCode = error.exitCode === 1 ? 0 : 1
+try {
+  await execa('eslint --exit-on-fatal-error test/test.ts', {
+    stdio: 'inherit'
+  })
 
-    console.log(`Exiting with exit code: ${exitCode}`)
-
-    process.exitCode = exitCode
+  // Process should not finish successfully
+  console.log('❗ No ESLint errors or warnings found.')
+  process.exitCode = 1
+} catch (error) {
+  if ((error as ExecaError).exitCode === 2) {
+    console.log('❗ Broken configuration.')
+    process.exitCode = 1
+  } else {
+    console.log(
+      '✔️ ESLint errors and warnings found. Config checked successfully.'
+    )
+    process.exitCode = 0
   }
-)
+}
