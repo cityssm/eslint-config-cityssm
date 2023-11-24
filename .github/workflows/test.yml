@@ -28,5 +28,9 @@ jobs:
           npm install -g eslint
 
       - name: Run Test (Should Fail)
-        run: npm test
+        run: |
+          npm test
+          exitcode="$?"
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          exit "$exitcode"
 
