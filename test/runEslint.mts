@@ -1,6 +1,6 @@
 import { exec } from 'node:child_process'
 
-const eslintCommand = 'npx eslint --exit-on-fatal-error ./test/test.ts'
+const eslintCommand = 'eslint --exit-on-fatal-error ./test/test.ts'
 
 console.log(`Running ${eslintCommand} ...`)
 
