@@ -39,6 +39,6 @@ In the project's .eslintrc.json file.
 
 - [EMILE (Energy Monitoring in Less Effort)](https://github.com/cityssm/EMILE)
 
-- [MonTY (MONitor and Track Your Employee Absences, Call Outs, and more!)](https://github.com/cityssm/MonTY)
+- [Attendance Tracking](https://github.com/cityssm/attendance-tracking)
 
 - [General Licence Manager](https://github.com/cityssm/general-licence-manager)
