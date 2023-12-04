@@ -1,7 +1,7 @@
 /* eslint-disable no-multi-spaces */
 import './missing';
 export async function test_fn(varName) {
-    // This files has purposely formatted badly to ensure the 
+    // This file is formatted badly on purpose to ensure the 
     // ESLint configuration is loading correctly. 
     var VAR = /[0-9\d]/g;
     return varName + 'test' + ' ' + 2;

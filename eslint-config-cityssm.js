@@ -60,6 +60,7 @@ module.exports = {
                 }
             }
         ],
+        'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
         'sonarjs/cognitive-complexity': ['warn', 20],
         'sonarjs/no-duplicate-string': 'warn',
