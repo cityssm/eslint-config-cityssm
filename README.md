@@ -32,6 +32,7 @@ In the project's .eslintrc.json file.
 - [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
 - [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
+- [eslint-plugin-security](https://www.npmjs.com/package/eslint-plugin-security)
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 
