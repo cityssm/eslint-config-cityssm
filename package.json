@@ -7,7 +7,8 @@
     "test": "node ./test/runEslint.mjs"
   },
   "keywords": [
-    "eslint-config"
+    "eslint-config",
+    "eslintconfig"
   ],
   "repository": {
     "type": "git",
