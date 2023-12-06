@@ -1,5 +1,6 @@
 /* eslint-disable no-multi-spaces */
 import './missing';
+var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 export async function test_fn(varName) {
     // This file is formatted badly on purpose to ensure the 
     // ESLint configuration is loading correctly. 

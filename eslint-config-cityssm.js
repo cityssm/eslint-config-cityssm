@@ -16,6 +16,7 @@ module.exports = {
         'import',
         'n',
         'regexp',
+        'security',
         'sonarjs',
         'unicorn'
     ],
@@ -28,6 +29,7 @@ module.exports = {
         'plugin:n/recommended',
         'plugin:promise/recommended',
         'plugin:regexp/recommended',
+        'plugin:security/recommended',
         'plugin:sonarjs/recommended',
         'plugin:unicorn/recommended',
         'plugin:@typescript-eslint/recommended'

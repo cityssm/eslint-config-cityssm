@@ -6,6 +6,7 @@ import fs from  'fs'
 
 import './missing'
 
+var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 export async function test_fn (varName) {
 
