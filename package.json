@@ -4,7 +4,8 @@
   "version": "1.2.0",
   "main": "eslint-config-cityssm.js",
   "scripts": {
-    "test": "node ./test/runEslint.mjs"
+    "test": "node ./test/runEslint.mjs",
+    "coverage": "c8 node ./test/runEslint.mjs"
   },
   "keywords": [
     "eslint-config",
