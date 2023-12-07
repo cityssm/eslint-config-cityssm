@@ -1,6 +1,7 @@
 # eslint-config-cityssm
 
 [![DeepSource](https://app.deepsource.com/gh/cityssm/eslint-config-cityssm.svg/?label=active+issues&show_trend=true&token=2x51pzQmdmBmD3LNk4XgOTZC)](https://app.deepsource.com/gh/cityssm/eslint-config-cityssm/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/789e61c09874b68eb06a/maintainability)](https://codeclimate.com/github/cityssm/eslint-config-cityssm/maintainability)
 
 ![Code Scanning Banner](banner.png)
 
