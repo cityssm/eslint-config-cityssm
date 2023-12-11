@@ -50,6 +50,7 @@ module.exports = {
     '@typescript-eslint/no-extra-semi': 'off',
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/no-misused-promises': 'warn',
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/restrict-plus-operands': 'warn',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
