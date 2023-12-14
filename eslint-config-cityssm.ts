@@ -15,6 +15,7 @@ module.exports = {
     '@typescript-eslint',
     'eslint-comments',
     'import',
+    'jsdoc',
     'n',
     'regexp',
     'security',
@@ -27,6 +28,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:jsdoc/recommended',
     'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
@@ -65,6 +67,8 @@ module.exports = {
         }
       }
     ],
+
+    'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
     'n/no-missing-import': 'off',
 
