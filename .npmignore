@@ -9,6 +9,7 @@ test
 .eslintignore
 .eslintrc.json
 .gitignore
+.ncurc.json
 .npmignore
 .prettierignore
 .prettierrc.json
