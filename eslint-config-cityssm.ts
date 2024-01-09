@@ -32,7 +32,7 @@ module.exports = {
     'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
     'plugin:sonarjs/recommended',
     'plugin:unicorn/recommended',
     'plugin:@typescript-eslint/recommended'
