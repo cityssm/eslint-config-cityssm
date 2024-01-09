@@ -70,6 +70,12 @@ module.exports = {
         'no-extra-semi': 'off',
         'sonarjs/cognitive-complexity': ['warn', 20],
         'sonarjs/no-duplicate-string': 'warn',
+        'sort-imports': [
+            'error',
+            {
+                ignoreDeclarationSort: true
+            }
+        ],
         'unicorn/consistent-function-scoping': 'warn',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/filename-case': [
