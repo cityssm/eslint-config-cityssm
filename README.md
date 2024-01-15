@@ -30,6 +30,7 @@ In the project's .eslintrc.json file.
 - [eslint-config-standard-with-typescript](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
 - [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+- [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 - [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
 - [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
