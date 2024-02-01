@@ -22,12 +22,12 @@
   "author": "The Corporation of the City of Sault Ste. Marie",
   "license": "Unlicense",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
-    "eslint-config-standard-with-typescript": "^43.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-jsdoc": "^48.0.4",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-regexp": "^2.2.0",
@@ -36,6 +36,6 @@
     "eslint-plugin-unicorn": "^50.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.2"
+    "@types/node": "^20.11.16"
   }
 }
