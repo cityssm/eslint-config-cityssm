@@ -27,7 +27,7 @@ In the project's .eslintrc.json file.
 **Thanks to all of the developers who help make the City of Sault Ste. Marie's code awesome!** 😎
 
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-- [eslint-config-standard-with-typescript](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
+- [eslint-config-love](https://www.npmjs.com/package/eslint-config-love)
 - [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)

@@ -24,7 +24,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'standard-with-typescript',
+    'love',
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
