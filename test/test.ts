@@ -1,3 +1,11 @@
+/*
+This
+    file 
+      is
+         intentionally 
+ horrible. 
+
+*/
 
 /* eslint-disable no-multi-spaces */
 
@@ -21,7 +29,12 @@ export async function test_fn (varName) {
 
 }
 
-let tst = `test`
+export default function ()  {
+  /** test */
+  return !false
+}
+
+let tmp = `test`
 
 async function promiseTst (param1, param2, param3, param4, param5, param6) {
   return new Promise(function (resolve, reject) {
