@@ -36,7 +36,8 @@ export default function ()  {
 
 let tmp = `test`
 
-async function promiseTst (param1, param2, param3, param4, param5, param6) {
+async function promiseTst (param1, param2?
+  , param3, param4, param5, param6) {
   return new Promise(function (resolve, reject) {
     for (let i = 1; i <= 1; i ++) {
       //

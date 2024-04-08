@@ -1,4 +1,11 @@
-/* eslint-disable no-multi-spaces */
+/*
+This
+    file
+      is
+         intentionally
+ horrible.
+
+*/
 import './missing';
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 export async function test_fn(varName) {
@@ -7,7 +14,11 @@ export async function test_fn(varName) {
     var VAR = /[0-9\d]/g;
     return varName + 'test' + ' ' + 2;
 }
-let tst = `test`;
+export default function () {
+    /** test */
+    return !false;
+}
+let tmp = `test`;
 async function promiseTst(param1, param2, param3, param4, param5, param6) {
     return new Promise(function (resolve, reject) {
         for (let i = 1; i <= 1; i++) {
