@@ -9,7 +9,20 @@
   },
   "keywords": [
     "eslint-config",
-    "eslintconfig"
+    "eslintconfig",
+    "eslint-plugin",
+    "eslint-plugin-eslint-comments",
+    "eslint-plugin-import",
+    "eslint-plugin-jsdoc",
+    "eslint-plugin-n",
+    "eslint-plugin-no-secrets",
+    "eslint-plugin-no-unsanitized",
+    "eslint-plugin-promise",
+    "eslint-plugin-regexp",
+    "eslint-plugin-security",
+    "eslint-plugin-sonarjs",
+    "eslint-plugin-unicorn",
+    "typescript-eslint"
   ],
   "repository": {
     "type": "git",
