@@ -17,6 +17,8 @@ module.exports = {
     'import',
     'jsdoc',
     'n',
+    'no-secrets',
+    'no-unsanitized',
     'regexp',
     'security',
     'sonarjs',
@@ -30,6 +32,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsdoc/recommended',
     'plugin:n/recommended',
+    'plugin:no-unsanitized/DOM',
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:security/recommended-legacy',
@@ -74,6 +77,7 @@ module.exports = {
     'n/no-missing-import': 'off',
 
     'no-extra-semi': 'off',
+    'no-secrets/no-secrets': 'error',
 
     'sonarjs/cognitive-complexity': ['warn', 20],
     'sonarjs/no-duplicate-string': 'warn',
