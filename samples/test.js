@@ -8,6 +8,7 @@ This
 */
 import './missing';
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
 export async function test_fn(varName) {
     // This file is formatted badly on purpose to ensure the 
     // ESLint configuration is loading correctly. 

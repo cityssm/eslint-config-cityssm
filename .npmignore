@@ -3,6 +3,7 @@
 .nyc_output
 coverage
 node_modules
+samples
 test
 
 .deepsource.toml
