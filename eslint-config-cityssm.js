@@ -73,6 +73,22 @@ module.exports = {
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
         'no-secrets/no-secrets': 'error',
+        'no-unsanitized/method': [
+            'error',
+            {
+                escape: {
+                    methods: ['cityssm.escapeHTML']
+                }
+            }
+        ],
+        'no-unsanitized/property': [
+            'error',
+            {
+                escape: {
+                    methods: ['cityssm.escapeHTML']
+                }
+            }
+        ],
         'sonarjs/cognitive-complexity': ['warn', 20],
         'sonarjs/no-duplicate-string': 'warn',
         'sort-imports': [
