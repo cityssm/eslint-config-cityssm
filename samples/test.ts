@@ -53,3 +53,4 @@ async function promiseTst (param1, param2?
   })
 }
 
+let windows_path = 'C:\\windows\\path.exe'
