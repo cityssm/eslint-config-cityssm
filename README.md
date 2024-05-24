@@ -14,12 +14,14 @@
 npm install --save-dev eslint-config-cityssm
 ```
 
-In the project's .eslintrc.json file.
+In the project's `eslint.config.js` file.
 
-```json
-{
-  "extends": ["eslint-config-cityssm"]
-}
+```javascript
+import eslintConfigCityssm from 'eslint-config-cityssm'
+
+export default [
+  eslintConfigCityssm
+]
 ```
 
 ## Included Plugins
