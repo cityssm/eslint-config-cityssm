@@ -3,7 +3,8 @@
     "target": "es2022",
     "module": "es2022",
     "moduleResolution": "Node",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true
   },
   "compileOnSave": true,
   "buildOnSave": true,

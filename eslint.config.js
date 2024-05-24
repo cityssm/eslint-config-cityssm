@@ -1,44 +1,34 @@
-/* eslint-disable unicorn/filename-case, unicorn/prefer-module, eslint-comments/disable-enable-pair */
-module.exports = {
-    root: true,
-    env: {
-        es6: true
+import eslint from '@eslint/js';
+import eslintConfigLove from 'eslint-config-love';
+import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
+import eslintPluginNoSecrets from 'eslint-plugin-no-secrets';
+import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
+import * as eslintPluginRegexp from 'eslint-plugin-regexp';
+import eslintPluginSecurity from 'eslint-plugin-security';
+import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import tseslint from 'typescript-eslint';
+export default tseslint.config(
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+eslint.configs.recommended, ...tseslint.configs.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+eslintPluginSecurity.configs.recommended, 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+eslintPluginSonarjs.configs.recommended, 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
+    languageOptions: {
+        parserOptions: {
+            ecmaFeatures: { modules: true },
+            ecmaVersion: 2022,
+            project: ['./tsconfig.json'],
+            sourceType: 'module'
+        }
     },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        project: ['./tsconfig.json'],
-        ecmaVersion: 2022,
-        sourceType: 'module'
+    plugins: {
+        'no-secrets': eslintPluginNoSecrets,
+        'no-unsanitized': eslintPluginNoUnsanitized
     },
-    plugins: [
-        '@typescript-eslint',
-        'eslint-comments',
-        'import',
-        'jsdoc',
-        'n',
-        'no-secrets',
-        'no-unsanitized',
-        'regexp',
-        'security',
-        'sonarjs',
-        'unicorn'
-    ],
-    extends: [
-        'eslint:recommended',
-        'love',
-        'plugin:eslint-comments/recommended',
-        'plugin:import/recommended',
-        'plugin:import/typescript',
-        'plugin:jsdoc/recommended',
-        'plugin:n/recommended',
-        'plugin:no-unsanitized/DOM',
-        'plugin:promise/recommended',
-        'plugin:regexp/recommended',
-        'plugin:security/recommended-legacy',
-        'plugin:sonarjs/recommended-legacy',
-        'plugin:unicorn/recommended',
-        'plugin:@typescript-eslint/recommended'
-    ],
     rules: {
         '@typescript-eslint/member-delimiter-style': [
             'error',
@@ -132,4 +122,4 @@ module.exports = {
             }
         ]
     }
-};
+});
