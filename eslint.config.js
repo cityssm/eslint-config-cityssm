@@ -1,4 +1,5 @@
 import eslint from '@eslint/js';
+import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import eslintConfigLove from 'eslint-config-love';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets';
@@ -10,7 +11,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
 export default tseslint.config(
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslint.configs.recommended, ...tseslint.configs.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], 
+eslint.configs.recommended, ...tseslint.configs.recommended, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 eslintPluginSecurity.configs.recommended, 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument

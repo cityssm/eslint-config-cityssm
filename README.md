@@ -19,9 +19,7 @@ In the project's `eslint.config.js` file.
 ```javascript
 import eslintConfigCityssm from 'eslint-config-cityssm'
 
-export default [
-  ...eslintConfigCityssm
-]
+export default [...eslintConfigCityssm]
 ```
 
 ## Included Plugins
@@ -30,7 +28,7 @@ export default [
 
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-config-love](https://www.npmjs.com/package/eslint-config-love)
-- [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
+- [@eslint-community/eslint-plugin-eslint-comments](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 - [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)

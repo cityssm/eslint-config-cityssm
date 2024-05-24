@@ -1,4 +1,5 @@
 import eslint from '@eslint/js'
+import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
@@ -14,6 +15,8 @@ export default tseslint.config(
   eslint.configs.recommended,
 
   ...tseslint.configs.recommended,
+
+  eslintPluginEslintComments.recommended,
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
   eslintPluginRegexp.configs['flat/recommended'],
 
