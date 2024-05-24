@@ -20,7 +20,7 @@ In the project's `eslint.config.js` file.
 import eslintConfigCityssm from 'eslint-config-cityssm'
 
 export default [
-  eslintConfigCityssm
+  ...eslintConfigCityssm
 ]
 ```
 
