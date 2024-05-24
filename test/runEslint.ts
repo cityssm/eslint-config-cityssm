@@ -1,6 +1,6 @@
 import { exec } from 'node:child_process'
 
-const eslintCommand = 'eslint --config eslint.config.js --exit-on-fatal-error ./samples/*.ts'
+const eslintCommand = 'eslint --config eslint.config.js --exit-on-fatal-error ./samples/*.test.ts'
 
 console.log(`Running ${eslintCommand} ...`)
 
