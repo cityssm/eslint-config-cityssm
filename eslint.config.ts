@@ -10,7 +10,7 @@ import eslintPluginSonarjs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
+export const config = tseslint.config(
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslint.configs.recommended,
 
@@ -40,8 +40,7 @@ export default tseslint.config(
       }
     },
     plugins: {
-      'no-secrets': eslintPluginNoSecrets,
-      'no-unsanitized': eslintPluginNoUnsanitized
+      'no-secrets': eslintPluginNoSecrets
     },
     rules: {
       '@typescript-eslint/member-delimiter-style': [
@@ -81,24 +80,6 @@ export default tseslint.config(
 
       'no-extra-semi': 'off',
       'no-secrets/no-secrets': 'error',
-
-      'no-unsanitized/method': [
-        'error',
-        {
-          escape: {
-            methods: ['cityssm.escapeHTML']
-          }
-        }
-      ],
-
-      'no-unsanitized/property': [
-        'error',
-        {
-          escape: {
-            methods: ['cityssm.escapeHTML']
-          }
-        }
-      ],
 
       'sonarjs/cognitive-complexity': ['warn', 20],
       'sonarjs/no-duplicate-string': 'warn',
@@ -147,3 +128,32 @@ export default tseslint.config(
     }
   }
 )
+
+export const configWebApp = tseslint.config(...config, {
+  plugins: {
+    'no-unsanitized': eslintPluginNoUnsanitized
+  },
+  rules: {
+    'jsdoc/require-jsdoc': 'off',
+
+    'no-unsanitized/method': [
+      'error',
+      {
+        escape: {
+          methods: ['cityssm.escapeHTML']
+        }
+      }
+    ],
+
+    'no-unsanitized/property': [
+      'error',
+      {
+        escape: {
+          methods: ['cityssm.escapeHTML']
+        }
+      }
+    ]
+  }
+})
+
+export default config

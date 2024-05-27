@@ -9,7 +9,7 @@ import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
-export default tseslint.config(
+export const config = tseslint.config(
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 eslint.configs.recommended, ...tseslint.configs.recommended, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -27,8 +27,7 @@ eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
         }
     },
     plugins: {
-        'no-secrets': eslintPluginNoSecrets,
-        'no-unsanitized': eslintPluginNoUnsanitized
+        'no-secrets': eslintPluginNoSecrets
     },
     rules: {
         '@typescript-eslint/member-delimiter-style': [
@@ -64,22 +63,6 @@ eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
         'no-secrets/no-secrets': 'error',
-        'no-unsanitized/method': [
-            'error',
-            {
-                escape: {
-                    methods: ['cityssm.escapeHTML']
-                }
-            }
-        ],
-        'no-unsanitized/property': [
-            'error',
-            {
-                escape: {
-                    methods: ['cityssm.escapeHTML']
-                }
-            }
-        ],
         'sonarjs/cognitive-complexity': ['warn', 20],
         'sonarjs/no-duplicate-string': 'warn',
         'sort-imports': [
@@ -124,3 +107,28 @@ eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
         ]
     }
 });
+export const configWebApp = tseslint.config(...config, {
+    plugins: {
+        'no-unsanitized': eslintPluginNoUnsanitized
+    },
+    rules: {
+        'jsdoc/require-jsdoc': 'off',
+        'no-unsanitized/method': [
+            'error',
+            {
+                escape: {
+                    methods: ['cityssm.escapeHTML']
+                }
+            }
+        ],
+        'no-unsanitized/property': [
+            'error',
+            {
+                escape: {
+                    methods: ['cityssm.escapeHTML']
+                }
+            }
+        ]
+    }
+});
+export default config;
