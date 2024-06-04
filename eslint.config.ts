@@ -16,7 +16,9 @@ export const config = tseslint.config(
 
   ...tseslint.configs.recommended,
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintPluginEslintComments.recommended,
+
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
   eslintPluginRegexp.configs['flat/recommended'],
 
