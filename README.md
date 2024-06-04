@@ -47,3 +47,8 @@ export default [...eslintConfigCityssm]
 - [Attendance Tracking](https://github.com/cityssm/attendance-tracking)
 
 - [General Licence Manager](https://github.com/cityssm/general-licence-manager)
+
+## Related Projects
+
+**[prettier-config-cityssm](https://github.com/cityssm/prettier-config-cityssm)**<br />
+Prettier configuration for the City of Sault Ste. Marie's projects.
