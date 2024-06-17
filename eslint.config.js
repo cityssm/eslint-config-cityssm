@@ -9,17 +9,7 @@ import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
-export const config = tseslint.config(
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslint.configs.recommended, ...tseslint.configs.recommended, 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslintPluginSecurity.configs.recommended, 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslintPluginSonarjs.configs.recommended, 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
+export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarjs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
     languageOptions: {
         parserOptions: {
             ecmaFeatures: { modules: true },
