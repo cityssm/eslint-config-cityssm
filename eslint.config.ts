@@ -17,19 +17,19 @@ export const config = tseslint.config(
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginEslintComments.recommended,
 
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
   eslintPluginRegexp.configs['flat/recommended'],
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginSecurity.configs.recommended,
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintPluginSonarjs.configs.recommended,
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginUnicorn.configs['flat/recommended'],
 
   eslintConfigLove,
@@ -43,6 +43,7 @@ export const config = tseslint.config(
       }
     },
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'no-secrets': eslintPluginNoSecrets
     },
     rules: {
@@ -134,6 +135,7 @@ export const config = tseslint.config(
 
 export const configWebApp = tseslint.config(...config, {
   plugins: {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     'no-unsanitized': eslintPluginNoUnsanitized
   },
   rules: {
