@@ -8,11 +8,10 @@ test
 
 .deepsource.toml
 .eslintignore
-.eslintrc.json
 .gitignore
 .ncurc.json
 .npmignore
 .prettierignore
-.prettierrc.json
 banner.png
+prettier.config.*
 tsconfig.json
