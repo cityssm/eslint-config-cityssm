@@ -4,7 +4,6 @@ import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
 import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized'
-// import eslintPluginPromise from 'eslint-plugin-promise'
 import * as eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecurity from 'eslint-plugin-security'
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs'
@@ -22,7 +21,6 @@ export const config = tseslint.config(
   eslintPluginEslintComments.recommended,
 
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
-  // eslintPluginPromise.configs['flat/recommended'],
   eslintPluginRegexp.configs['flat/recommended'],
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
@@ -35,6 +33,7 @@ export const config = tseslint.config(
   eslintPluginUnicorn.configs['flat/recommended'],
 
   eslintConfigLove,
+
   {
     languageOptions: {
       parserOptions: {
