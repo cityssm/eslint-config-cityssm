@@ -1,5 +1,5 @@
 import { exec } from 'node:child_process';
-const eslintCommand = 'eslint --config eslint.config.js --exit-on-fatal-error ./samples/*.test.ts';
+const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.test.ts';
 console.log(`Running ${eslintCommand} ...`);
 try {
     exec(eslintCommand, (error, stdout, stderr) => {
@@ -12,16 +12,39 @@ try {
             console.log(stderr);
         }
         if (error === null) {
-            console.log('❗ ESLint did not find any errors or warnings.');
+            console.log('❗  ESLint did not find any errors or warnings.');
             process.exitCode = 1;
         }
         else if (error.code === 2) {
-            console.log('❗ Broken configuration.');
+            console.log('❗  Broken configuration.');
             process.exitCode = 1;
         }
         else {
-            console.log('✔️ ESLint errors and warnings found. Config checked successfully.');
+            console.log('✔️  ESLint errors and warnings found. Config checked successfully.');
             process.exitCode = 0;
+        }
+        console.log('\nPLUGINS TESTED');
+        const pluginStrings = [
+            '@eslint-community/eslint-comments/',
+            '@typescript-eslint/',
+            'import/',
+            'jsdoc/',
+            'n/',
+            'no-secrets/',
+            'no-unsanitized/',
+            'promise/',
+            'regexp/',
+            'security/',
+            'sonarjs/',
+            'unicorn/'
+        ];
+        const outputLines = stdout.split('\n');
+        for (const pluginString of pluginStrings) {
+            const pluginUsed = outputLines.some((outputLine) => {
+                const possiblePluginString = outputLine.trim().split(' ').at(-1) ?? '';
+                return possiblePluginString.startsWith(pluginString);
+            });
+            console.log(` ${pluginUsed ? '✔️' : '⚠️'}  ${pluginString}`);
         }
     });
 }
