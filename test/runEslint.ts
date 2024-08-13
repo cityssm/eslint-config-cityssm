@@ -68,6 +68,10 @@ try {
       })
 
       console.log(` ${pluginUsed ? '✔️' : '⚠️'}  ${pluginString}`)
+
+      if (!pluginUsed) {
+        process.exitCode = 1
+      }
     }
   })
 } catch {

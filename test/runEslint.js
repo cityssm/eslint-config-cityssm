@@ -45,6 +45,9 @@ try {
                 return possiblePluginString.startsWith(pluginString);
             });
             console.log(` ${pluginUsed ? '✔️' : '⚠️'}  ${pluginString}`);
+            if (!pluginUsed) {
+                process.exitCode = 1;
+            }
         }
     });
 }
