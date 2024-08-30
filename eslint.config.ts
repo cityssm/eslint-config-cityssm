@@ -48,17 +48,6 @@ export const config = tseslint.config(
       'no-secrets': eslintPluginNoSecrets
     },
     rules: {
-      '@typescript-eslint/member-delimiter-style': [
-        'error',
-        {
-          multiline: {
-            delimiter: 'none'
-          },
-          singleline: {
-            delimiter: 'semi'
-          }
-        }
-      ],
       '@typescript-eslint/no-extra-semi': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/no-misused-promises': 'warn',
