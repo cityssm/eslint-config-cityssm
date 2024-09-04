@@ -6,6 +6,7 @@ const eslintCommand =
 console.log(`Running ${eslintCommand} ...`)
 
 try {
+  // eslint-disable-next-line sonarjs/no-os-command-from-path, sonarjs/os-command
   exec(eslintCommand, (error, stdout, stderr) => {
     /*
      * Print output
