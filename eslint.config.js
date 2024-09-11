@@ -112,4 +112,5 @@ export const configWebApp = tseslint.config(...config, {
         ]
     }
 });
+export { default as tseslint } from 'typescript-eslint';
 export default config;

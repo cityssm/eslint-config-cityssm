@@ -151,4 +151,6 @@ export const configWebApp = tseslint.config(...config, {
   }
 })
 
+export { default as tseslint, type Config } from 'typescript-eslint'
+
 export default config
