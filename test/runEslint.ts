@@ -26,7 +26,7 @@ try {
     }
 
     /*
-     * Check if processed correctly
+     * Check if processed
      */
 
     if (error === null) {
@@ -43,7 +43,7 @@ try {
     }
 
     /*
-     * Check if all imported plugins are used
+     * Check if all imported plugins used
      */
 
     console.log('\nPLUGINS TESTED')

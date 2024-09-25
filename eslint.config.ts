@@ -75,6 +75,7 @@ export const config = tseslint.config(
       'no-extra-semi': 'off',
       'no-secrets/no-secrets': 'error',
 
+      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
       'sonarjs/cognitive-complexity': ['warn', 20],
       'sonarjs/no-duplicate-string': 'warn',
 
