@@ -28,6 +28,8 @@
     "eslint-plugin-security",
     "eslint-plugin-sonarjs",
     "eslint-plugin-unicorn",
+    "eslint-plugin-woke",
+    "eslint-plugin-write-good-comments",
     "typescript-eslint"
   ],
   "repository": {
