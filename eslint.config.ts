@@ -1,3 +1,6 @@
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
+
 import eslint from '@eslint/js'
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintConfigLove from 'eslint-config-love'
@@ -8,28 +11,23 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecurity from 'eslint-plugin-security'
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import * as eslintPluginWoke from 'eslint-plugin-woke'
+import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import tseslint from 'typescript-eslint'
 
 export const config = tseslint.config(
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslint.configs.recommended,
 
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginEslintComments.recommended,
 
   eslintPluginJsdoc.configs['flat/recommended-typescript'],
   eslintPluginRegexp.configs['flat/recommended'],
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginSecurity.configs.recommended,
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintPluginSonarjs.configs.recommended,
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginUnicorn.configs['flat/recommended'],
 
   eslintConfigLove,
@@ -38,14 +36,16 @@ export const config = tseslint.config(
     languageOptions: {
       parserOptions: {
         ecmaFeatures: { modules: true },
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         ecmaVersion: 2022,
         project: ['./tsconfig.json'],
         sourceType: 'module'
       }
     },
     plugins: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      'no-secrets': eslintPluginNoSecrets
+      'no-secrets': eslintPluginNoSecrets,
+      woke: eslintPluginWoke,
+      'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
       '@typescript-eslint/no-extra-semi': 'off',
@@ -118,14 +118,17 @@ export const config = tseslint.config(
             }
           }
         }
-      ]
+      ],
+
+      'woke/all': 'error',
+
+      'write-good-comments/write-good-comments': 'warn'
     }
   }
 )
 
 export const configWebApp = tseslint.config(...config, {
   plugins: {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     'no-unsanitized': eslintPluginNoUnsanitized
   },
   rules: {

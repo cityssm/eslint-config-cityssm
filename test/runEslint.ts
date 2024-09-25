@@ -1,3 +1,6 @@
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+
 import { exec } from 'node:child_process'
 
 const eslintCommand =
@@ -57,7 +60,9 @@ try {
       'regexp/',
       'security/',
       'sonarjs/',
-      'unicorn/'
+      'unicorn/',
+      'woke/',
+      'write-good-comments/'
     ]
 
     const outputLines = stdout.split('\n')

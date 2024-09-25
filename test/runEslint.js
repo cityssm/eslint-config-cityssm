@@ -36,7 +36,9 @@ try {
             'regexp/',
             'security/',
             'sonarjs/',
-            'unicorn/'
+            'unicorn/',
+            'woke/',
+            'write-good-comments/'
         ];
         const outputLines = stdout.split('\n');
         for (const pluginString of pluginStrings) {

@@ -19,6 +19,8 @@ import './missing'
 
 const FilePath = __dirname + '/file.txt'
 
+const whitelist = ['a', 'b', 'c']
+
 fs.exists(FilePath)
 
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;

@@ -39,6 +39,8 @@ export default [...eslintConfigCityssm]
 - [eslint-plugin-security](https://www.npmjs.com/package/eslint-plugin-security)
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+- [eslint-plugin-woke](https://www.npmjs.com/package/eslint-plugin-woke)
+- [eslint-plugin-write-good-comments](https://www.npmjs.com/package/eslint-plugin-write-good-comments)
 
 ## Major Projects Using eslint-config-cityssm
 
