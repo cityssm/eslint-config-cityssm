@@ -91,7 +91,13 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             }
         ],
         'woke/all': 'error',
-        'write-good-comments/write-good-comments': 'warn'
+        'write-good-comments/write-good-comments': [
+            'warn',
+            {
+                passive: false,
+                whitelist: ['only']
+            }
+        ]
     }
 });
 export const configWebApp = tseslint.config(...config, {

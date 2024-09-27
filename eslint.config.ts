@@ -123,7 +123,13 @@ export const config = tseslint.config(
 
       'woke/all': 'error',
 
-      'write-good-comments/write-good-comments': 'warn'
+      'write-good-comments/write-good-comments': [
+        'warn',
+        {
+          passive: false,
+          whitelist: ['only']
+        }
+      ]
     }
   }
 )
