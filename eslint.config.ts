@@ -127,6 +127,7 @@ export const config = tseslint.config(
         'warn',
         {
           passive: false,
+          // eslint-disable-next-line woke/all
           whitelist: ['only']
         }
       ]
