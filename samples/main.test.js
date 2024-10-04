@@ -3,6 +3,7 @@ import 'missing-package';
 import './missing';
 const FilePath = __dirname + '/file.txt';
 const whitelist = ['a', 'b', 'c'];
+let maxVal = 50 > 100 ? 50 : 100;
 fs.exists(FilePath);
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
