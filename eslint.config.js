@@ -96,7 +96,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             'warn',
             {
                 passive: false,
-                whitelist: ['only']
+                whitelist: ['only', 'validate']
             }
         ]
     }
