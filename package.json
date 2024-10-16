@@ -45,10 +45,10 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/js": "^9.12.0",
-    "eslint": "^8.57.1",
-    "eslint-config-love": "^84.1.0",
+    "eslint": "^9.12.0",
+    "eslint-config-love": "^87.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.3.1",
+    "eslint-plugin-jsdoc": "^50.4.1",
     "eslint-plugin-n": "^17.11.1",
     "eslint-plugin-no-secrets": "^1.0.2",
     "eslint-plugin-no-unsanitized": "^4.1.2",
@@ -57,9 +57,8 @@
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^2.0.3",
     "eslint-plugin-unicorn": "^56.0.0",
-    "eslint-plugin-woke": "^1.0.1",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.8.1"
+    "typescript-eslint": "^8.9.0"
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",

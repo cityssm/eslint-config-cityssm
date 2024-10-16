@@ -8,7 +8,6 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import * as eslintPluginWoke from 'eslint-plugin-woke';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import tseslint from 'typescript-eslint';
 export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarjs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
@@ -20,9 +19,9 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             sourceType: 'module'
         }
     },
+    ignores: ['**/*.d.ts', '**/*.js'],
     plugins: {
         'no-secrets': eslintPluginNoSecrets,
-        woke: eslintPluginWoke,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -91,7 +90,6 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
                 }
             }
         ],
-        'woke/all': 'error',
         'write-good-comments/write-good-comments': [
             'warn',
             {
