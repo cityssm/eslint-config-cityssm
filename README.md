@@ -28,6 +28,7 @@ export default [...eslintConfigCityssm]
 
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-config-love](https://www.npmjs.com/package/eslint-config-love)
+- [@cspell/eslint-plugin](https://www.npmjs.com/package/@cspell/eslint-plugin)
 - [@eslint-community/eslint-plugin-eslint-comments](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
