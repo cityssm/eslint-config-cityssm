@@ -1,5 +1,5 @@
 // eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
-/* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 
 import eslintCspell from '@cspell/eslint-plugin/recommended'
 import eslint from '@eslint/js'
@@ -15,6 +15,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import tseslint from 'typescript-eslint'
+
 import flagWords from './cspell.flagWords.js'
 
 export const config = tseslint.config(

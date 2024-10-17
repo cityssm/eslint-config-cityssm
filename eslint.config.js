@@ -34,7 +34,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             'warn', {
                 cspell: {
                     language: 'en-CA,en-US,en-GB',
-                    flagWords: flagWords
+                    flagWords
                 }
             }
         ],
