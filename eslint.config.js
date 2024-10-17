@@ -1,3 +1,4 @@
+import eslintCspell from '@cspell/eslint-plugin/recommended';
 import eslint from '@eslint/js';
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import eslintConfigLove from 'eslint-config-love';
@@ -6,12 +7,15 @@ import eslintPluginNoSecrets from 'eslint-plugin-no-secrets';
 import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
 import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
-import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
+import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import * as eslintPluginWoke from 'eslint-plugin-woke';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import tseslint from 'typescript-eslint';
-export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarjs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
+import flagWords from './cspell.flagWords.js';
+export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintCspell, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarJs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
+    files: ['**/*.ts'],
+    ignores: ['**/*.d.ts'],
     languageOptions: {
         parserOptions: {
             ecmaFeatures: { modules: true },
@@ -20,13 +24,20 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             sourceType: 'module'
         }
     },
-    ignores: ['**/*.d.ts', '**/*.js'],
     plugins: {
         'no-secrets': eslintPluginNoSecrets,
         woke: eslintPluginWoke,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
+        '@cspell/spellchecker': [
+            'warn', {
+                cspell: {
+                    language: 'en-CA,en-US,en-GB',
+                    flagWords: flagWords
+                }
+            }
+        ],
         '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-magic-numbers': 'warn',
@@ -103,6 +114,8 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
     }
 });
 export const configWebApp = tseslint.config(...config, {
+    files: ['**/*.ts'],
+    ignores: ['**/*.d.ts'],
     plugins: {
         'no-unsanitized': eslintPluginNoUnsanitized
     },

@@ -19,6 +19,9 @@ import './missing'
 
 const FilePath = __dirname + '/file.txt'
 
+/**
+ * whitelist - not blacklist
+ */
 const whitelist = ['a', 'b', 'c']
 
 let maxVal = 50 > 100 ? 50 : 100
@@ -31,8 +34,8 @@ const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNE
 
 export async function test_fn (varName) {
 
-  // This file is formatted badly on purpose to ensure the 
-   // ESLint configuration is loading correctly. 
+  // This file is formatted badly on purpose to ennsure the 
+   // ESLint configuration is loadng correctly. 
 
   var VAR = /[0-9\d]/g
 

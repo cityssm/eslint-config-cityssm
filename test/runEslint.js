@@ -1,5 +1,5 @@
 import { exec } from 'node:child_process';
-const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.test.ts';
+const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.sample.ts';
 console.log(`Running ${eslintCommand} ...`);
 try {
     exec(eslintCommand, (error, stdout, stderr) => {
@@ -25,6 +25,7 @@ try {
         }
         console.log('\nPLUGINS TESTED');
         const pluginStrings = [
+            '@cspell/',
             '@eslint-community/eslint-comments/',
             '@typescript-eslint/',
             'import/',
