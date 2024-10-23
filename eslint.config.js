@@ -43,7 +43,12 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         ],
         '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-non-null-assertion': 'warn',
-        '@typescript-eslint/no-magic-numbers': 'warn',
+        '@typescript-eslint/no-magic-numbers': [
+            'warn',
+            {
+                ignore: [0]
+            }
+        ],
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         '@typescript-eslint/non-nullable-type-assertion-style': 'off',
