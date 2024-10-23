@@ -32,7 +32,8 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
     },
     rules: {
         '@cspell/spellchecker': [
-            'warn', {
+            'warn',
+            {
                 cspell: {
                     language: 'en-CA,en-US,en-GB',
                     flagWords,
@@ -142,4 +143,5 @@ export const configWebApp = tseslint.config(...config, {
     }
 });
 export { default as tseslint } from 'typescript-eslint';
+export { words as cspellWords, flagWords as cspellFlagWords };
 export default config;
