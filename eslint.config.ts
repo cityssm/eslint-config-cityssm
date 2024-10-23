@@ -17,6 +17,7 @@ import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comment
 import tseslint from 'typescript-eslint'
 
 import flagWords from './cspell.flagWords.js'
+import words from './cspell.words.js'
 
 export const config = tseslint.config(
   eslint.configs.recommended,
@@ -58,7 +59,8 @@ export const config = tseslint.config(
         'warn', {
           cspell: {
             language: 'en-CA,en-US,en-GB',
-            flagWords
+            flagWords,
+            words
           }
         }
       ],
