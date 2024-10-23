@@ -1,3 +1,6 @@
+/**
+ * Words that will be treated as valid.
+ */
 export const words = [
   /* City of Sault Ste. Marie words */
   'cityssm',

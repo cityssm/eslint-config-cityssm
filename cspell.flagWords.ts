@@ -21,6 +21,9 @@ for (const unformattedWordList of unformattedWordLists) {
   }
 }
 
+/**
+ * Words that will be flagged as not allowed.
+ */
 export const flagWords = [...wordListSet]
 
 export default flagWords
