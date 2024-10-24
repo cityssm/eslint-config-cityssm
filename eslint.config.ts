@@ -195,6 +195,7 @@ export const configWebApp = tseslint.config(...config, {
 
 export { default as tseslint, type Config } from 'typescript-eslint'
 
-export { words as cspellWords, flagWords as cspellFlagWords }
+export { default as cspellFlagWords } from './cspell.flagWords.js'
+export { default as cspellWords } from './cspell.words.js'
 
 export default config
