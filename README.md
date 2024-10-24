@@ -8,11 +8,28 @@
 [ESLint](https://eslint.org/) rules used in the
 [City of Sault Ste. Marie's TypeScript projects](https://github.com/search?q=org%3Acityssm++language%3ATypeScript&type=repositories).
 
-## How to Use
+## Installation
 
 ```sh
 npm install --save-dev eslint-config-cityssm
 ```
+
+## Simple Usage
+
+In the project's `eslint.config.js` file,
+it's as easy as one line.
+
+```javascript
+export { default } from 'eslint-config-cityssm'
+```
+
+For web applications, export `configWebApp` instead.
+
+```javascript
+export { configWebApp as default } from 'eslint-config-cityssm'
+```
+
+## Advanced Usage
 
 In the project's `eslint.config.js` file.
 
