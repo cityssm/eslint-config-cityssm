@@ -46,7 +46,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         '@typescript-eslint/no-magic-numbers': [
             'warn',
             {
-                ignore: [0]
+                ignore: [0, 1]
             }
         ],
         '@typescript-eslint/no-misused-promises': 'warn',

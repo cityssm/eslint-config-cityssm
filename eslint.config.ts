@@ -43,7 +43,6 @@ export const config = tseslint.config(
     languageOptions: {
       parserOptions: {
         ecmaFeatures: { modules: true },
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         ecmaVersion: 2022,
         project: ['./tsconfig.json'],
         sourceType: 'module'
@@ -65,12 +64,13 @@ export const config = tseslint.config(
           }
         }
       ],
+
       '@typescript-eslint/no-extra-semi': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/no-magic-numbers': [
         'warn',
         {
-          ignore: [0]
+          ignore: [0, 1]
         }
       ],
       '@typescript-eslint/no-misused-promises': 'warn',
