@@ -45,10 +45,10 @@
   "license": "Unlicense",
   "dependencies": {
     "@cspell/eslint-plugin": "^8.15.4",
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/js": "^9.13.0",
     "eslint": "^9.13.0",
-    "eslint-config-love": "^89.0.1",
+    "eslint-config-love": "^96.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-n": "^17.11.1",
@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.7.9",
+    "@types/node": "^22.8.1",
     "prettier-config-cityssm": "^1.0.0"
   }
 }
