@@ -3,6 +3,7 @@ export const words = [
     'datetimepicker',
     'fullwidth',
     'hoverable',
+    'maxlength',
     'onremoved',
     'onshown',
     'trash',
@@ -11,6 +12,7 @@ export const words = [
     'nvarchar',
     'recordset',
     'sonarjs',
-    'tseslint'
+    'tseslint',
+    'millis'
 ];
 export default words;

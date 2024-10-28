@@ -9,6 +9,7 @@ export const words = [
   'datetimepicker',
   'fullwidth',
   'hoverable',
+  'maxlength',
   'onremoved',
   'onshown',
   'trash',
@@ -21,7 +22,10 @@ export const words = [
 
   /* Linter words */
   'sonarjs',
-  'tseslint'
+  'tseslint',
+
+  /* Other words */
+  'millis'
 ]
 
 export default words
