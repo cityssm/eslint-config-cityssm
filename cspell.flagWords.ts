@@ -3,6 +3,8 @@ import list2 from 'eslint-plugin-woke/lib/categories/gender.js'
 import list3 from 'eslint-plugin-woke/lib/categories/profanity.js'
 import list4 from 'eslint-plugin-woke/lib/categories/racism.js'
 
+import { words } from './cspell.words.js'
+
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const unformattedWordLists = [...list1, ...list2, ...list3, ...list4] as Array<{
   description: string
@@ -19,6 +21,14 @@ for (const unformattedWordList of unformattedWordLists) {
       wordListSet.add(word.join(''))
     }
   }
+}
+
+/**
+ * Remove all allowed words
+ */
+
+for (const wordToRemove of words) {
+  wordListSet.delete(wordToRemove)
 }
 
 /**
