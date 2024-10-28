@@ -82,6 +82,7 @@ export const config = tseslint.config(
       '@typescript-eslint/no-unsafe-member-access': 'warn',
 
       '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+      '@typescript-eslint/prefer-destructuring': 'off',
       '@typescript-eslint/restrict-plus-operands': 'warn',
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
