@@ -70,7 +70,7 @@ export const config = tseslint.config(
       '@typescript-eslint/no-magic-numbers': [
         'warn',
         {
-          ignore: [0, 1]
+          ignore: [-1, 0, 1]
         }
       ],
       '@typescript-eslint/no-misused-promises': 'warn',
