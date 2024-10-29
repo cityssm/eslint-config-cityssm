@@ -17,6 +17,7 @@ export const words = [
   'yellow',
 
   /* Database-related words */
+  'ifnull',
   'nvarchar',
   'recordset',
 

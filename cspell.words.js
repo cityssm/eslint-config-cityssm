@@ -9,6 +9,7 @@ export const words = [
     'trash',
     'vcentered',
     'yellow',
+    'ifnull',
     'nvarchar',
     'recordset',
     'sonarjs',
