@@ -4,6 +4,7 @@
 export const words = [
   /* City of Sault Ste. Marie words */
   'cityssm',
+  'saultstemarie',
 
   /* CitySSM Web App words */
   'datetimepicker',

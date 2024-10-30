@@ -1,5 +1,6 @@
 export const words = [
     'cityssm',
+    'saultstemarie',
     'datetimepicker',
     'fullwidth',
     'hoverable',
