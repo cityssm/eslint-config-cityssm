@@ -16,9 +16,9 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import tseslint from 'typescript-eslint'
 
-import cspellFlagWords from './cspell.flagWords.js'
-import cspellWords from './cspell.words.js'
-import writeGoodCommentsWhitelist from './writeGoodComments.whitelist.js'
+import cspellFlagWords from './wordLists/cspell.flagWords.js'
+import cspellWords from './wordLists/cspell.words.js'
+import writeGoodCommentsWhitelist from './wordLists/writeGoodComments.whitelist.js'
 
 export const config = tseslint.config(
   eslint.configs.recommended,
@@ -196,7 +196,8 @@ export const configWebApp = tseslint.config(...config, {
 
 export { default as tseslint, type Config } from 'typescript-eslint'
 
-export { default as cspellFlagWords } from './cspell.flagWords.js'
-export { default as cspellWords } from './cspell.words.js'
+export { default as cspellFlagWords } from './wordLists/cspell.flagWords.js'
+export { default as cspellWords } from './wordLists/cspell.words.js'
+export { default as writeGoodCommentsWhitelist } from './wordLists/writeGoodComments.whitelist.js'
 
 export default config
