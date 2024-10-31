@@ -110,6 +110,13 @@ export const config = tseslint.config(
       'sonarjs/cognitive-complexity': ['warn', 20],
       'sonarjs/no-duplicate-string': 'warn',
 
+      // checked by "no-useless-escape"
+      'regexp/no-useless-escape': 'off',
+      'sonarjs/unnecessary-character-escapes': 'off',
+
+      // checked by "regexp/no-dupe-characters-character-class"
+      'sonarjs/duplicates-in-character-class': 'off',
+
       'sort-imports': [
         'error',
         {
