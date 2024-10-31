@@ -1,3 +1,5 @@
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 import eslintCspell from '@cspell/eslint-plugin/recommended';
 import eslint from '@eslint/js';
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
@@ -9,6 +11,7 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+// import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import tseslint from 'typescript-eslint';
 import cspellFlagWords from './wordLists/cspell.flagWords.js';
@@ -27,6 +30,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
     },
     plugins: {
         'no-secrets': eslintPluginNoSecrets,
+        // woke: eslintPluginWoke,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -73,6 +77,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
         'no-secrets/no-secrets': 'error',
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         'sonarjs/cognitive-complexity': ['warn', 20],
         'sonarjs/no-duplicate-string': 'warn',
         'sort-imports': [
@@ -115,6 +120,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
                 }
             }
         ],
+        // 'woke/all': 'error',
         'write-good-comments/write-good-comments': [
             'warn',
             {

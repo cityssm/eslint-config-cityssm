@@ -1,6 +1,11 @@
+/**
+ * Words that will be treated as valid.
+ */
 export const words = [
+    /* City of Sault Ste. Marie words */
     'cityssm',
     'saultstemarie',
+    /* CitySSM Web App words */
     'datetimepicker',
     'fullwidth',
     'hoverable',
@@ -10,11 +15,14 @@ export const words = [
     'trash',
     'vcentered',
     'yellow',
+    /* Database-related words */
     'ifnull',
     'nvarchar',
     'recordset',
+    /* Linter words */
     'sonarjs',
     'tseslint',
+    /* Other words */
     'millis'
 ];
 export default words;
