@@ -11,8 +11,9 @@ import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import tseslint from 'typescript-eslint';
-import flagWords from './cspell.flagWords.js';
-import words from './cspell.words.js';
+import cspellFlagWords from './cspell.flagWords.js';
+import cspellWords from './cspell.words.js';
+import writeGoodCommentsWhitelist from './writeGoodComments.whitelist.js';
 export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintCspell, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarJs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
@@ -34,8 +35,8 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             {
                 cspell: {
                     language: 'en-CA,en-US,en-GB',
-                    flagWords,
-                    words
+                    flagWords: cspellFlagWords,
+                    words: cspellWords
                 }
             }
         ],
@@ -118,7 +119,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             'warn',
             {
                 passive: false,
-                whitelist: ['only', 'validate']
+                whitelist: writeGoodCommentsWhitelist
             }
         ]
     }
