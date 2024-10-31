@@ -9,7 +9,6 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import * as eslintPluginWoke from 'eslint-plugin-woke';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import tseslint from 'typescript-eslint';
 import flagWords from './cspell.flagWords.js';
@@ -27,7 +26,6 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
     },
     plugins: {
         'no-secrets': eslintPluginNoSecrets,
-        woke: eslintPluginWoke,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -116,7 +114,6 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
                 }
             }
         ],
-        'woke/all': 'error',
         'write-good-comments/write-good-comments': [
             'warn',
             {

@@ -12,7 +12,7 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecurity from 'eslint-plugin-security'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
-import * as eslintPluginWoke from 'eslint-plugin-woke'
+// import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import tseslint from 'typescript-eslint'
 
@@ -50,7 +50,7 @@ export const config = tseslint.config(
     },
     plugins: {
       'no-secrets': eslintPluginNoSecrets,
-      woke: eslintPluginWoke,
+      // woke: eslintPluginWoke,
       'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -151,7 +151,7 @@ export const config = tseslint.config(
         }
       ],
 
-      'woke/all': 'error',
+      // 'woke/all': 'error',
 
       'write-good-comments/write-good-comments': [
         'warn',

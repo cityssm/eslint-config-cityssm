@@ -62,7 +62,7 @@ try {
       'security/',
       'sonarjs/',
       'unicorn/',
-      'woke/',
+      // 'woke/',
       'write-good-comments/'
     ]
 

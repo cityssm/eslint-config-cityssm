@@ -38,7 +38,6 @@ try {
             'security/',
             'sonarjs/',
             'unicorn/',
-            'woke/',
             'write-good-comments/'
         ];
         const outputLines = stdout.split('\n');
