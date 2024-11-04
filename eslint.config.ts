@@ -88,6 +88,8 @@ export const config = tseslint.config(
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
 
+      'eslint-comments/require-description': 'off',
+
       'import/order': [
         'error',
         {
