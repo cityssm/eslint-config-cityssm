@@ -88,6 +88,8 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         'sonarjs/unnecessary-character-escapes': 'off',
         // checked by "regexp/no-dupe-characters-character-class"
         'sonarjs/duplicates-in-character-class': 'off',
+        // checked by "@typescript-eslint/no-misused-promises"
+        'sonarjs/no-misused-promises': 'off',
         'sort-imports': [
             'error',
             {
