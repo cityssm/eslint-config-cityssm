@@ -4,6 +4,6 @@
 /**
  * Words that will not be flagged by write-good-comments.
  */
-export const whitelist = ['only', 'validate']
+export const whitelist = ['only', 'validate', 'Validate']
 
 export default whitelist
