@@ -15,7 +15,7 @@ const whitelistLowercase = ['only', 'validate'] satisfies Array<
 export const whitelist = [...whitelistLowercase] as string[]
 
 // List is case-sensitive, include words starting with capitals.
-for (const word of whitelist) {
+for (const word of whitelistLowercase) {
   whitelist.push(capitalize(word))
 }
 

@@ -9,7 +9,7 @@ const whitelistLowercase = ['only', 'validate'];
  */
 export const whitelist = [...whitelistLowercase];
 // List is case-sensitive, include words starting with capitals.
-for (const word of whitelist) {
+for (const word of whitelistLowercase) {
     whitelist.push(capitalize(word));
 }
 export default whitelist;
