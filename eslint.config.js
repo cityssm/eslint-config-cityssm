@@ -24,7 +24,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         parserOptions: {
             ecmaFeatures: { modules: true },
             ecmaVersion: 2022,
-            project: ['./tsconfig.json'],
+            project: true,
             sourceType: 'module'
         }
     },
