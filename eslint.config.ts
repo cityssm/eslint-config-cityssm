@@ -16,9 +16,10 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import tseslint from 'typescript-eslint'
 
-import cspellFlagWords from './wordLists/cspell.flagWords.js'
-import cspellWords from './wordLists/cspell.words.js'
-import writeGoodCommentsWhitelist from './wordLists/writeGoodComments.whitelist.js'
+import cspellFlagWords from './lists/cspell.flagWords.js'
+import cspellWords from './lists/cspell.words.js'
+import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js'
+import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
 export const config = tseslint.config(
   eslint.configs.recommended,
@@ -72,7 +73,7 @@ export const config = tseslint.config(
       '@typescript-eslint/no-magic-numbers': [
         'warn',
         {
-          ignore: [-1, 0, 1]
+          ignore: noMagicNumbers
         }
       ],
       '@typescript-eslint/no-misused-promises': 'warn',
@@ -188,6 +189,13 @@ export const configWebApp = tseslint.config(...config, {
     'no-unsanitized': eslintPluginNoUnsanitized
   },
   rules: {
+    '@typescript-eslint/no-magic-numbers': [
+      'warn',
+      {
+        ignore: [...noMagicNumbers, ...httpErrors]
+      }
+    ],
+
     'jsdoc/require-jsdoc': 'off',
 
     'no-unsanitized/method': [
@@ -212,8 +220,12 @@ export const configWebApp = tseslint.config(...config, {
 
 export { default as tseslint, type Config } from 'typescript-eslint'
 
-export { default as cspellFlagWords } from './wordLists/cspell.flagWords.js'
-export { default as cspellWords } from './wordLists/cspell.words.js'
-export { default as writeGoodCommentsWhitelist } from './wordLists/writeGoodComments.whitelist.js'
+export { default as cspellFlagWords } from './lists/cspell.flagWords.js'
+export { default as cspellWords } from './lists/cspell.words.js'
+export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js'
+export {
+  default as noMagicNumbersIgnore,
+  httpErrors as noMagicNumbersHttpErrors
+} from './lists/noMagicNumbers.ignore.js'
 
 export default config
