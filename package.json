@@ -46,22 +46,22 @@
   "dependencies": {
     "@cspell/eslint-plugin": "^8.16.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "9.14.0",
-    "eslint": "9.14.0",
-    "eslint-config-love": "^107.0.0",
+    "@eslint/js": "9.16.0",
+    "eslint": "9.16.0",
+    "eslint-config-love": "^110.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-n": "^17.14.0",
-    "eslint-plugin-no-secrets": "^1.1.2",
+    "eslint-plugin-no-secrets": "^2.1.1",
     "eslint-plugin-no-unsanitized": "^4.1.2",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-sonarjs": "^2.0.4",
+    "eslint-plugin-sonarjs": "^3.0.1",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.16.0"
+    "typescript-eslint": "^8.18.0"
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
