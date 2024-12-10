@@ -91,6 +91,13 @@ export const config = tseslint.config(
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
 
+      complexity: [
+        'error',
+        {
+          max: 20
+        }
+      ],
+
       'eslint-comments/require-description': 'off',
 
       'import/order': [
