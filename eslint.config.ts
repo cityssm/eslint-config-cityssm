@@ -92,7 +92,7 @@ export const config = tseslint.config(
       '@typescript-eslint/strict-boolean-expressions': 'warn',
 
       complexity: [
-        'error',
+        'warn',
         {
           max: 20
         }

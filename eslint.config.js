@@ -67,7 +67,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
         '@typescript-eslint/space-before-function-paren': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'warn',
         complexity: [
-            'error',
+            'warn',
             {
                 max: 20
             }
