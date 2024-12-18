@@ -44,13 +44,13 @@
   "author": "The Corporation of the City of Sault Ste. Marie",
   "license": "Unlicense",
   "dependencies": {
-    "@cspell/eslint-plugin": "^8.16.1",
+    "@cspell/eslint-plugin": "^8.17.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "9.16.0",
-    "eslint": "9.16.0",
-    "eslint-config-love": "^110.0.0",
+    "@eslint/js": "9.17.0",
+    "eslint": "9.17.0",
+    "eslint-config-love": "^112.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.6.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
     "eslint-plugin-n": "^17.15.0",
     "eslint-plugin-no-secrets": "^2.1.1",
     "eslint-plugin-no-unsanitized": "^4.1.2",
@@ -61,11 +61,11 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.18.0"
+    "typescript-eslint": "^8.18.1"
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "prettier-config-cityssm": "^1.0.0"
   }
 }
