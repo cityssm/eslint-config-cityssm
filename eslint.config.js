@@ -19,7 +19,7 @@ import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js';
 export const config = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked, eslintCspell, eslintPluginEslintComments.recommended, eslintPluginJsdoc.configs['flat/recommended-typescript'], eslintPluginRegexp.configs['flat/recommended'], eslintPluginSecurity.configs.recommended, eslintPluginSonarJs.configs.recommended, eslintPluginUnicorn.configs['flat/recommended'], eslintConfigLove, {
-    files: ['**/*.ts'],
+    files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     languageOptions: {
         parserOptions: {

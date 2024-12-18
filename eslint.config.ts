@@ -40,7 +40,7 @@ export const config = tseslint.config(
   eslintConfigLove,
 
   {
-    files: ['**/*.ts'],
+    files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     languageOptions: {
       parserOptions: {
