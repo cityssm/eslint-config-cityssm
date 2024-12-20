@@ -8,7 +8,9 @@ function capitalize(lowercaseString: string): string {
 const whitelistLowercase = [
   'only',
   'purchase',
+  'maximum',
   'minimum',
+  'successfully',
   'validate'
 ] satisfies Array<Lowercase<string>>
 

@@ -6,7 +6,9 @@ function capitalize(lowercaseString) {
 const whitelistLowercase = [
     'only',
     'purchase',
+    'maximum',
     'minimum',
+    'successfully',
     'validate'
 ];
 /**
