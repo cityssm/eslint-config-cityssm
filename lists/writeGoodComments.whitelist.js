@@ -3,7 +3,12 @@
 function capitalize(lowercaseString) {
     return lowercaseString.charAt(0).toUpperCase() + lowercaseString.slice(1);
 }
-const whitelistLowercase = ['only', 'validate'];
+const whitelistLowercase = [
+    'only',
+    'purchase',
+    'minimum',
+    'validate'
+];
 /**
  * Words that will not be flagged by write-good-comments.
  */

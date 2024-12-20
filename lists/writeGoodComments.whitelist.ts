@@ -5,9 +5,12 @@ function capitalize(lowercaseString: string): string {
   return lowercaseString.charAt(0).toUpperCase() + lowercaseString.slice(1)
 }
 
-const whitelistLowercase = ['only', 'validate'] satisfies Array<
-  Lowercase<string>
->
+const whitelistLowercase = [
+  'only',
+  'purchase',
+  'minimum',
+  'validate'
+] satisfies Array<Lowercase<string>>
 
 /**
  * Words that will not be flagged by write-good-comments.
