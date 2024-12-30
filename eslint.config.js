@@ -46,7 +46,6 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
             }
         ],
         '@typescript-eslint/init-declarations': 'warn',
-        '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-magic-numbers': [
             'warn',

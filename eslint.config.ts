@@ -68,7 +68,6 @@ export const config = tseslint.config(
       ],
 
       '@typescript-eslint/init-declarations': 'warn',
-      '@typescript-eslint/no-extra-semi': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/no-magic-numbers': [
         'warn',
