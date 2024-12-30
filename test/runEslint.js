@@ -1,5 +1,3 @@
-// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
-/* eslint-disable @typescript-eslint/no-magic-numbers */
 import { exec } from 'node:child_process';
 const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.sample.ts';
 console.log(`Running ${eslintCommand} ...`);
