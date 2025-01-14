@@ -149,7 +149,7 @@ export const config = tseslint.config(eslint.configs.recommended, ...tseslint.co
     }
 });
 export const configWebApp = tseslint.config(...config, {
-    files: ['**/*.ts'],
+    files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     plugins: {
         'no-unsanitized': eslintPluginNoUnsanitized

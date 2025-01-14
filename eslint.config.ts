@@ -190,7 +190,7 @@ export const config = tseslint.config(
 )
 
 export const configWebApp = tseslint.config(...config, {
-  files: ['**/*.ts'],
+  files: ['**/*.ts', '**/*.js'],
   ignores: ['**/*.d.ts'],
   plugins: {
     'no-unsanitized': eslintPluginNoUnsanitized
