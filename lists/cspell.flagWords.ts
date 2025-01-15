@@ -5,7 +5,7 @@ import list4 from 'eslint-plugin-woke/lib/categories/racism.js'
 
 import { words } from './cspell.words.js'
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-type-assertion
 const unformattedWordLists = [...list1, ...list2, ...list3, ...list4] as Array<{
   description: string
   words: Array<string | string[]>

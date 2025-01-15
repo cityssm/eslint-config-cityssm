@@ -1,4 +1,4 @@
-/*
+     /*
 This
     file 
       is
@@ -7,7 +7,7 @@ This
 
 */
 
-/* eslint-disable no-multi-spaces */
+/*  eslint-disable no-multi-spaces */
 
 import path from 'path'
 import fs from  'fs'
@@ -17,7 +17,7 @@ import { log, error } from 'console'
 import 'missing-package'
 import './missing'
 
-const FilePath = __dirname + '/file.txt'
+const FilePath = __dirname + '/file.txt' as string
 
 /**
  * whitelist - not blacklist
@@ -26,7 +26,7 @@ const whitelist = ['a', 'b', 'c']
 
 let maxVal = 50 > 100 ? 50 : 100
 
-fs.exists(FilePath)
+fs.exists( FilePath)
 
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -65,4 +65,6 @@ async function promiseTst (param1, param2?
   })
 }
 
-let windows_path = 'C:\\windows\\path.exe'
+let windows_path = 'C:\\windows\\path.exe';;
+
+
