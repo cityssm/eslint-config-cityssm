@@ -117,8 +117,9 @@ export const config = tseslint.config(
       'no-extra-semi': 'off',
       'no-secrets/no-secrets': 'error',
 
-      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-      'sonarjs/cognitive-complexity': ['warn', 20],
+      // checked by "complexity"
+      'sonarjs/cognitive-complexity': 'off',
+
       'sonarjs/no-duplicate-string': 'warn',
 
       // checked by "@typescript-eslint/no-redundant-type-constituents"
