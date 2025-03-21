@@ -35,7 +35,7 @@ export const config = tseslint.config(
 
   eslintPluginSecurity.configs.recommended,
   eslintPluginSonarJs.configs.recommended,
-  eslintPluginUnicorn.configs['flat/recommended'],
+  eslintPluginUnicorn.configs.recommended,
 
   eslintConfigLove,
 
