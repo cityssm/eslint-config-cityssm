@@ -1,10 +1,14 @@
 // eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
 /* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 
-import eslintCspell from '@cspell/eslint-plugin/recommended'
-import eslint from '@eslint/js'
+import eslintCspell from '@cspell/eslint-plugin'
+import eslintCss from '@eslint/css'
+import eslintJs from '@eslint/js'
+import eslintJson from '@eslint/json'
+import eslintMarkdown from '@eslint/markdown'
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintConfigLove from 'eslint-config-love'
+import eslintImport from 'eslint-plugin-import'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
 import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized'
@@ -22,23 +26,6 @@ import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
 export const config = tseslint.config(
-  eslint.configs.recommended,
-
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-
-  eslintCspell,
-  eslintPluginEslintComments.recommended,
-
-  eslintPluginJsdoc.configs['flat/recommended-typescript'],
-  eslintPluginRegexp.configs['flat/recommended'],
-
-  eslintPluginSecurity.configs.recommended,
-  eslintPluginSonarJs.configs.recommended,
-  eslintPluginUnicorn.configs.recommended,
-
-  eslintConfigLove,
-
   {
     files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
@@ -50,11 +37,33 @@ export const config = tseslint.config(
         sourceType: 'module'
       }
     },
+    extends: [
+      tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+
+      eslintJs.configs.recommended,
+      eslintPluginEslintComments.recommended,
+
+      eslintPluginJsdoc.configs['flat/recommended-typescript'],
+      eslintPluginRegexp.configs['flat/recommended'],
+
+      eslintPluginSecurity.configs.recommended,
+      eslintPluginSonarJs.configs.recommended,
+      eslintPluginUnicorn.configs.recommended,
+
+      eslintConfigLove
+    ],
+
     plugins: {
+      '@cspell': eslintCspell,
+      import: eslintImport,
       'no-secrets': eslintPluginNoSecrets,
+      // sonarjs: eslintPluginSonarJs,
+      // unicorn: eslintPluginUnicorn,
       // woke: eslintPluginWoke,
       'write-good-comments': eslintPluginWriteGoodComments
     },
+
     rules: {
       '@cspell/spellchecker': [
         'warn',
@@ -187,45 +196,72 @@ export const config = tseslint.config(
         }
       ]
     }
+  },
+  {
+    files: ['**/*.json'],
+    extends: [eslintJson.configs.recommended],
+    plugins: {
+      json: eslintJson
+    },
+    language: 'json/json'
+  },
+  {
+    files: ['**/*.md'],
+    extends: [eslintMarkdown.configs.recommended],
+    plugins: {
+      markdown: eslintMarkdown
+    },
+    language: 'markdown/gfm'
   }
 )
 
-export const configWebApp = tseslint.config(...config, {
-  files: ['**/*.ts', '**/*.js'],
-  ignores: ['**/*.d.ts'],
-  plugins: {
-    'no-unsanitized': eslintPluginNoUnsanitized
+export const configWebApp = tseslint.config(
+  config,
+  {
+    files: ['**/*.ts', '**/*.js'],
+    ignores: ['**/*.d.ts'],
+    plugins: {
+      'no-unsanitized': eslintPluginNoUnsanitized
+    },
+    rules: {
+      '@typescript-eslint/init-declarations': 'off',
+      '@typescript-eslint/no-magic-numbers': [
+        'warn',
+        {
+          ignore: [...noMagicNumbers, ...httpErrors]
+        }
+      ],
+
+      'jsdoc/require-jsdoc': 'off',
+
+      'no-unsanitized/method': [
+        'error',
+        {
+          escape: {
+            methods: ['cityssm.escapeHTML']
+          }
+        }
+      ],
+
+      'no-unsanitized/property': [
+        'error',
+        {
+          escape: {
+            methods: ['cityssm.escapeHTML']
+          }
+        }
+      ]
+    }
   },
-  rules: {
-    '@typescript-eslint/init-declarations': 'off',
-    '@typescript-eslint/no-magic-numbers': [
-      'warn',
-      {
-        ignore: [...noMagicNumbers, ...httpErrors]
-      }
-    ],
-
-    'jsdoc/require-jsdoc': 'off',
-
-    'no-unsanitized/method': [
-      'error',
-      {
-        escape: {
-          methods: ['cityssm.escapeHTML']
-        }
-      }
-    ],
-
-    'no-unsanitized/property': [
-      'error',
-      {
-        escape: {
-          methods: ['cityssm.escapeHTML']
-        }
-      }
-    ]
+  {
+    files: ['**/*.css'],
+    extends: [eslintCss.configs.recommended],
+    plugins: {
+      css: eslintCss
+    },
+    language: 'css/css'
   }
-})
+)
 
 export { default as tseslint, type Config } from 'typescript-eslint'
 

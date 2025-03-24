@@ -1,7 +1,10 @@
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable no-console */
+
 import { exec } from 'node:child_process'
 
 const eslintCommand =
-  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.sample.ts'
+  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.sample.css ./samples/*.sample.json ./samples/*.sample.md ./samples/*.sample.ts'
 
 console.log(`Running ${eslintCommand} ...`)
 
@@ -49,8 +52,11 @@ try {
       '@cspell/',
       '@eslint-community/eslint-comments/',
       '@typescript-eslint/',
+      'css/',
       'import/',
       'jsdoc/',
+      'json/',
+      'markdown/',
       'n/',
       'no-secrets/',
       'no-unsanitized/',

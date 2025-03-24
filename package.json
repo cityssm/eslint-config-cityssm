@@ -46,11 +46,14 @@
   "dependencies": {
     "@cspell/eslint-plugin": "^8.17.5",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "9.22.0",
-    "eslint": "9.22.0",
+    "@eslint/css": "^0.5.0",
+    "@eslint/js": "9.23.0",
+    "@eslint/json": "^0.11.0",
+    "@eslint/markdown": "^6.3.0",
+    "eslint": "9.23.0",
     "eslint-config-love": "^119.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.6.8",
+    "eslint-plugin-jsdoc": "^50.6.9",
     "eslint-plugin-n": "^17.16.2",
     "eslint-plugin-no-secrets": "^2.2.1",
     "eslint-plugin-no-unsanitized": "^4.1.2",
@@ -58,13 +61,13 @@
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-unicorn": "^58.0.0",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript-eslint": "^8.27.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.11",
+    "@types/node": "^22.13.13",
     "prettier-config-cityssm": "^1.0.0"
   }
 }
