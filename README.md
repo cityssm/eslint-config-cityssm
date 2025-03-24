@@ -8,6 +8,8 @@
 [ESLint](https://eslint.org/) rules used in the
 [City of Sault Ste. Marie's TypeScript projects](https://github.com/search?q=org%3Acityssm++language%3ATypeScript&type=repositories).
 
+Now testing support for ESLint's CSS, JSON, and Markdown parsers!
+
 ## Installation
 
 ```sh
