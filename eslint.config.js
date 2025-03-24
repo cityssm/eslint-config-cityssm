@@ -1,16 +1,16 @@
 // eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
-/* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 import eslintCspell from '@cspell/eslint-plugin';
+import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import eslintCss from '@eslint/css';
 import eslintJs from '@eslint/js';
 import eslintJson from '@eslint/json';
 import eslintMarkdown from '@eslint/markdown';
-import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import eslintConfigLove from 'eslint-config-love';
-import eslintImport from 'eslint-plugin-import';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets';
 import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
+import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
@@ -23,6 +23,19 @@ import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js';
 export const config = tseslint.config({
+    extends: [
+        tseslint.configs.recommendedTypeChecked,
+        tseslint.configs.stylisticTypeChecked,
+        eslintJs.configs.recommended,
+        eslintPluginEslintComments.recommended,
+        eslintPluginJsdoc.configs['flat/recommended-typescript'],
+        eslintPluginPerfectionist.configs['recommended-natural'],
+        eslintPluginRegexp.configs['flat/recommended'],
+        eslintPluginSecurity.configs.recommended,
+        eslintPluginSonarJs.configs.recommended,
+        eslintPluginUnicorn.configs.recommended,
+        eslintConfigLove
+    ],
     files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     languageOptions: {
@@ -33,21 +46,8 @@ export const config = tseslint.config({
             sourceType: 'module'
         }
     },
-    extends: [
-        tseslint.configs.recommendedTypeChecked,
-        tseslint.configs.stylisticTypeChecked,
-        eslintJs.configs.recommended,
-        eslintPluginEslintComments.recommended,
-        eslintPluginJsdoc.configs['flat/recommended-typescript'],
-        eslintPluginRegexp.configs['flat/recommended'],
-        eslintPluginSecurity.configs.recommended,
-        eslintPluginSonarJs.configs.recommended,
-        eslintPluginUnicorn.configs.recommended,
-        eslintConfigLove
-    ],
     plugins: {
         '@cspell': eslintCspell,
-        import: eslintImport,
         'no-secrets': eslintPluginNoSecrets,
         // sonarjs: eslintPluginSonarJs,
         // unicorn: eslintPluginUnicorn,
@@ -59,14 +59,13 @@ export const config = tseslint.config({
             'warn',
             {
                 cspell: {
-                    language: 'en-CA,en-US,en-GB',
                     flagWords: cspellFlagWords,
+                    language: 'en-CA,en-US,en-GB',
                     words: cspellWords
                 }
             }
         ],
         '@typescript-eslint/init-declarations': 'warn',
-        '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-magic-numbers': [
             'warn',
             {
@@ -74,9 +73,10 @@ export const config = tseslint.config({
             }
         ],
         '@typescript-eslint/no-misused-promises': 'warn',
+        '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-        '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unsafe-argument': 'warn',
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unsafe-call': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'warn',
         '@typescript-eslint/no-unsafe-type-assertion': 'warn',
@@ -92,38 +92,23 @@ export const config = tseslint.config({
             }
         ],
         'eslint-comments/require-description': 'off',
-        'import/order': [
-            'error',
-            {
-                'newlines-between': 'always',
-                alphabetize: {
-                    order: 'asc',
-                    orderImportKind: 'asc'
-                }
-            }
-        ],
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
         'no-secrets/no-secrets': 'error',
-        // checked by "complexity"
-        'sonarjs/cognitive-complexity': 'off',
-        'sonarjs/no-duplicate-string': 'warn',
-        // checked by "@typescript-eslint/no-redundant-type-constituents"
-        'sonarjs/no-redundant-type-constituents': 'off',
+        'no-undef': 'off',
         // checked by "no-useless-escape"
         'regexp/no-useless-escape': 'off',
-        'sonarjs/unnecessary-character-escapes': 'off',
+        // checked by "complexity"
+        'sonarjs/cognitive-complexity': 'off',
         // checked by "regexp/no-dupe-characters-character-class"
         'sonarjs/duplicates-in-character-class': 'off',
+        'sonarjs/no-duplicate-string': 'warn',
         // checked by "@typescript-eslint/no-misused-promises"
         'sonarjs/no-misused-promises': 'off',
-        'sort-imports': [
-            'error',
-            {
-                ignoreDeclarationSort: true
-            }
-        ],
+        // checked by "@typescript-eslint/no-redundant-type-constituents"
+        'sonarjs/no-redundant-type-constituents': 'off',
+        'sonarjs/unnecessary-character-escapes': 'off',
         'unicorn/consistent-function-scoping': 'warn',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/filename-case': [
@@ -168,19 +153,19 @@ export const config = tseslint.config({
         ]
     }
 }, {
-    files: ['**/*.json'],
     extends: [eslintJson.configs.recommended],
+    files: ['**/*.json'],
+    language: 'json/json',
     plugins: {
         json: eslintJson
-    },
-    language: 'json/json'
+    }
 }, {
-    files: ['**/*.md'],
     extends: [eslintMarkdown.configs.recommended],
+    files: ['**/*.md'],
+    language: 'markdown/gfm',
     plugins: {
         markdown: eslintMarkdown
-    },
-    language: 'markdown/gfm'
+    }
 });
 export const configWebApp = tseslint.config(config, {
     files: ['**/*.ts', '**/*.js'],
@@ -215,16 +200,16 @@ export const configWebApp = tseslint.config(config, {
         ]
     }
 }, {
-    files: ['**/*.css'],
     extends: [eslintCss.configs.recommended],
+    files: ['**/*.css'],
+    language: 'css/css',
     plugins: {
         css: eslintCss
-    },
-    language: 'css/css'
+    }
 });
-export { default as tseslint } from 'typescript-eslint';
 export { default as cspellFlagWords } from './lists/cspell.flagWords.js';
 export { default as cspellWords } from './lists/cspell.words.js';
+export { httpErrors as noMagicNumbersHttpErrors, default as noMagicNumbersIgnore } from './lists/noMagicNumbers.ignore.js';
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js';
-export { default as noMagicNumbersIgnore, httpErrors as noMagicNumbersHttpErrors } from './lists/noMagicNumbers.ignore.js';
+export { default as tseslint } from 'typescript-eslint';
 export default config;

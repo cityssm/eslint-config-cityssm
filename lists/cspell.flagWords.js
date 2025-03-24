@@ -1,5 +1,5 @@
-import list1 from 'eslint-plugin-woke/lib/categories/LGBTQ.js';
-import list2 from 'eslint-plugin-woke/lib/categories/gender.js';
+import list1 from 'eslint-plugin-woke/lib/categories/gender.js';
+import list2 from 'eslint-plugin-woke/lib/categories/LGBTQ.js';
 import list3 from 'eslint-plugin-woke/lib/categories/profanity.js';
 import list4 from 'eslint-plugin-woke/lib/categories/racism.js';
 import { words } from './cspell.words.js';

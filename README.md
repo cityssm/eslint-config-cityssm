@@ -54,6 +54,7 @@ export default [...eslintConfigCityssm]
 - [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
 - [eslint-plugin-no-secrets](https://www.npmjs.com/package/eslint-plugin-no-secrets)
 - [eslint-plugin-no-unsanitized](https://www.npmjs.com/package/eslint-plugin-no-unsanitized)
+- [eslint-plugin-perfectionist](https://www.npmjs.com/package/eslint-plugin-perfectionist)
 - [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
 - [eslint-plugin-security](https://www.npmjs.com/package/eslint-plugin-security)
