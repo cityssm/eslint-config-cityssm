@@ -182,6 +182,7 @@ export const config = tseslint.config(
   {
     extends: [eslintJson.configs.recommended],
     files: ['**/*.json'],
+    ignores: ['**/package-lock.json'],
     language: 'json/json',
     plugins: {
       json: eslintJson
