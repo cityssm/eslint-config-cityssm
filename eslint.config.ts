@@ -115,6 +115,25 @@ export const config = tseslint.config(
       'no-secrets/no-secrets': 'error',
       'no-undef': 'off',
 
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          groups: [
+            'type',
+            'builtin',
+            'external',
+            'internal-type',
+            'internal',
+            ['parent-type', 'sibling-type', 'index-type'],
+            ['parent', 'sibling', 'index'],
+            'object',
+            'unknown'
+          ]
+        }
+      ],
+      'perfectionist/sort-modules': 'warn',
+      'perfectionist/sort-objects': 'warn',
+
       // checked by "no-useless-escape"
       'regexp/no-useless-escape': 'off',
 
