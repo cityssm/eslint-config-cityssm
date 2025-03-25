@@ -147,6 +147,12 @@ export const config = tseslint.config(
           groupKind: 'types-first'
         }
       ],
+      'perfectionist/sort-object-types': [
+        'warn',
+        {
+          partitionByNewLine: true
+        }
+      ],
       'perfectionist/sort-objects': [
         'warn',
         {
