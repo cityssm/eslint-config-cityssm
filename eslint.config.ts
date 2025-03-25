@@ -121,12 +121,9 @@ export const config = tseslint.config(
           groups: [
             'type',
             'builtin',
-            'external',
-            'internal-type',
-            'internal',
-            ['parent-type', 'sibling-type', 'index-type'],
-            ['parent', 'sibling', 'index'],
-            'object',
+            ['external', 'internal-type', 'internal'],
+            ['parent-type', 'parent'],
+            ['sibling-type', 'sibling'],
             'unknown'
           ]
         }
@@ -137,7 +134,7 @@ export const config = tseslint.config(
         {
           groupKind: 'types-first'
         }
-      ],      
+      ],
       'perfectionist/sort-named-imports': [
         'error',
         {
