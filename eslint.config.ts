@@ -128,6 +128,12 @@ export const config = tseslint.config(
           ]
         }
       ],
+      'perfectionist/sort-interfaces': [
+        'warn',
+        {
+          partitionByNewLine: true
+        }
+      ],
       'perfectionist/sort-modules': 'warn',
       'perfectionist/sort-named-exports': [
         'error',
