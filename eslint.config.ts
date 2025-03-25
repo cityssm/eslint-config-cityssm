@@ -132,7 +132,30 @@ export const config = tseslint.config(
         }
       ],
       'perfectionist/sort-modules': 'warn',
-      'perfectionist/sort-objects': 'warn',
+      'perfectionist/sort-named-exports': [
+        'error',
+        {
+          groupKind: 'types-first'
+        }
+      ],      
+      'perfectionist/sort-named-imports': [
+        'error',
+        {
+          groupKind: 'types-first'
+        }
+      ],
+      'perfectionist/sort-objects': [
+        'warn',
+        {
+          partitionByNewLine: true
+        }
+      ],
+      'perfectionist/sort-union-types': [
+        'error',
+        {
+          groups: ['unknown', 'nullish']
+        }
+      ],
 
       // checked by "no-useless-escape"
       'regexp/no-useless-escape': 'off',
