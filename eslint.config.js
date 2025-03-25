@@ -101,9 +101,8 @@ export const config = tseslint.config({
             'error',
             {
                 groups: [
-                    'type',
                     'builtin',
-                    ['external', 'internal-type', 'internal'],
+                    ['external', 'internal-type', 'internal', 'type'],
                     ['parent-type', 'parent'],
                     ['sibling-type', 'sibling'],
                     'unknown'
