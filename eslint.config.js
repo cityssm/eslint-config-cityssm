@@ -23,6 +23,11 @@ import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js';
 export const config = tseslint.config({
+    linterOptions: {
+        reportUnusedDisableDirectives: 'error',
+        reportUnusedInlineConfigs: 'error'
+    }
+}, {
     extends: [
         tseslint.configs.recommendedTypeChecked,
         tseslint.configs.stylisticTypeChecked,
@@ -109,12 +114,7 @@ export const config = tseslint.config({
                 ]
             }
         ],
-        'perfectionist/sort-interfaces': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
+        'perfectionist/sort-interfaces': 'warn',
         'perfectionist/sort-modules': 'warn',
         'perfectionist/sort-named-exports': [
             'error',
@@ -128,18 +128,8 @@ export const config = tseslint.config({
                 groupKind: 'types-first'
             }
         ],
-        'perfectionist/sort-object-types': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
-        'perfectionist/sort-objects': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
+        'perfectionist/sort-object-types': 'warn',
+        'perfectionist/sort-objects': 'warn',
         'perfectionist/sort-union-types': [
             'error',
             {
@@ -200,6 +190,11 @@ export const config = tseslint.config({
                 whitelist: writeGoodCommentsWhitelist
             }
         ]
+    },
+    settings: {
+        perfectionist: {
+            partitionByNewLine: true
+        }
     }
 }, {
     extends: [eslintJson.configs.recommended],

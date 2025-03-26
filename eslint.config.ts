@@ -27,6 +27,12 @@ import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
 export const config = tseslint.config(
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error'
+    }
+  },
+  {
     extends: [
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
@@ -127,12 +133,7 @@ export const config = tseslint.config(
           ]
         }
       ],
-      'perfectionist/sort-interfaces': [
-        'warn',
-        {
-          partitionByNewLine: true
-        }
-      ],
+      'perfectionist/sort-interfaces': 'warn',
       'perfectionist/sort-modules': 'warn',
       'perfectionist/sort-named-exports': [
         'error',
@@ -146,18 +147,9 @@ export const config = tseslint.config(
           groupKind: 'types-first'
         }
       ],
-      'perfectionist/sort-object-types': [
-        'warn',
-        {
-          partitionByNewLine: true
-        }
-      ],
-      'perfectionist/sort-objects': [
-        'warn',
-        {
-          partitionByNewLine: true
-        }
-      ],
+      'perfectionist/sort-object-types': 'warn',
+      'perfectionist/sort-objects': 'warn',
+
       'perfectionist/sort-union-types': [
         'error',
         {
@@ -175,6 +167,7 @@ export const config = tseslint.config(
       'sonarjs/duplicates-in-character-class': 'off',
 
       'sonarjs/no-duplicate-string': 'warn',
+
       // checked by "@typescript-eslint/no-misused-promises"
       'sonarjs/no-misused-promises': 'off',
 
@@ -227,6 +220,11 @@ export const config = tseslint.config(
           whitelist: writeGoodCommentsWhitelist
         }
       ]
+    },
+    settings: {
+      perfectionist: {
+        partitionByNewLine: true
+      }
     }
   },
   {
@@ -258,6 +256,7 @@ export const configWebApp = tseslint.config(
     },
     rules: {
       '@typescript-eslint/init-declarations': 'off',
+
       '@typescript-eslint/no-magic-numbers': [
         'warn',
         {
