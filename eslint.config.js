@@ -111,7 +111,8 @@ export const config = tseslint.config({
                     ['parent-type', 'parent'],
                     ['sibling-type', 'sibling'],
                     'unknown'
-                ]
+                ],
+                partitionByNewLine: false
             }
         ],
         'perfectionist/sort-interfaces': 'warn',
