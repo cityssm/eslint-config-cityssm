@@ -121,6 +121,9 @@ export const config = tseslint.config(
       'no-secrets/no-secrets': 'error',
       'no-undef': 'off',
 
+      // checked by "@typescript-eslint/no-unused-vars"
+      'no-unused-vars': 'off',
+
       'perfectionist/sort-imports': [
         'error',
         {
