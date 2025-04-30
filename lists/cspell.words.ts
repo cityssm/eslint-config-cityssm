@@ -23,6 +23,7 @@ export const words = [
   'recordset',
 
   /* Linter words */
+  'httponly',
   'sonarjs',
   'tseslint',
 

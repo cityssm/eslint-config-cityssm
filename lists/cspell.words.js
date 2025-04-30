@@ -20,6 +20,7 @@ export const words = [
     'nvarchar',
     'recordset',
     /* Linter words */
+    'httponly',
     'sonarjs',
     'tseslint',
     /* Other words */
