@@ -10,6 +10,7 @@ import eslintConfigLove from 'eslint-config-love';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets';
 import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
+import eslintPluginPackageJson from 'eslint-plugin-package-json';
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import * as eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
@@ -27,7 +28,7 @@ export const config = tseslint.config({
         reportUnusedDisableDirectives: 'error',
         reportUnusedInlineConfigs: 'error'
     }
-}, {
+}, eslintPluginPackageJson.configs.recommended, {
     extends: [
         tseslint.configs.recommendedTypeChecked,
         tseslint.configs.stylisticTypeChecked,
@@ -202,7 +203,7 @@ export const config = tseslint.config({
 }, {
     extends: [eslintJson.configs.recommended],
     files: ['**/*.json'],
-    ignores: ['**/package-lock.json'],
+    ignores: ['**/package.json', '**/package-lock.json'],
     language: 'json/json',
     plugins: {
         json: eslintJson

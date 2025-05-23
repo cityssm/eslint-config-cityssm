@@ -1,18 +1,24 @@
+"use strict";
 /* eslint-disable unicorn/prevent-abbreviations */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.one = void 0;
+exports.exportedNoJsDocs = exportedNoJsDocs;
+exports.badJsDocs = badJsDocs;
+exports.goodJsDocs = goodJsDocs;
 function noJsDocs() {
     // No JS Doc error
     return false;
 }
-export function exportedNoJsDocs() {
+function exportedNoJsDocs() {
     // No JS Doc error
     return noJsDocs();
 }
-export const one = 1;
+exports.one = 1;
 /**
  *
  * @param letter
  */
-export function badJsDocs(letter) {
+function badJsDocs(letter) {
     return letter.toLowerCase();
 }
 /**
@@ -20,6 +26,6 @@ export function badJsDocs(letter) {
  * @param {string} letter Either upper or lower case.
  * @returns {string} Upper case letter
  */
-export function goodJsDocs(letter) {
+function goodJsDocs(letter) {
     return letter.toUpperCase();
 }

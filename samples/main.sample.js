@@ -1,3 +1,4 @@
+"use strict";
 /*
 This
 file
@@ -6,25 +7,31 @@ file
 horrible.
 
 */
-import fs from 'fs';
-import 'missing-package';
-import './missing';
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.test_fn = test_fn;
+exports.default = default_1;
+const fs_1 = __importDefault(require("fs"));
+require("missing-package");
+require("./missing");
 const FilePath = __dirname + '/file.txt';
 /**
  * whitelist - not blacklist
  */
 const whitelist = ['a', 'b', 'c'];
 let maxVal = 50 > 100 ? 50 : 100;
-fs.exists(FilePath);
+fs_1.default.exists(FilePath);
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
-export async function test_fn(varName) {
+async function test_fn(varName) {
     // This file is formatted badly on purpose to ennsure the 
     // ESLint configuration is loadng correctly. 
     var VAR = /[0-9\d]/g;
     return varName + 'test' + ' ' + 2;
 }
-export default function () {
+function default_1() {
     /** test */
     return !false;
 }

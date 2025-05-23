@@ -1,0 +1,19 @@
+{
+  "version": "v24",
+
+  "keywords": [
+    "eslint"
+  ],
+  "author": "The Corporation of the City of Sault Ste. Marie ",
+  "type": "module ",
+  "scripts": {
+    "test": "node ./test/runEslint.js",
+    "coverage": "c8 node ./test/runEslint.js"
+  },
+  "devDependencies": {
+    "prettier-config-cityssm": "^1.0.0"
+  },
+  "dependencies": {
+    "prettier-config-cityssm": "^1.0.0"
+  }
+}

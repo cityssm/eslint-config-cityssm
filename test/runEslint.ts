@@ -4,7 +4,7 @@
 import { exec } from 'node:child_process'
 
 const eslintCommand =
-  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/*.sample.css ./samples/*.sample.json ./samples/*.sample.md ./samples/*.sample.ts'
+  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/package.json ./samples/*.sample.css ./samples/*.sample.json ./samples/*.sample.md ./samples/*.sample.ts'
 
 console.log(`Running ${eslintCommand} ...`)
 
@@ -59,6 +59,7 @@ try {
       'n/',
       'no-secrets/',
       'no-unsanitized/',
+      'package-json/',
       'perfectionist/',
       'promise/',
       'regexp/',
