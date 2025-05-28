@@ -67,10 +67,10 @@
     "eslint-plugin-unicorn": "^59.0.1",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.32.1"
+    "typescript-eslint": "^8.33.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.21",
+    "@types/node": "^22.15.23",
     "prettier-config-cityssm": "^1.0.0"
   }
 }
