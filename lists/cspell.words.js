@@ -7,8 +7,11 @@ export const words = [
     'saultstemarie',
     /* CitySSM Web App words */
     'datetimepicker',
+    'fieldsets',
+    'fontawesome',
     'fullwidth',
     'hoverable',
+    'inputmode',
     'maxlength',
     'onremoved',
     'onshown',
@@ -16,6 +19,7 @@ export const words = [
     'vcentered',
     'yellow',
     /* Database-related words */
+    'autoincrement',
     'ifnull',
     'nvarchar',
     'recordset',

@@ -8,8 +8,11 @@ export const words = [
 
   /* CitySSM Web App words */
   'datetimepicker',
+  'fieldsets',
+  'fontawesome',
   'fullwidth',
   'hoverable',
+  'inputmode',
   'maxlength',
   'onremoved',
   'onshown',
@@ -18,6 +21,7 @@ export const words = [
   'yellow',
 
   /* Database-related words */
+  'autoincrement',
   'ifnull',
   'nvarchar',
   'recordset',
