@@ -261,6 +261,8 @@ export const configWebApp: ConfigArray = tseslint.config(
       'no-unsanitized': eslintPluginNoUnsanitized
     },
     rules: {
+      'no-redeclare': 'off',
+      
       '@typescript-eslint/init-declarations': 'off',
 
       '@typescript-eslint/no-magic-numbers': [

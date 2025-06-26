@@ -223,6 +223,7 @@ export const configWebApp = tseslint.config(config, {
         'no-unsanitized': eslintPluginNoUnsanitized
     },
     rules: {
+        'no-redeclare': 'off',
         '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/no-magic-numbers': [
             'warn',
