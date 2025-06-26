@@ -101,6 +101,7 @@ export const config = tseslint.config({
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
+        'no-redeclare': 'off',
         'no-secrets/no-secrets': 'error',
         'no-undef': 'off',
         // checked by "@typescript-eslint/no-unused-vars"
@@ -223,7 +224,6 @@ export const configWebApp = tseslint.config(config, {
         'no-unsanitized': eslintPluginNoUnsanitized
     },
     rules: {
-        'no-redeclare': 'off',
         '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/no-magic-numbers': [
             'warn',

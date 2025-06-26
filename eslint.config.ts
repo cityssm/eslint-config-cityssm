@@ -119,7 +119,7 @@ export const config: ConfigArray = tseslint.config(
       'n/no-missing-import': 'off',
 
       'no-extra-semi': 'off',
-
+      'no-redeclare': 'off',
       'no-secrets/no-secrets': 'error',
       'no-undef': 'off',
 
@@ -261,8 +261,6 @@ export const configWebApp: ConfigArray = tseslint.config(
       'no-unsanitized': eslintPluginNoUnsanitized
     },
     rules: {
-      'no-redeclare': 'off',
-      
       '@typescript-eslint/init-declarations': 'off',
 
       '@typescript-eslint/no-magic-numbers': [
