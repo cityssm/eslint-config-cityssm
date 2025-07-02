@@ -23,7 +23,7 @@ import tseslint, { type ConfigArray } from 'typescript-eslint'
 
 import cspellFlagWords from './lists/cspell.flagWords.js'
 import cspellWords from './lists/cspell.words.js'
-import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js'
+import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
 export const config: ConfigArray = tseslint.config(
@@ -266,7 +266,7 @@ export const configWebApp: ConfigArray = tseslint.config(
       '@typescript-eslint/no-magic-numbers': [
         'warn',
         {
-          ignore: [...noMagicNumbers, ...httpErrors]
+          ignore: [...noMagicNumbers, ...httpStatusCodes]
         }
       ],
 
@@ -305,7 +305,7 @@ export { default as cspellFlagWords } from './lists/cspell.flagWords.js'
 export { default as cspellWords } from './lists/cspell.words.js'
 
 export {
-  httpErrors as noMagicNumbersHttpErrors,
+  httpStatusCodes as noMagicNumbersHttpStatusCodes,
   default as noMagicNumbersIgnore
 } from './lists/noMagicNumbers.ignore.js'
 

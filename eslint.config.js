@@ -21,7 +21,7 @@ import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comment
 import tseslint from 'typescript-eslint';
 import cspellFlagWords from './lists/cspell.flagWords.js';
 import cspellWords from './lists/cspell.words.js';
-import noMagicNumbers, { httpErrors } from './lists/noMagicNumbers.ignore.js';
+import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js';
 export const config = tseslint.config({
     linterOptions: {
@@ -228,7 +228,7 @@ export const configWebApp = tseslint.config(config, {
         '@typescript-eslint/no-magic-numbers': [
             'warn',
             {
-                ignore: [...noMagicNumbers, ...httpErrors]
+                ignore: [...noMagicNumbers, ...httpStatusCodes]
             }
         ],
         'jsdoc/require-jsdoc': 'off',
@@ -259,7 +259,7 @@ export const configWebApp = tseslint.config(config, {
 });
 export { default as cspellFlagWords } from './lists/cspell.flagWords.js';
 export { default as cspellWords } from './lists/cspell.words.js';
-export { httpErrors as noMagicNumbersHttpErrors, default as noMagicNumbersIgnore } from './lists/noMagicNumbers.ignore.js';
+export { httpStatusCodes as noMagicNumbersHttpStatusCodes, default as noMagicNumbersIgnore } from './lists/noMagicNumbers.ignore.js';
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js';
 export { default as tseslint } from 'typescript-eslint';
 export default config;
