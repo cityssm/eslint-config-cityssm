@@ -169,6 +169,8 @@ export const config: ConfigArray = tseslint.config(
       // checked by "complexity"
       'sonarjs/cognitive-complexity': 'off',
 
+      'sonarjs/different-types-comparison': 'off',
+
       // checked by "regexp/no-dupe-characters-character-class"
       'sonarjs/duplicates-in-character-class': 'off',
 

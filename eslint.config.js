@@ -145,6 +145,7 @@ export const config = tseslint.config({
         'regexp/no-useless-escape': 'off',
         // checked by "complexity"
         'sonarjs/cognitive-complexity': 'off',
+        'sonarjs/different-types-comparison': 'off',
         // checked by "regexp/no-dupe-characters-character-class"
         'sonarjs/duplicates-in-character-class': 'off',
         'sonarjs/no-duplicate-string': 'warn',
