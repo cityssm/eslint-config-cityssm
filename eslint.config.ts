@@ -19,14 +19,15 @@ import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 // import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
+import tseslint from 'typescript-eslint'
 
 import cspellFlagWords from './lists/cspell.flagWords.js'
 import cspellWords from './lists/cspell.words.js'
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
-export const config: ConfigArray = tseslint.config(
+export const config = defineConfig(
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -254,7 +255,7 @@ export const config: ConfigArray = tseslint.config(
   }
 )
 
-export const configWebApp: ConfigArray = tseslint.config(
+export const configWebApp = defineConfig(
   config,
   {
     files: ['**/*.ts', '**/*.js'],
@@ -313,6 +314,7 @@ export {
 
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js'
 
+export { defineConfig } from 'eslint/config'
 export { type Config, default as tseslint } from 'typescript-eslint'
 
 export default config

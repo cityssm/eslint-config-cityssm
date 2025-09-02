@@ -18,12 +18,13 @@ import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 // import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import cspellFlagWords from './lists/cspell.flagWords.js';
 import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js';
-export const config = tseslint.config({
+export const config = defineConfig({
     linterOptions: {
         reportUnusedDisableDirectives: 'error',
         reportUnusedInlineConfigs: 'error'
@@ -218,7 +219,7 @@ export const config = tseslint.config({
         markdown: eslintMarkdown
     }
 });
-export const configWebApp = tseslint.config(config, {
+export const configWebApp = defineConfig(config, {
     files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     plugins: {
@@ -262,5 +263,6 @@ export { default as cspellFlagWords } from './lists/cspell.flagWords.js';
 export { default as cspellWords } from './lists/cspell.words.js';
 export { httpStatusCodes as noMagicNumbersHttpStatusCodes, default as noMagicNumbersIgnore } from './lists/noMagicNumbers.ignore.js';
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js';
+export { defineConfig } from 'eslint/config';
 export { default as tseslint } from 'typescript-eslint';
 export default config;
