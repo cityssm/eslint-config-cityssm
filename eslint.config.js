@@ -1,6 +1,6 @@
 // eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
 /* eslint-disable @cspell/spellchecker, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
-import eslintCspell from '@cspell/eslint-plugin';
+import eslintCspellRecommended from '@cspell/eslint-plugin/recommended';
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import eslintCss from '@eslint/css';
 import eslintJs from '@eslint/js';
@@ -34,6 +34,7 @@ export const config = defineConfig({
         tseslint.configs.recommendedTypeChecked,
         tseslint.configs.stylisticTypeChecked,
         eslintJs.configs.recommended,
+        eslintCspellRecommended,
         eslintPluginEslintComments.recommended,
         eslintPluginJsdoc.configs['flat/recommended-typescript'],
         eslintPluginPerfectionist.configs['recommended-natural'],
@@ -54,7 +55,6 @@ export const config = defineConfig({
         }
     },
     plugins: {
-        '@cspell': eslintCspell,
         'no-secrets': eslintPluginNoSecrets,
         // sonarjs: eslintPluginSonarJs,
         // unicorn: eslintPluginUnicorn,
