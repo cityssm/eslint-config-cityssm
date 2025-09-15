@@ -54,7 +54,7 @@
     "@eslint/markdown": "^7.2.0",
     "eslint": "9.35.0",
     "eslint-config-love": "^123.0.0",
-    "eslint-plugin-jsdoc": "^54.5.0",
+    "eslint-plugin-jsdoc": "^57.0.8",
     "eslint-plugin-n": "^17.21.3",
     "eslint-plugin-no-secrets": "^2.2.1",
     "eslint-plugin-no-unsanitized": "^4.1.4",
