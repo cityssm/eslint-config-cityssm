@@ -15,6 +15,8 @@ document.getElementById('#test')!.insertAdjacentHTML('beforeend'  , cityssm.esca
 
 var val = 4
 
+val++
+
 const mesageElement = document.getElementById('message')
 
 if (val >= 3) {

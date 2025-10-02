@@ -9,6 +9,7 @@ var text = document.getElementsByTagName('p')[2].textContent ?? '';
 document.getElementById('#test').insertAdjacentHTML('beforeend', text);
 document.getElementById('#test').insertAdjacentHTML('beforeend', cityssm.escapeHTML(text));
 var val = 4;
+val++;
 const mesageElement = document.getElementById('message');
 if (val >= 3) {
     messageElement.classList.add('is-active');
