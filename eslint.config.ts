@@ -323,6 +323,4 @@ export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments
 export { ConfigObject } from '@eslint/core'
 export { defineConfig } from 'eslint/config'
 
-// export { type Config, default as tseslint } from 'typescript-eslint'
-
 export default config
