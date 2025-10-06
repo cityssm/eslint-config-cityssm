@@ -102,6 +102,7 @@ export const config = defineConfig({
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
         'no-extra-semi': 'off',
+        'no-param-reassign': ['error', { props: false }],
         'no-redeclare': 'off',
         'no-secrets/no-secrets': 'error',
         'no-undef': 'off',

@@ -37,10 +37,18 @@ export async function test_fn (varName) {
   // This file is formatted badly on purpose to ennsure the 
    // ESLint configuration is loadng correctly. 
 
+   varName = ''
+
+
   var VAR = /[0-9\d]/g
 
   return varName + 'test' + ' ' + 2;
 
+}
+
+function test_fn2 (obj: {test: string})
+{
+  obj.test = 'test'
 }
 
 export default function ()  {

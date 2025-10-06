@@ -24,7 +24,9 @@ import tseslint from 'typescript-eslint'
 
 import cspellFlagWords from './lists/cspell.flagWords.js'
 import cspellWords from './lists/cspell.words.js'
-import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js'
+import noMagicNumbers, {
+  httpStatusCodes
+} from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
 export const config = defineConfig(
@@ -39,9 +41,9 @@ export const config = defineConfig(
     extends: [
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
-      
+
       eslintJs.configs.recommended,
-      
+
       eslintCspellRecommended,
       eslintPluginEslintComments.recommended,
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
@@ -120,6 +122,9 @@ export const config = defineConfig(
       'n/no-missing-import': 'off',
 
       'no-extra-semi': 'off',
+
+      'no-param-reassign': ['error', { props: false }],
+
       'no-redeclare': 'off',
       'no-secrets/no-secrets': 'error',
       'no-undef': 'off',
