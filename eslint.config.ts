@@ -3,6 +3,7 @@
 
 import eslintCspellRecommended from '@cspell/eslint-plugin/recommended'
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import type { ConfigObject } from '@eslint/core'
 import eslintCss from '@eslint/css'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
@@ -29,7 +30,7 @@ import noMagicNumbers, {
 } from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsWhitelist from './lists/writeGoodComments.whitelist.js'
 
-export const config = defineConfig(
+export const config: ConfigObject[] = defineConfig(
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -260,7 +261,7 @@ export const config = defineConfig(
   }
 )
 
-export const configWebApp = defineConfig(
+export const configWebApp: ConfigObject[] = defineConfig(
   config,
   {
     files: ['**/*.ts', '**/*.js'],
@@ -319,7 +320,9 @@ export {
 
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js'
 
+export { ConfigObject } from '@eslint/core'
 export { defineConfig } from 'eslint/config'
-export { type Config, default as tseslint } from 'typescript-eslint'
+
+// export { type Config, default as tseslint } from 'typescript-eslint'
 
 export default config
