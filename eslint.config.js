@@ -286,6 +286,29 @@ export const configWebApp = defineConfig(config, {
             {
                 selfClosing: 'always'
             }
+        ],
+        'html/sort-attrs': [
+            'warn',
+            {
+                // https://codeguide.co/#html-attribute-order
+                priority: [
+                    'class',
+                    'id',
+                    'name',
+                    { pattern: 'data-.*' },
+                    'src',
+                    'for',
+                    'type',
+                    'href',
+                    'value',
+                    'title',
+                    'alt',
+                    'role',
+                    { pattern: 'aria-.*' },
+                    'tabindex',
+                    'style'
+                ]
+            }
         ]
     }
 });
