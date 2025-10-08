@@ -324,8 +324,9 @@ export const configWebApp: ConfigObject[] = defineConfig(
       parser: htmlParser,
       parserOptions: {
         templateEngineSyntax: {
-          // here
-          '<%': '%>' // ejs
+          '<%': '%>',
+          '<%=': '%>',
+          '<%-': '%>'
         }
       }
     },

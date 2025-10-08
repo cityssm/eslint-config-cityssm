@@ -273,8 +273,9 @@ export const configWebApp = defineConfig(config, {
         parser: htmlParser,
         parserOptions: {
             templateEngineSyntax: {
-                // here
-                '<%': '%>' // ejs
+                '<%': '%>',
+                '<%=': '%>',
+                '<%-': '%>'
             }
         }
     },
