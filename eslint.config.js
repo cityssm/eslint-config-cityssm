@@ -293,10 +293,12 @@ export const configWebApp = defineConfig(config, {
             {
                 // https://codeguide.co/#html-attribute-order
                 priority: [
+                    // Identification
                     'class',
                     'id',
                     'name',
                     { pattern: 'data-.*' },
+                    // Unique to specific elements
                     'src',
                     'for',
                     'type',
@@ -305,11 +307,16 @@ export const configWebApp = defineConfig(config, {
                     'min',
                     'max',
                     'step',
+                    'minlength',
+                    'maxlength',
+                    // Accessibility
                     'title',
                     'alt',
                     'role',
                     { pattern: 'aria-.*' },
                     'tabindex',
+                    // Style
+                    'rows',
                     'style',
                     { pattern: 'on.*' }
                 ]
