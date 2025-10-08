@@ -353,12 +353,16 @@ export const configWebApp: ConfigObject[] = defineConfig(
             'type',
             'href',
             'value',
+            'min',
+            'max',
+            'step',
             'title',
             'alt',
             'role',
             { pattern: 'aria-.*' },
             'tabindex',
-            'style'
+            'style',
+            { pattern: 'on.*' }
           ]
         }
       ]

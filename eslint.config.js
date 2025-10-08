@@ -301,12 +301,16 @@ export const configWebApp = defineConfig(config, {
                     'type',
                     'href',
                     'value',
+                    'min',
+                    'max',
+                    'step',
                     'title',
                     'alt',
                     'role',
                     { pattern: 'aria-.*' },
                     'tabindex',
-                    'style'
+                    'style',
+                    { pattern: 'on.*' }
                 ]
             }
         ]
