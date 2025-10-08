@@ -282,6 +282,15 @@ export const configWebApp = defineConfig(config, {
     rules: {
         'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
         'html/indent': ['warn', 2],
+        'html/no-extra-spacing-attrs': [
+            'error',
+            {
+                disallowInAssignment: true,
+                disallowMissing: true,
+                disallowTabs: true,
+                enforceBeforeSelfClose: true
+            }
+        ],
         'html/require-closing-tags': [
             'error',
             {
