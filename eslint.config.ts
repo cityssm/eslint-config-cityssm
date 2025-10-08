@@ -332,7 +332,13 @@ export const configWebApp: ConfigObject[] = defineConfig(
 
     extends: ['html/recommended'],
     rules: {
-      'html/indent': ['warn', 2]
+      'html/indent': ['warn', 2],
+      'html/require-closing-tags': [
+        'error',
+        {
+          selfClosing: 'always'
+        }
+      ]
     }
   }
 )

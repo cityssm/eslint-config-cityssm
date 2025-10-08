@@ -280,7 +280,13 @@ export const configWebApp = defineConfig(config, {
     },
     extends: ['html/recommended'],
     rules: {
-        'html/indent': ['warn', 2]
+        'html/indent': ['warn', 2],
+        'html/require-closing-tags': [
+            'error',
+            {
+                selfClosing: 'always'
+            }
+        ]
     }
 });
 export { default as cspellFlagWords } from './lists/cspell.flagWords.js';
