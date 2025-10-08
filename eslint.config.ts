@@ -332,6 +332,7 @@ export const configWebApp: ConfigObject[] = defineConfig(
 
     extends: ['html/recommended'],
     rules: {
+      'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
       'html/indent': ['warn', 2],
       'html/require-closing-tags': [
         'error',
