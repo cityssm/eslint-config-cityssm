@@ -325,8 +325,10 @@ export const configWebApp = defineConfig(config, {
                     { pattern: 'aria-.*' },
                     'tabindex',
                     // Style
+                    'placeholder',
                     'rows',
                     'style',
+                    // JavaScript
                     { pattern: 'on.*' }
                 ]
             }

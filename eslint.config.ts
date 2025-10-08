@@ -380,8 +380,11 @@ export const configWebApp: ConfigObject[] = defineConfig(
             'tabindex',
 
             // Style
+            'placeholder',
             'rows',
             'style',
+
+            // JavaScript
             { pattern: 'on.*' }
           ]
         }
