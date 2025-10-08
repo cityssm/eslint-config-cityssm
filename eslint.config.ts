@@ -8,6 +8,8 @@ import eslintCss from '@eslint/css'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
+import eslintHtml from '@html-eslint/eslint-plugin'
+import htmlParser from '@html-eslint/parser'
 import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
@@ -267,8 +269,11 @@ export const configWebApp: ConfigObject[] = defineConfig(
     files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
     plugins: {
+      html: eslintHtml,
       'no-unsanitized': eslintPluginNoUnsanitized
     },
+
+    extends: ['html/recommended'],
     rules: {
       '@typescript-eslint/init-declarations': 'off',
 
@@ -307,6 +312,28 @@ export const configWebApp: ConfigObject[] = defineConfig(
     plugins: {
       css: eslintCss
     }
+  },
+  {
+    files: ['**/*.ejs', '**/*.html'],
+    language: 'html/html',
+    plugins: {
+      html: eslintHtml
+    },
+
+    languageOptions: {
+      parser: htmlParser,
+      parserOptions: {
+        templateEngineSyntax: {
+          // here
+          '<%': '%>' // ejs
+        }
+      }
+    },
+
+    extends: ['html/recommended'],
+    rules: {
+      'html/indent': ['warn', 2]
+    }
   }
 )
 
@@ -320,7 +347,7 @@ export {
 
 export { default as writeGoodCommentsWhitelist } from './lists/writeGoodComments.whitelist.js'
 
-export { ConfigObject } from '@eslint/core'
+export type { ConfigObject } from '@eslint/core'
 export { defineConfig } from 'eslint/config'
 
 export default config

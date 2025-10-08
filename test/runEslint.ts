@@ -3,13 +3,23 @@
 
 import { exec } from 'node:child_process'
 
+const sampleFiles = [
+  './samples/package.json',
+  './samples/*.sample.css',
+  './samples/*.sample.ejs',
+  './samples/*.sample.html',
+  './samples/*.sample.json',
+  './samples/*.sample.md',
+  './samples/*.sample.ts'
+]
+
 const eslintCommand =
-  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ./samples/package.json ./samples/*.sample.css ./samples/*.sample.json ./samples/*.sample.md ./samples/*.sample.ts'
+  `eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error ${sampleFiles.join(' ')}`
 
 console.log(`Running ${eslintCommand} ...`)
 
 try {
-  // eslint-disable-next-line sonarjs/no-os-command-from-path, sonarjs/os-command
+  // eslint-disable-next-line sonarjs/os-command
   exec(eslintCommand, (error, stdout, stderr) => {
     /*
      * Print output
@@ -53,6 +63,7 @@ try {
       '@eslint-community/eslint-comments/',
       '@typescript-eslint/',
       'css/',
+      'html/',
       'jsdoc/',
       'json/',
       'markdown/',

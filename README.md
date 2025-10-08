@@ -62,10 +62,11 @@ export default [...eslintConfigCityssm]
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 - [eslint-plugin-woke](https://www.npmjs.com/package/eslint-plugin-woke)
 - [eslint-plugin-write-good-comments](https://www.npmjs.com/package/eslint-plugin-write-good-comments)
+- [html-eslint](https://github.com/yeonjuan/html-eslint)
 
 ## Projects Using eslint-config-cityssm
 
-[**Used in 50+ projects**](https://github.com/search?q=eslint-config-cityssm+path%3A**%2Fpackage.json&type=code), including:
+[**Used in 70+ projects**](https://github.com/search?q=eslint-config-cityssm+path%3A**%2Fpackage.json&type=code), including:
 
 - [EMILE (Energy Monitoring in Less Effort)](https://github.com/cityssm/EMILE)
 

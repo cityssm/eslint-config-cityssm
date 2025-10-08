@@ -17,3 +17,5 @@ if (val >= 3) {
 else {
     messageElement.classList.remove('is-active');
 }
+document.write(`<p>
+  Test ${'val'} `);
