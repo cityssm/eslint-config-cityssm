@@ -2,17 +2,19 @@
 .github
 .nyc_output
 .vscode
+
 coverage
 node_modules
 samples
 test
 
 .deepsource.toml
-.eslintignore
 .gitignore
+.markdownlint.json
 .ncurc.json
 .npmignore
 .prettierignore
+
 banner.png
 prettier.config.*
 tsconfig.json
