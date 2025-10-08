@@ -30,14 +30,37 @@ For web applications, export `configWebApp` instead.
 export { configWebApp as default } from 'eslint-config-cityssm'
 ```
 
-## Advanced Usage
+## Advanced Usage (TypeScript)
 
-In the project's `eslint.config.js` file.
+```typescript
+import {
+  type ConfigObject,
+  configWebApp,
+  cspellWords,
+  defineConfig
+} from 'eslint-config-cityssm'
 
-```javascript
-import eslintConfigCityssm from 'eslint-config-cityssm'
+export const config: ConfigObject[] = defineConfig(configWebApp, {
+  files: ['**/*.ts'],
+  languageOptions: {
+    parserOptions: {
+      project: ['./tsconfig.json', './public/javascripts/tsconfig.json']
+    }
+  },
+  rules: {
+    '@cspell/spellchecker': [
+      'warn',
+      {
+        cspell: {
+          words: [...cspellWords, 'autoincrement', 'fontawesome']
+        }
+      }
+    ],
+    '@typescript-eslint/no-unsafe-type-assertion': 'off'
+  }
+})
 
-export default [...eslintConfigCityssm]
+export default config
 ```
 
 ## Included Plugins
