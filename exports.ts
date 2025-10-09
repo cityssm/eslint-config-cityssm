@@ -7,6 +7,3 @@ export {
 } from './lists/noMagicNumbers.ignore.js'
 
 export { default as writeGoodCommentsAllowlist } from './lists/writeGoodComments.allowlist.js'
-
-export type { ConfigObject } from '@eslint/core'
-export { defineConfig } from 'eslint/config'

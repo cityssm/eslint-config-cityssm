@@ -7,6 +7,9 @@ import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
 import { defineConfig } from 'eslint/config';
 import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
+/**
+ * ESLint Configuration for Web Applications
+ */
 export const config = defineConfig(packageConfig, {
     files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
@@ -124,3 +127,4 @@ export const config = defineConfig(packageConfig, {
     }
 });
 export default config;
+export { defineConfig } from 'eslint/config';

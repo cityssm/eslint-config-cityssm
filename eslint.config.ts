@@ -13,6 +13,9 @@ import noMagicNumbers, {
   httpStatusCodes
 } from './lists/noMagicNumbers.ignore.js'
 
+/**
+ * ESLint Configuration for Web Applications
+ */
 export const config: ConfigObject[] = defineConfig(
   packageConfig,
   {
@@ -147,3 +150,6 @@ export const config: ConfigObject[] = defineConfig(
 )
 
 export default config
+
+export type { ConfigObject } from '@eslint/core'
+export { defineConfig } from 'eslint/config'

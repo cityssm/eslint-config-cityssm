@@ -13,7 +13,6 @@ import * as eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecurity from 'eslint-plugin-security'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
-// import * as eslintPluginWoke from 'eslint-plugin-woke'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
@@ -23,6 +22,9 @@ import cspellWords from './lists/cspell.words.js'
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
 
+/**
+ * ESLint Configuration for General TypeScript/JavaScript Projects
+ */
 export const config: ConfigObject[] = defineConfig(
   {
     linterOptions: {
@@ -255,3 +257,6 @@ export const config: ConfigObject[] = defineConfig(
 )
 
 export default config
+
+export type { ConfigObject } from '@eslint/core'
+export { defineConfig } from 'eslint/config'
