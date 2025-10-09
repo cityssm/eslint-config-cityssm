@@ -39,6 +39,8 @@
   "type": "module",
   "exports": {
     ".": "./eslint.config.js",
+    "./packageConfig": "./eslint.packageConfig.js",
+    "./eslint.packageConfig.js": "./eslint.packageConfig.js",
     "./eslint.config.js": "./eslint.config.js"
   },
   "main": "eslint.config.js",
