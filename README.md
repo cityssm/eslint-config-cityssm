@@ -32,7 +32,7 @@ export { default } from 'eslint-config-cityssm/packageConfig'
 ## Advanced Usage (TypeScript)
 
 ```typescript
-import default as configWebApp {
+import configWebApp {
   type ConfigObject,
   defineConfig
 } from 'eslint-config-cityssm'
