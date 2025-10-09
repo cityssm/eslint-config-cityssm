@@ -17,28 +17,26 @@ npm install --save-dev eslint-config-cityssm
 
 ## Simple Usage
 
-In the project's `eslint.config.js` file,
-it's as easy as one line.
+For web applications, export the default export.
 
 ```javascript
 export { default } from 'eslint-config-cityssm'
 ```
 
-For web applications, export `configWebApp` instead.
+For simpler packages, export the `packageConfig`.
 
 ```javascript
-export { configWebApp as default } from 'eslint-config-cityssm'
+export { default } from 'eslint-config-cityssm/packageConfig'
 ```
 
 ## Advanced Usage (TypeScript)
 
 ```typescript
-import {
+import default as configWebApp {
   type ConfigObject,
-  configWebApp,
-  cspellWords,
   defineConfig
 } from 'eslint-config-cityssm'
+import { cspellWords } from 'eslint-config-cityssm/exports'
 
 export const config: ConfigObject[] = defineConfig(configWebApp, {
   files: ['**/*.ts'],
