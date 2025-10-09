@@ -60,7 +60,6 @@ export const config = defineConfig(packageConfig, {
     languageOptions: {
         parser: htmlParser,
         parserOptions: {
-            rawContentTags: ['%'],
             templateEngineSyntax: {
                 '<%': '%>',
                 '<%-': '%>',

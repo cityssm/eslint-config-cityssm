@@ -76,7 +76,6 @@ export const config: ConfigObject[] = defineConfig(
     languageOptions: {
       parser: htmlParser,
       parserOptions: {
-        rawContentTags: ['%'],
         templateEngineSyntax: {
           '<%': '%>',
           '<%-': '%>',
