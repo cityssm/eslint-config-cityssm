@@ -150,5 +150,5 @@ export const config: ConfigObject[] = defineConfig(
 
 export default config
 
-export type { ConfigObject } from '@eslint/core'
+export { ConfigObject } from '@eslint/core'
 export { defineConfig } from 'eslint/config'
