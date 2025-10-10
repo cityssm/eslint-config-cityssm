@@ -7,6 +7,62 @@ import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
 import { defineConfig } from 'eslint/config';
 import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
+const htmlEslintRulesConfig = {
+    'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+    'html/indent': ['warn', 2],
+    'html/no-extra-spacing-attrs': [
+        'error',
+        {
+            disallowInAssignment: true,
+            disallowMissing: true,
+            disallowTabs: true,
+            enforceBeforeSelfClose: true
+        }
+    ],
+    'html/require-closing-tags': [
+        'error',
+        {
+            selfClosing: 'always'
+        }
+    ],
+    'html/sort-attrs': [
+        'warn',
+        {
+            // https://codeguide.co/#html-attribute-order
+            priority: [
+                // Identification
+                'class',
+                'id',
+                'name',
+                { pattern: 'data-.*' },
+                // Unique to specific elements
+                'src',
+                'for',
+                'type',
+                'href',
+                'value',
+                'min',
+                'max',
+                'step',
+                'minlength',
+                'maxlength',
+                // Accessibility
+                'title',
+                'alt',
+                'role',
+                { pattern: 'aria-.*' },
+                'tabindex',
+                // Style
+                'placeholder',
+                'rows',
+                'style',
+                // JavaScript
+                { pattern: 'on.*' }
+            ]
+        }
+    ],
+    'html/use-baseline': 'warn'
+};
 /**
  * ESLint Configuration for Web Applications
  */
@@ -19,6 +75,7 @@ export const config = defineConfig(packageConfig, {
     },
     extends: ['html/recommended'],
     rules: {
+        ...htmlEslintRulesConfig,
         '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/no-magic-numbers': [
             'warn',
@@ -69,60 +126,7 @@ export const config = defineConfig(packageConfig, {
     },
     extends: ['html/recommended'],
     rules: {
-        'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
-        'html/indent': ['warn', 2],
-        'html/no-extra-spacing-attrs': [
-            'error',
-            {
-                disallowInAssignment: true,
-                disallowMissing: true,
-                disallowTabs: true,
-                enforceBeforeSelfClose: true
-            }
-        ],
-        'html/require-closing-tags': [
-            'error',
-            {
-                selfClosing: 'always'
-            }
-        ],
-        'html/sort-attrs': [
-            'warn',
-            {
-                // https://codeguide.co/#html-attribute-order
-                priority: [
-                    // Identification
-                    'class',
-                    'id',
-                    'name',
-                    { pattern: 'data-.*' },
-                    // Unique to specific elements
-                    'src',
-                    'for',
-                    'type',
-                    'href',
-                    'value',
-                    'min',
-                    'max',
-                    'step',
-                    'minlength',
-                    'maxlength',
-                    // Accessibility
-                    'title',
-                    'alt',
-                    'role',
-                    { pattern: 'aria-.*' },
-                    'tabindex',
-                    // Style
-                    'placeholder',
-                    'rows',
-                    'style',
-                    // JavaScript
-                    { pattern: 'on.*' }
-                ]
-            }
-        ],
-        'html/use-baseline': 'warn'
+        ...htmlEslintRulesConfig
     }
 });
 export default config;

@@ -1,7 +1,7 @@
 // eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-import type { ConfigObject } from '@eslint/core'
+import type { ConfigObject, RulesConfig } from '@eslint/core'
 import eslintCss from '@eslint/css'
 import eslintHtml from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
@@ -12,6 +12,67 @@ import packageConfig from './eslint.packageConfig.js'
 import noMagicNumbers, {
   httpStatusCodes
 } from './lists/noMagicNumbers.ignore.js'
+
+const htmlEslintRulesConfig: Partial<RulesConfig> = {
+  'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+  'html/indent': ['warn', 2],
+  'html/no-extra-spacing-attrs': [
+    'error',
+    {
+      disallowInAssignment: true,
+      disallowMissing: true,
+      disallowTabs: true,
+      enforceBeforeSelfClose: true
+    }
+  ],
+  'html/require-closing-tags': [
+    'error',
+    {
+      selfClosing: 'always'
+    }
+  ],
+  'html/sort-attrs': [
+    'warn',
+    {
+      // https://codeguide.co/#html-attribute-order
+      priority: [
+        // Identification
+        'class',
+        'id',
+        'name',
+        { pattern: 'data-.*' },
+
+        // Unique to specific elements
+        'src',
+        'for',
+        'type',
+        'href',
+        'value',
+        'min',
+        'max',
+        'step',
+        'minlength',
+        'maxlength',
+
+        // Accessibility
+        'title',
+        'alt',
+        'role',
+        { pattern: 'aria-.*' },
+        'tabindex',
+
+        // Style
+        'placeholder',
+        'rows',
+        'style',
+
+        // JavaScript
+        { pattern: 'on.*' }
+      ]
+    }
+  ],
+  'html/use-baseline': 'warn'
+}
 
 /**
  * ESLint Configuration for Web Applications
@@ -28,6 +89,8 @@ export const config: ConfigObject[] = defineConfig(
 
     extends: ['html/recommended'],
     rules: {
+      ...htmlEslintRulesConfig,
+      
       '@typescript-eslint/init-declarations': 'off',
 
       '@typescript-eslint/no-magic-numbers': [
@@ -86,69 +149,14 @@ export const config: ConfigObject[] = defineConfig(
 
     extends: ['html/recommended'],
     rules: {
-      'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
-      'html/indent': ['warn', 2],
-      'html/no-extra-spacing-attrs': [
-        'error',
-        {
-          disallowInAssignment: true,
-          disallowMissing: true,
-          disallowTabs: true,
-          enforceBeforeSelfClose: true
-        }
-      ],
-      'html/require-closing-tags': [
-        'error',
-        {
-          selfClosing: 'always'
-        }
-      ],
-      'html/sort-attrs': [
-        'warn',
-        {
-          // https://codeguide.co/#html-attribute-order
-          priority: [
-            // Identification
-            'class',
-            'id',
-            'name',
-            { pattern: 'data-.*' },
-
-            // Unique to specific elements
-            'src',
-            'for',
-            'type',
-            'href',
-            'value',
-            'min',
-            'max',
-            'step',
-            'minlength',
-            'maxlength',
-
-            // Accessibility
-            'title',
-            'alt',
-            'role',
-            { pattern: 'aria-.*' },
-            'tabindex',
-
-            // Style
-            'placeholder',
-            'rows',
-            'style',
-
-            // JavaScript
-            { pattern: 'on.*' }
-          ]
-        }
-      ],
-      'html/use-baseline': 'warn'
+      ...htmlEslintRulesConfig
     }
   }
 )
 
 export default config
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-exports
 export { ConfigObject } from '@eslint/core'
+
 export { defineConfig } from 'eslint/config'

@@ -19,3 +19,4 @@ else {
 }
 document.write(`<p>
   Test ${'val'} `);
+const html = /*html*/ `<p>`;

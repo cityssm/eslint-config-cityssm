@@ -193,6 +193,7 @@ export const config = defineConfig({
             'warn',
             {
                 passive: false,
+                // eslint-disable-next-line @cspell/spellchecker
                 whitelist: writeGoodCommentsAllowlist
             }
         ]

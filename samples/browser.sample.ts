@@ -27,3 +27,6 @@ if (val >= 3) {
 
 document.write(`<p>
   Test ${'val'} `)
+
+const html = /*html*/`<p>`
+

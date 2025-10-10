@@ -227,6 +227,8 @@ export const config: ConfigObject[] = defineConfig(
         'warn',
         {
           passive: false,
+
+          // eslint-disable-next-line @cspell/spellchecker
           whitelist: writeGoodCommentsAllowlist
         }
       ]
@@ -258,5 +260,7 @@ export const config: ConfigObject[] = defineConfig(
 
 export default config
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-exports
 export { ConfigObject } from '@eslint/core'
+
 export { defineConfig } from 'eslint/config'
