@@ -1,4 +1,4 @@
-import eslintCspellRecommended from '@cspell/eslint-plugin/recommended'
+import eslintCspell from '@cspell/eslint-plugin'
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import type { ConfigObject } from '@eslint/core'
 import eslintJs from '@eslint/js'
@@ -40,7 +40,6 @@ export const config: ConfigObject[] = defineConfig(
 
       eslintJs.configs.recommended,
 
-      eslintCspellRecommended,
       eslintPluginEslintComments.recommended,
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginPerfectionist.configs['recommended-natural'],
@@ -62,6 +61,7 @@ export const config: ConfigObject[] = defineConfig(
     },
 
     plugins: {
+      '@cspell': eslintCspell,
       'no-secrets': eslintPluginNoSecrets,
       // sonarjs: eslintPluginSonarJs,
       // unicorn: eslintPluginUnicorn,
