@@ -181,6 +181,9 @@ export const config: ConfigObject[] = defineConfig(
       // checked by "@typescript-eslint/no-misused-promises"
       'sonarjs/no-misused-promises': 'off',
 
+      // checked by "max-nested-callbacks"
+      'sonarjs/no-nested-functions': 'off',
+
       // checked by "@typescript-eslint/no-redundant-type-constituents"
       'sonarjs/no-redundant-type-constituents': 'off',
 
