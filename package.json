@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cityssm",
-  "version": "33.1.1",
+  "version": "33.2.0",
   "description": "ESLint rules used in the City of Sault Ste. Marie's TypeScript projects.",
   "keywords": [
     "eslint",
