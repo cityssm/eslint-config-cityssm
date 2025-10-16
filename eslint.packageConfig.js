@@ -47,9 +47,9 @@ export const config = defineConfig({
         parserOptions: {
             ecmaFeatures: { modules: true },
             ecmaVersion: 2022,
-            projectService: true,
             sourceType: 'module',
-            tsconfigRootDir: import.meta.dirname,
+            projectService: true,
+            tsconfigRootDir: import.meta.dirname
         }
     },
     plugins: {
@@ -66,7 +66,7 @@ export const config = defineConfig({
             {
                 cspell: {
                     flagWords: cspellFlagWords,
-                    language: 'en-CA,en-US,en-GB',
+                    language: 'en-CA',
                     words: cspellWords
                 }
             }

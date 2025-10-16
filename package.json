@@ -48,6 +48,7 @@
   "main": "eslint.config.js",
   "scripts": {
     "coverage": "c8 node ./test/runEslint.js",
+    "performance": "cross-env TIMING=1 eslint samples",
     "test": "node ./test/runEslint.js"
   },
   "dependencies": {

@@ -9,5 +9,11 @@
     <button
       _<% if (true) { %> class="active" <% } %>
       onclick="alert('Button clicked!')">Click Me</button>
+
+    <select>
+
+      <option value="1"
+        _<% if (selectedOption === '1') { %> selected <% } %>>Option 1</option>
+    </select>
   </body>
 </html>
