@@ -41,14 +41,15 @@ export const config = defineConfig({
         eslintPluginUnicorn.configs.recommended,
         eslintConfigLove
     ],
-    files: ['**/*.ts', '**/*.js'],
+    files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
     languageOptions: {
         parserOptions: {
             ecmaFeatures: { modules: true },
             ecmaVersion: 2022,
-            project: true,
-            sourceType: 'module'
+            projectService: true,
+            sourceType: 'module',
+            tsconfigRootDir: import.meta.dirname,
         }
     },
     plugins: {

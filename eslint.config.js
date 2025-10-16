@@ -67,7 +67,7 @@ const htmlEslintRulesConfig = {
  * ESLint Configuration for Web Applications
  */
 export const config = defineConfig(packageConfig, {
-    files: ['**/*.ts', '**/*.js'],
+    files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
     plugins: {
         html: eslintHtml,

@@ -80,7 +80,7 @@ const htmlEslintRulesConfig: Partial<RulesConfig> = {
 export const config: ConfigObject[] = defineConfig(
   packageConfig,
   {
-    files: ['**/*.ts', '**/*.js'],
+    files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
     plugins: {
       html: eslintHtml,
