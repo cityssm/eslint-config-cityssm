@@ -55,9 +55,6 @@ export const config = defineConfig({
     plugins: {
         '@cspell': eslintCspell,
         'no-secrets': eslintPluginNoSecrets,
-        // sonarjs: eslintPluginSonarJs,
-        // unicorn: eslintPluginUnicorn,
-        // woke: eslintPluginWoke,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -66,7 +63,7 @@ export const config = defineConfig({
             {
                 cspell: {
                     flagWords: cspellFlagWords,
-                    language: 'en-CA',
+                    language: 'en-US,en-GB',
                     words: cspellWords
                 }
             }

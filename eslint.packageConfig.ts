@@ -37,9 +37,9 @@ export const config: ConfigObject[] = defineConfig(
     extends: [
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
-
+      
       eslintJs.configs.recommended,
-
+      
       eslintPluginEslintComments.recommended,
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginPerfectionist.configs['recommended-natural'],
@@ -65,9 +65,6 @@ export const config: ConfigObject[] = defineConfig(
     plugins: {
       '@cspell': eslintCspell,
       'no-secrets': eslintPluginNoSecrets,
-      // sonarjs: eslintPluginSonarJs,
-      // unicorn: eslintPluginUnicorn,
-      // woke: eslintPluginWoke,
       'write-good-comments': eslintPluginWriteGoodComments
     },
 
@@ -77,7 +74,7 @@ export const config: ConfigObject[] = defineConfig(
         {
           cspell: {
             flagWords: cspellFlagWords,
-            language: 'en-CA',
+            language: 'en-US,en-GB',
             words: cspellWords
           }
         }
