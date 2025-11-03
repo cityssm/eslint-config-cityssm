@@ -61,7 +61,7 @@
     "@eslint/markdown": "^7.5.0",
     "@html-eslint/eslint-plugin": "^0.47.0",
     "@html-eslint/parser": "^0.47.0",
-    "eslint": "9.38.0",
+    "eslint": "9.39.0",
     "eslint-config-love": "^133.0.0",
     "eslint-plugin-jsdoc": "^61.1.11",
     "eslint-plugin-n": "^17.23.1",
