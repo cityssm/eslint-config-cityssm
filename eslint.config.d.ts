@@ -1,8 +1,6 @@
-import type { ConfigObject } from '@eslint/core';
 /**
  * ESLint Configuration for Web Applications
  */
-export declare const config: ConfigObject[];
+export declare const config: import("eslint/config").Config[];
 export default config;
-export { ConfigObject } from '@eslint/core';
-export { defineConfig } from 'eslint/config';
+export { Config, defineConfig } from 'eslint/config';

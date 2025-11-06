@@ -1,6 +1,5 @@
 import eslintCspell from '@cspell/eslint-plugin'
 import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import type { ConfigObject } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
@@ -25,7 +24,7 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
 /**
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
-export const config: ConfigObject[] = defineConfig(
+export const config = defineConfig(
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -37,9 +36,9 @@ export const config: ConfigObject[] = defineConfig(
     extends: [
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
-      
+
       eslintJs.configs.recommended,
-      
+
       eslintPluginEslintComments.recommended,
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginPerfectionist.configs['recommended-natural'],
@@ -263,6 +262,4 @@ export const config: ConfigObject[] = defineConfig(
 export default config
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-exports
-export { ConfigObject } from '@eslint/core'
-
-export { defineConfig } from 'eslint/config'
+export { Config, defineConfig } from 'eslint/config'
