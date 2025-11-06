@@ -52,7 +52,7 @@
     "test": "node ./test/runEslint.js"
   },
   "dependencies": {
-    "@cspell/eslint-plugin": "^9.2.2",
+    "@cspell/eslint-plugin": "^9.3.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/core": "^0.17.0",
     "@eslint/css": "^0.14.1",
@@ -67,7 +67,7 @@
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-no-secrets": "^2.2.1",
     "eslint-plugin-no-unsanitized": "^4.1.4",
-    "eslint-plugin-package-json": "^0.63.0",
+    "eslint-plugin-package-json": "^0.64.0",
     "eslint-plugin-perfectionist": "^4.15.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.10.0",
