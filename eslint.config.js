@@ -104,7 +104,10 @@ export const config = defineConfig(packageConfig, {
 }, {
     extends: [eslintCss.configs.recommended],
     files: ['**/*.css'],
-    language: 'css/css'
+    language: 'css/css',
+    rules: {
+        'css/use-baseline': 'warn'
+    }
 }, {
     files: ['**/*.ejs', '**/*.html'],
     language: 'html/html',
