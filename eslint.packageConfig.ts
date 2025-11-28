@@ -174,6 +174,9 @@ export const config = defineConfig(
       // checked by "regexp/no-dupe-characters-character-class"
       'sonarjs/duplicates-in-character-class': 'off',
 
+      // checked by "no-control-regex"
+      'sonarjs/no-control-regex': 'off',
+
       'sonarjs/no-duplicate-string': 'warn',
 
       // checked by "@typescript-eslint/no-misused-promises"
