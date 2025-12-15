@@ -60,7 +60,7 @@
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@html-eslint/eslint-plugin": "^0.50.0",
-    "@html-eslint/parser": "^0.50.0",
+    "@html-eslint/parser": "^0.51.0",
     "eslint": "9.39.1",
     "eslint-config-love": "^134.0.0",
     "eslint-plugin-jsdoc": "^61.4.1",
