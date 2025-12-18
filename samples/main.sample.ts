@@ -12,7 +12,7 @@ This
 import path from 'path'
 import fs from  'fs'
 
-import { log, error } from 'console'
+import { log, error, type Console } from 'console'
 
 import 'missing-package'
 import './missing'

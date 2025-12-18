@@ -131,12 +131,11 @@ export const config = defineConfig(
         {
           groups: [
             'builtin',
-            ['external', 'internal-type', 'internal', 'type'],
-            ['parent-type', 'parent'],
-            ['sibling-type', 'sibling'],
+            ['external', 'internal', 'type'],
+            'parent',
+            'sibling',
             'unknown'
-          ],
-          partitionByNewLine: false
+          ]
         }
       ],
       'perfectionist/sort-interfaces': 'warn',
@@ -144,13 +143,13 @@ export const config = defineConfig(
       'perfectionist/sort-named-exports': [
         'error',
         {
-          groupKind: 'types-first'
+          groups: ['type', 'unknown']
         }
       ],
       'perfectionist/sort-named-imports': [
         'error',
         {
-          groupKind: 'types-first'
+          groups: ['type-import', 'unknown']
         }
       ],
       'perfectionist/sort-object-types': 'warn',
@@ -236,11 +235,6 @@ export const config = defineConfig(
           whitelist: writeGoodCommentsAllowlist
         }
       ]
-    },
-    settings: {
-      perfectionist: {
-        partitionByNewLine: true
-      }
     }
   },
   {
@@ -264,5 +258,4 @@ export const config = defineConfig(
 
 export default config
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-exports
-export { Config, defineConfig } from 'eslint/config'
+export { defineConfig, type Config } from 'eslint/config'

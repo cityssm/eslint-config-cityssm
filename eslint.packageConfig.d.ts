@@ -1,6 +1,6 @@
 /**
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
-export declare const config: import("eslint/config").Config[];
+export declare const config: any;
 export default config;
-export { Config, defineConfig } from 'eslint/config';
+export { defineConfig, type Config } from 'eslint/config';

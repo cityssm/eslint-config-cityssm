@@ -130,5 +130,4 @@ export const config = defineConfig(packageConfig, {
     }
 });
 export default config;
-// eslint-disable-next-line @typescript-eslint/consistent-type-exports
 export { defineConfig } from 'eslint/config';
