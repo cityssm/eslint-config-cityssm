@@ -116,12 +116,22 @@ export const config = defineConfig({
                 ]
             }
         ],
-        'perfectionist/sort-interfaces': 'warn',
-        'perfectionist/sort-modules': 'warn',
+        'perfectionist/sort-interfaces': [
+            'warn',
+            {
+                partitionByNewLine: true
+            }
+        ],
+        'perfectionist/sort-modules': [
+            'warn',
+            {
+                partitionByNewLine: true
+            }
+        ],
         'perfectionist/sort-named-exports': [
             'error',
             {
-                groups: ['type', 'unknown']
+                groups: ['type-export', 'unknown']
             }
         ],
         'perfectionist/sort-named-imports': [
@@ -130,8 +140,18 @@ export const config = defineConfig({
                 groups: ['type-import', 'unknown']
             }
         ],
-        'perfectionist/sort-object-types': 'warn',
-        'perfectionist/sort-objects': 'warn',
+        'perfectionist/sort-object-types': [
+            'warn',
+            {
+                partitionByNewLine: true
+            }
+        ],
+        'perfectionist/sort-objects': [
+            'warn',
+            {
+                partitionByNewLine: true
+            }
+        ],
         'perfectionist/sort-union-types': [
             'error',
             {
