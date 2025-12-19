@@ -21,11 +21,19 @@ interface RequiredSystemLists {
   delta: string
   epsilon: string
   zeta: string
-  
+
   eta: string
   theta: string
   iota: string
   kappa: string
   lambda: string
   mu: string
+}
+
+type RequiredSystemListKeys = {
+  alpha: keyof typeof REQUIRED_SYSTEM_LISTS
+  beta: keyof typeof REQUIRED_SYSTEM_LISTS
+  gamma: keyof typeof REQUIRED_SYSTEM_LISTS
+  
+  delta: keyof typeof REQUIRED_SYSTEM_LISTS
 }

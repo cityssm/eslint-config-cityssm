@@ -109,11 +109,12 @@ export const config = defineConfig({
             {
                 groups: [
                     'builtin',
-                    ['external', 'internal', 'type'],
+                    ['external', 'internal'],
                     'parent',
                     'sibling',
                     'unknown'
-                ]
+                ],
+                newlinesBetween: 1
             }
         ],
         'perfectionist/sort-interfaces': [
