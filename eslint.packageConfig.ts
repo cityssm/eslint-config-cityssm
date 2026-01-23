@@ -1,5 +1,4 @@
 import eslintCspell from '@cspell/eslint-plugin'
-import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
@@ -8,7 +7,7 @@ import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
 import eslintPluginPackageJson from 'eslint-plugin-package-json'
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist'
-import * as eslintPluginRegexp from 'eslint-plugin-regexp'
+import eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecurity from 'eslint-plugin-security'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
@@ -39,7 +38,6 @@ export const config = defineConfig(
 
       eslintJs.configs.recommended,
 
-      eslintPluginEslintComments.recommended,
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginPerfectionist.configs['recommended-natural'],
       eslintPluginRegexp.configs['flat/recommended'],
@@ -109,7 +107,7 @@ export const config = defineConfig(
         }
       ],
 
-      'eslint-comments/require-description': 'off',
+      '@eslint-community/eslint-comments/require-description': 'warn',
 
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
@@ -258,7 +256,7 @@ export const config = defineConfig(
         {
           passive: false,
 
-          // eslint-disable-next-line @cspell/spellchecker
+          // eslint-disable-next-line @cspell/spellchecker -- Allow forbidden word
           whitelist: writeGoodCommentsAllowlist
         }
       ]

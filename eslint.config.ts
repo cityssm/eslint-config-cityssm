@@ -1,6 +1,3 @@
-// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
 import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintCss from '@eslint/css'
 import eslintHtml from '@html-eslint/eslint-plugin'
@@ -84,6 +81,7 @@ export const config = defineConfig(
     ignores: ['**/*.d.ts'],
     plugins: {
       html: eslintHtml,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'no-unsanitized': eslintPluginNoUnsanitized
     },
 
