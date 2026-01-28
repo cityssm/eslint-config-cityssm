@@ -1,4 +1,3 @@
-// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
 /* eslint-disable no-console */
 import { exec } from 'node:child_process';
 const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples';

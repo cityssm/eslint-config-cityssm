@@ -171,6 +171,7 @@ export const config = defineConfig({
         'sonarjs/no-misused-promises': 'off',
         // checked by "max-nested-callbacks"
         'sonarjs/no-nested-functions': 'off',
+        'sonarjs/no-nested-template-literals': 'warn',
         // checked by "@typescript-eslint/no-redundant-type-constituents"
         'sonarjs/no-redundant-type-constituents': 'off',
         'sonarjs/unnecessary-character-escapes': 'off',
