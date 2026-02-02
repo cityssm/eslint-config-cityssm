@@ -63,7 +63,7 @@
     "@html-eslint/parser": "^0.54.0",
     "baseline-browser-mapping": "^2.9.19",
     "eslint": "9.39.2",
-    "eslint-config-love": "^147.0.0",
+    "eslint-config-love": "^149.0.0",
     "eslint-plugin-jsdoc": "^62.4.1",
     "eslint-plugin-n": "^17.23.2",
     "eslint-plugin-no-secrets": "^2.2.1",
