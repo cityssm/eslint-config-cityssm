@@ -113,6 +113,8 @@ export const config = defineConfig(
 
       'n/no-missing-import': 'off',
 
+      'no-await-in-loop': 'warn',
+
       'no-extra-semi': 'off',
 
       'no-param-reassign': ['error', { props: false }],

@@ -95,6 +95,7 @@ export const config = defineConfig({
         '@eslint-community/eslint-comments/require-description': 'warn',
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
+        'no-await-in-loop': 'warn',
         'no-extra-semi': 'off',
         'no-param-reassign': ['error', { props: false }],
         'no-redeclare': 'off',
