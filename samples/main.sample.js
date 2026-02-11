@@ -26,8 +26,8 @@ fs_1.default.exists(FilePath);
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
 async function test_fn(varName) {
-    // This file is formatted badly on purpose to ennsure the 
-    // ESLint configuration is loadng correctly. 
+    // This file is formatted badly on purpose to ennsure the
+    // ESLint configuration is loadng correctly.
     varName = '';
     var VAR = /[0-9\d]/g;
     return varName + 'test' + ' ' + 2;

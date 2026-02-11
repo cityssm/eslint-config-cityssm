@@ -9,6 +9,8 @@ samples
 test
 
 .deepsource.toml
+.editorconfig
+.gitattributes
 .gitignore
 .markdownlint.json
 .ncurc.json

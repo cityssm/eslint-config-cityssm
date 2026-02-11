@@ -1,9 +1,9 @@
      /*
 This
-    file 
+    file
       is
-         intentionally 
- horrible. 
+         intentionally
+ horrible.
 
 */
 
@@ -34,8 +34,8 @@ const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNE
 
 export async function test_fn (varName) {
 
-  // This file is formatted badly on purpose to ennsure the 
-   // ESLint configuration is loadng correctly. 
+  // This file is formatted badly on purpose to ennsure the
+   // ESLint configuration is loadng correctly.
 
    varName = ''
 
@@ -64,7 +64,7 @@ async function promiseTst (param1, param2?
     for (let i = 1; i <= 1; i ++) {
       //
     }
-    
+
     if (1 == 1)
     return 'test' + 'test' + 'test' + 'test'+ 'test'
   return 'test' | 'test'

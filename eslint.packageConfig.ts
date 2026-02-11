@@ -1,4 +1,5 @@
 import eslintCspell from '@cspell/eslint-plugin'
+import type { Plugin } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
@@ -272,7 +273,7 @@ export const config = defineConfig(
     ignores: ['**/package.json', '**/package-lock.json'],
     language: 'json/json',
     plugins: {
-      json: eslintJson
+      json: eslintJson as unknown as Plugin
     }
   },
   {

@@ -34,6 +34,6 @@ type RequiredSystemListKeys = {
   alpha: keyof typeof REQUIRED_SYSTEM_LISTS
   beta: keyof typeof REQUIRED_SYSTEM_LISTS
   gamma: keyof typeof REQUIRED_SYSTEM_LISTS
-  
+
   delta: keyof typeof REQUIRED_SYSTEM_LISTS
 }
