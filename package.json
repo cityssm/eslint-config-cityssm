@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cityssm",
-  "version": "38.1.0",
+  "version": "38.2.0",
   "description": "ESLint rules used in the City of Sault Ste. Marie's TypeScript projects.",
   "keywords": [
     "eslint",
@@ -57,30 +57,30 @@
     "@eslint/core": "^1.1.0",
     "@eslint/css": "^0.14.1",
     "@eslint/js": "9.39.2",
-    "@eslint/json": "^1.0.0",
+    "@eslint/json": "^1.0.1",
     "@eslint/markdown": "^7.5.1",
-    "@html-eslint/eslint-plugin": "^0.54.2",
-    "@html-eslint/parser": "^0.54.0",
-    "baseline-browser-mapping": "^2.9.19",
+    "@html-eslint/eslint-plugin": "^0.55.0",
+    "@html-eslint/parser": "^0.55.0",
+    "baseline-browser-mapping": "^2.10.0",
     "eslint": "9.39.2",
-    "eslint-config-love": "^149.0.0",
-    "eslint-plugin-jsdoc": "^62.5.4",
-    "eslint-plugin-n": "^17.23.2",
+    "eslint-config-love": "^151.0.0",
+    "eslint-plugin-jsdoc": "^62.6.1",
+    "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-no-secrets": "^2.2.2",
-    "eslint-plugin-no-unsanitized": "^4.1.4",
-    "eslint-plugin-package-json": "^0.88.2",
-    "eslint-plugin-perfectionist": "^5.5.0",
+    "eslint-plugin-no-unsanitized": "^4.1.5",
+    "eslint-plugin-package-json": "^0.88.3",
+    "eslint-plugin-perfectionist": "^5.6.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^3.0.0",
     "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-sonarjs": "^3.0.7",
+    "eslint-plugin-sonarjs": "^4.0.0",
     "eslint-plugin-unicorn": "^63.0.0",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.55.0"
+    "typescript-eslint": "^8.56.0"
   },
   "devDependencies": {
-    "@types/node": "^25.2.3",
+    "@types/node": "^25.3.0",
     "prettier-config-cityssm": "^2.1.1"
   }
 }
