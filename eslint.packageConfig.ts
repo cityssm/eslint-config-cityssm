@@ -279,10 +279,10 @@ export const config = defineConfig(
     extends: [eslintPluginPackageJson.configs.recommended],
     files: ['**/package.json'],
     rules: {
-      'package-json/export-subpaths-style': [
+      'package-json/exports-subpaths-style': [
         'error',
         {
-          style: 'explicit'
+          prefer: 'explicit'
         }
       ],
       'package-json/order-properties': [
