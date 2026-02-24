@@ -31,7 +31,6 @@ export const config = defineConfig(
       reportUnusedInlineConfigs: 'error'
     }
   },
-  eslintPluginPackageJson.configs.recommended,
   {
     extends: [
       tseslint.configs.recommendedTypeChecked,
@@ -274,6 +273,24 @@ export const config = defineConfig(
     language: 'json/json',
     plugins: {
       json: eslintJson as unknown as Plugin
+    }
+  },
+  {
+    extends: [eslintPluginPackageJson.configs.recommended],
+    files: ['**/package.json'],
+    rules: {
+      'package-json/export-subpaths-style': [
+        'error',
+        {
+          style: 'explicit'
+        }
+      ],
+      'package-json/order-properties': [
+        'error',
+        {
+          order: 'sort-package-json'
+        }
+      ]
     }
   },
   {

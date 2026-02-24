@@ -26,7 +26,7 @@ export const config = defineConfig({
         reportUnusedDisableDirectives: 'error',
         reportUnusedInlineConfigs: 'error'
     }
-}, eslintPluginPackageJson.configs.recommended, {
+}, {
     extends: [
         tseslint.configs.recommendedTypeChecked,
         tseslint.configs.stylisticTypeChecked,
@@ -227,6 +227,23 @@ export const config = defineConfig({
     language: 'json/json',
     plugins: {
         json: eslintJson
+    }
+}, {
+    extends: [eslintPluginPackageJson.configs.recommended],
+    files: ['**/package.json'],
+    rules: {
+        'package-json/export-subpaths-style': [
+            'error',
+            {
+                style: 'explicit'
+            }
+        ],
+        'package-json/order-properties': [
+            'error',
+            {
+                order: 'sort-package-json'
+            }
+        ]
     }
 }, {
     extends: [eslintMarkdown.configs.recommended],
