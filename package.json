@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cityssm",
-  "version": "38.2.2",
+  "version": "38.3.0",
   "description": "ESLint rules used in the City of Sault Ste. Marie's TypeScript projects.",
   "keywords": [
     "eslint",
@@ -36,6 +36,7 @@
   },
   "license": "Unlicense",
   "author": "The Corporation of the City of Sault Ste. Marie",
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": "./eslint.config.js",
@@ -46,6 +47,12 @@
     "./packageConfig": "./eslint.packageConfig.js"
   },
   "main": "eslint.config.js",
+  "files": [
+    "lists/*",
+    "eslint.config.*",
+    "eslint.packageConfig.*",
+    "exports.*"
+  ],
   "scripts": {
     "coverage": "c8 node ./test/runEslint.js",
     "performance": "cross-env TIMING=20 eslint samples",
@@ -64,7 +71,7 @@
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9.39.3",
     "eslint-config-love": "^151.0.0",
-    "eslint-plugin-jsdoc": "^62.7.0",
+    "eslint-plugin-jsdoc": "^62.7.1",
     "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-no-secrets": "^2.2.2",
     "eslint-plugin-no-unsanitized": "^4.1.5",
@@ -77,7 +84,7 @@
     "eslint-plugin-unicorn": "^63.0.0",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript-eslint": "^8.56.0"
+    "typescript-eslint": "^8.56.1"
   },
   "devDependencies": {
     "@types/node": "^25.3.0",
