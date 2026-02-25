@@ -124,7 +124,9 @@ export const config = defineConfig(
     files: ['**/*.css'],
     language: 'css/css',
     rules: {
-      'css/use-baseline': 'warn'
+      'css/use-baseline': ['warn', {
+        available: 2023
+      }]
     }
   },
   {
