@@ -66,8 +66,8 @@
     "@eslint/js": "9.39.2",
     "@eslint/json": "^1.0.1",
     "@eslint/markdown": "^7.5.1",
-    "@html-eslint/eslint-plugin": "^0.57.0",
-    "@html-eslint/parser": "^0.57.0",
+    "@html-eslint/eslint-plugin": "^0.57.1",
+    "@html-eslint/parser": "^0.57.1",
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9.39.3",
     "eslint-config-love": "^151.0.0",
@@ -87,7 +87,7 @@
     "typescript-eslint": "^8.56.1"
   },
   "devDependencies": {
-    "@types/node": "^25.3.0",
+    "@types/node": "^25.3.2",
     "prettier-config-cityssm": "^2.1.1"
   }
 }
