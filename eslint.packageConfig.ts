@@ -107,7 +107,7 @@ export const config = defineConfig(
         }
       ],
 
-      '@eslint-community/eslint-comments/require-description': 'warn',
+      '@eslint-community/eslint-comments/require-description': 'off',
 
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
@@ -191,6 +191,8 @@ export const config = defineConfig(
 
       // checked by "no-useless-escape"
       'regexp/no-useless-escape': 'off',
+
+      'require-unicode-regexp': 'warn',
 
       // checked by "complexity"
       'sonarjs/cognitive-complexity': 'off',

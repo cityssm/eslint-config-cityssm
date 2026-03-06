@@ -92,7 +92,7 @@ export const config = defineConfig({
                 max: 20
             }
         ],
-        '@eslint-community/eslint-comments/require-description': 'warn',
+        '@eslint-community/eslint-comments/require-description': 'off',
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
         'no-await-in-loop': 'warn',
@@ -160,6 +160,7 @@ export const config = defineConfig({
         ],
         // checked by "no-useless-escape"
         'regexp/no-useless-escape': 'off',
+        'require-unicode-regexp': 'warn',
         // checked by "complexity"
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/different-types-comparison': 'off',
