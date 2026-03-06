@@ -24,7 +24,7 @@ const FilePath = __dirname + '/file.txt' as string
  */
 const whitelist = ['a', 'b', 'c']
 
-let maxVal = 50 > 100 ? 50 : 100
+let maxVal = 50 > 100 ? 50 : 100 //eslint-disable-line
 
 fs.exists( FilePath)
 

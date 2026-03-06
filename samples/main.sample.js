@@ -21,7 +21,7 @@ const FilePath = __dirname + '/file.txt';
  * whitelist - not blacklist
  */
 const whitelist = ['a', 'b', 'c'];
-let maxVal = 50 > 100 ? 50 : 100;
+let maxVal = 50 > 100 ? 50 : 100; //eslint-disable-line
 fs_1.default.exists(FilePath);
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
