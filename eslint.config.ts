@@ -12,7 +12,11 @@ import noMagicNumbers, {
 
 const htmlEslintRulesConfig: Partial<RulesConfig> = {
   'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+  'html/head-order': 'error',
   'html/indent': ['warn', 2],
+  'html/lowercase': 'error',
+  'html/no-duplicate-class': 'error',
+  'html/no-duplicate-in-head': 'error',
   'html/no-extra-spacing-attrs': [
     'error',
     {
@@ -22,6 +26,10 @@ const htmlEslintRulesConfig: Partial<RulesConfig> = {
       enforceBeforeSelfClose: true
     }
   ],
+  'html/no-ineffective-attrs': 'error',
+  'html/no-invalid-entity': 'error',
+  'html/no-trailing-spaces': 'error',
+  'html/require-button-type': 'error',
   'html/require-closing-tags': [
     'error',
     {

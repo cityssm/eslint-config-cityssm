@@ -7,7 +7,11 @@ import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
 const htmlEslintRulesConfig = {
     'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+    'html/head-order': 'error',
     'html/indent': ['warn', 2],
+    'html/lowercase': 'error',
+    'html/no-duplicate-class': 'error',
+    'html/no-duplicate-in-head': 'error',
     'html/no-extra-spacing-attrs': [
         'error',
         {
@@ -17,6 +21,10 @@ const htmlEslintRulesConfig = {
             enforceBeforeSelfClose: true
         }
     ],
+    'html/no-ineffective-attrs': 'error',
+    'html/no-invalid-entity': 'error',
+    'html/no-trailing-spaces': 'error',
+    'html/require-button-type': 'error',
     'html/require-closing-tags': [
         'error',
         {
