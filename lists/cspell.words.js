@@ -12,6 +12,8 @@ export const words = [
     'fullwidth',
     'hoverable',
     'inputmode',
+    'noopener',
+    'noreferrer',
     'maxlength',
     'onremoved',
     'onshown',
