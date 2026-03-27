@@ -274,7 +274,7 @@ export const config = defineConfig(
     ignores: ['**/package.json', '**/package-lock.json'],
     language: 'json/json',
     plugins: {
-      json: eslintJson as unknown as Plugin
+      json: eslintJson as Plugin
     }
   },
   {
@@ -300,7 +300,7 @@ export const config = defineConfig(
     files: ['**/*.md'],
     language: 'markdown/gfm',
     plugins: {
-      markdown: eslintMarkdown
+      markdown: eslintMarkdown as Plugin
     }
   }
 )
