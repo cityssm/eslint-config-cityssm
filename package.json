@@ -81,7 +81,7 @@
     "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-security": "^4.0.0",
     "eslint-plugin-sonarjs": "^4.0.2",
-    "eslint-plugin-unicorn": "^63.0.0",
+    "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-woke": "github:cityssm/eslint-plugin-woke#ada548385155f458899a75688ca620c50222fcdb",
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript-eslint": "^8.57.2"
