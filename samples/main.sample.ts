@@ -75,4 +75,11 @@ async function promiseTst (param1, param2?
 
 let windows_path = 'C:\\windows\\path.exe';;
 
+;;;
 
+let a: boolean = true
+let b = false
+
+if (a === b && b === a && a) {
+ //  do something
+}
