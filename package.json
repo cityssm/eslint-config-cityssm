@@ -67,7 +67,7 @@
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
     "@html-eslint/eslint-plugin": "^0.58.1",
-    "@html-eslint/parser": "^0.58.1",
+    "@html-eslint/parser": "^0.59.0",
     "baseline-browser-mapping": "^2.10.13",
     "eslint": "^9.39.4",
     "eslint-config-love": "^151.0.0",
