@@ -59,7 +59,7 @@
     "test": "node ./test/runEslint.js"
   },
   "dependencies": {
-    "@cspell/eslint-plugin": "^9.7.0",
+    "@cspell/eslint-plugin": "^10.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@eslint/core": "^1.1.1",
     "@eslint/css": "^1.1.0",
