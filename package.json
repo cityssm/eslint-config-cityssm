@@ -70,7 +70,7 @@
     "@html-eslint/parser": "^0.59.0",
     "baseline-browser-mapping": "^2.10.17",
     "eslint": "^9.39.4",
-    "eslint-config-love": "^152.0.0",
+    "eslint-config-love": "^153.0.0",
     "eslint-plugin-jsdoc": "^62.9.0",
     "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-no-secrets": "^2.3.3",
