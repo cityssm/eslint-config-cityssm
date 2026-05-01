@@ -17,7 +17,7 @@ const htmlEslintRulesConfig: Partial<RulesConfig> = {
   'html/lowercase': 'error',
   'html/no-duplicate-class': 'error',
   'html/no-duplicate-in-head': 'error',
-  'html/no-extra-spacing-attrs': [
+  'html/no-extra-spacing-tags': [
     'error',
     {
       disallowInAssignment: true,
