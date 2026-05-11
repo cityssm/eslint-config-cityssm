@@ -96,6 +96,7 @@ export const config = defineConfig(
 
       '@typescript-eslint/non-nullable-type-assertion-style': 'off',
       '@typescript-eslint/prefer-destructuring': 'off',
+      '@typescript-eslint/prefer-optional-chain': 'warn',
       '@typescript-eslint/restrict-plus-operands': 'warn',
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
