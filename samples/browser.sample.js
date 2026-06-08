@@ -17,6 +17,7 @@ if (val >= 3) {
 else {
     messageElement.classList.remove('is-active');
 }
+const firstInputEle = document.querySelectorAll('.input')[0];
 document.write(`<p>
   Test ${'val'} `);
 const html = /*html*/ `<p>`;
