@@ -18,9 +18,6 @@ import cspellFlagWords from './lists/cspell.flagWords.js';
 import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
-/**
- * ESLint Configuration for General TypeScript/JavaScript Projects
- */
 export const config = defineConfig({
     linterOptions: {
         reportUnusedDisableDirectives: 'error',
@@ -102,7 +99,6 @@ export const config = defineConfig({
         'no-redeclare': 'off',
         'no-secrets/no-secrets': 'error',
         'no-undef': 'off',
-        // checked by "@typescript-eslint/no-unused-vars"
         'no-unused-vars': 'off',
         'perfectionist/sort-imports': [
             'error',
@@ -159,23 +155,16 @@ export const config = defineConfig({
                 groups: ['unknown', 'nullish']
             }
         ],
-        // checked by "no-useless-escape"
         'regexp/no-useless-escape': 'off',
         'require-unicode-regexp': 'warn',
-        // checked by "complexity"
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/different-types-comparison': 'off',
-        // checked by "regexp/no-dupe-characters-character-class"
         'sonarjs/duplicates-in-character-class': 'off',
-        // checked by "no-control-regex"
         'sonarjs/no-control-regex': 'off',
         'sonarjs/no-duplicate-string': 'warn',
-        // checked by "@typescript-eslint/no-misused-promises"
         'sonarjs/no-misused-promises': 'off',
-        // checked by "max-nested-callbacks"
         'sonarjs/no-nested-functions': 'off',
         'sonarjs/no-nested-template-literals': 'warn',
-        // checked by "@typescript-eslint/no-redundant-type-constituents"
         'sonarjs/no-redundant-type-constituents': 'off',
         'sonarjs/unnecessary-character-escapes': 'off',
         'unicorn/consistent-function-scoping': 'warn',
@@ -212,12 +201,10 @@ export const config = defineConfig({
                 }
             }
         ],
-        // 'woke/all': 'error',
         'write-good-comments/write-good-comments': [
             'warn',
             {
                 passive: false,
-                // eslint-disable-next-line @cspell/spellchecker -- Allow forbidden word
                 whitelist: writeGoodCommentsAllowlist
             }
         ]

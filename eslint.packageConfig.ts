@@ -44,6 +44,7 @@ export const config = defineConfig(
       eslintPluginSecurity.configs.recommended,
       eslintPluginSonarJs.configs.recommended,
       eslintPluginUnicorn.configs.recommended,
+
       eslintConfigLove
     ],
     files: ['**/*.ts'],

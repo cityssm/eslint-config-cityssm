@@ -34,14 +34,11 @@ const htmlEslintRulesConfig = {
     'html/sort-attrs': [
         'warn',
         {
-            // https://codeguide.co/#html-attribute-order
             priority: [
-                // Identification
                 'class',
                 'id',
                 'name',
                 { pattern: 'data-.*' },
-                // Unique to specific elements
                 'src',
                 'for',
                 'type',
@@ -52,32 +49,25 @@ const htmlEslintRulesConfig = {
                 'step',
                 'minlength',
                 'maxlength',
-                // Accessibility
                 'title',
                 'alt',
                 'role',
                 { pattern: 'aria-.*' },
                 'tabindex',
-                // Style
                 'placeholder',
                 'rows',
                 'style',
-                // JavaScript
                 { pattern: 'on.*' }
             ]
         }
     ],
     'html/use-baseline': 'warn'
 };
-/**
- * ESLint Configuration for Web Applications
- */
 export const config = defineConfig(packageConfig, {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
     plugins: {
         html: eslintHtml,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         'no-unsanitized': eslintPluginNoUnsanitized
     },
     extends: ['html/recommended'],
