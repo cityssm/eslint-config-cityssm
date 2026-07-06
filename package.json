@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@types/eslint-plugin-security": "^3.0.1",
-    "@types/node": "^25.9.2",
+    "@types/node": "^26.1.0",
     "prettier-config-cityssm": "^2.1.2"
   }
 }
