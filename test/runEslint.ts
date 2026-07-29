@@ -8,7 +8,6 @@ const eslintCommand =
 console.log(`Running ${eslintCommand} ...`)
 
 try {
-  // eslint-disable-next-line sonarjs/os-command
   exec(
     // eslint-disable-next-line sonarjs/no-os-command-from-path
     eslintCommand,
@@ -57,7 +56,6 @@ try {
       console.log('\nPLUGINS TESTED')
 
       const pluginStrings = [
-        '@cspell/',
         '@eslint-community/eslint-comments/',
         '@typescript-eslint/',
         'css/',

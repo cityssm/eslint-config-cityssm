@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "cityssm",
+    "deepsource",
+    "ncurc",
+    "npmignore",
+    "sonarjs"
+  ],
+  "ignoreWords": [],
+  "import": []
+}

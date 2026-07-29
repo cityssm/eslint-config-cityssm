@@ -1,6 +1,3 @@
-export { default as cspellFlagWords } from './lists/cspell.flagWords.js'
-export { default as cspellWords } from './lists/cspell.words.js'
-
 export {
   httpStatusCodes as noMagicNumbersHttpStatusCodes,
   default as noMagicNumbersIgnore

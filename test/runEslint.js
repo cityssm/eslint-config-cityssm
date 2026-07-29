@@ -30,7 +30,6 @@ try {
         }
         console.log('\nPLUGINS TESTED');
         const pluginStrings = [
-            '@cspell/',
             '@eslint-community/eslint-comments/',
             '@typescript-eslint/',
             'css/',

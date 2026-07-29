@@ -1,4 +1,3 @@
-import eslintCspell from '@cspell/eslint-plugin';
 import eslintJs from '@eslint/js';
 import eslintJson from '@eslint/json';
 import eslintMarkdown from '@eslint/markdown';
@@ -14,8 +13,6 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
-import cspellFlagWords from './lists/cspell.flagWords.js';
-import cspellWords from './lists/cspell.words.js';
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
 export const config = defineConfig({
@@ -48,21 +45,10 @@ export const config = defineConfig({
         }
     },
     plugins: {
-        '@cspell': eslintCspell,
         'no-secrets': eslintPluginNoSecrets,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
-        '@cspell/spellchecker': [
-            'warn',
-            {
-                cspell: {
-                    flagWords: cspellFlagWords,
-                    language: 'en-US,en-GB',
-                    words: cspellWords
-                }
-            }
-        ],
         '@typescript-eslint/init-declarations': 'warn',
         '@typescript-eslint/no-magic-numbers': [
             'warn',

@@ -1,4 +1,3 @@
-import eslintCspell from '@cspell/eslint-plugin'
 import type { Plugin } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
@@ -16,8 +15,6 @@ import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comment
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
-import cspellFlagWords from './lists/cspell.flagWords.js'
-import cspellWords from './lists/cspell.words.js'
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
 
@@ -61,23 +58,11 @@ export const config = defineConfig(
     },
 
     plugins: {
-      '@cspell': eslintCspell,
       'no-secrets': eslintPluginNoSecrets,
       'write-good-comments': eslintPluginWriteGoodComments
     },
 
     rules: {
-      '@cspell/spellchecker': [
-        'warn',
-        {
-          cspell: {
-            flagWords: cspellFlagWords,
-            language: 'en-US,en-GB',
-            words: cspellWords
-          }
-        }
-      ],
-
       '@typescript-eslint/init-declarations': 'warn',
       '@typescript-eslint/no-magic-numbers': [
         'warn',
@@ -264,7 +249,6 @@ export const config = defineConfig(
         {
           passive: false,
 
-          // eslint-disable-next-line @cspell/spellchecker -- Allow forbidden word
           whitelist: writeGoodCommentsAllowlist
         }
       ]
