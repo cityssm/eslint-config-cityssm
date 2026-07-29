@@ -54,7 +54,8 @@ export default config
 
 ## Included Plugins
 
-**Thanks to all of the developers who help make the City of Sault Ste. Marie's code awesome!** 😎
+**Thanks to all of the developers who help make the City of Sault Ste. Marie's
+code awesome!** 😎
 
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-config-love](https://www.npmjs.com/package/eslint-config-love)

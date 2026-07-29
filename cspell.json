@@ -8,7 +8,8 @@
     "deepsource",
     "ncurc",
     "npmignore",
-    "sonarjs"
+    "sonarjs",
+    "unsanitized"
   ],
   "ignoreWords": [],
   "import": []
