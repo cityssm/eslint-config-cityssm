@@ -9,7 +9,6 @@ import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecurity from 'eslint-plugin-security';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
-import eslintPluginTsdoc from 'eslint-plugin-tsdoc';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import { defineConfig } from 'eslint/config';
@@ -47,7 +46,6 @@ export const config = defineConfig({
     },
     plugins: {
         'no-secrets': eslintPluginNoSecrets,
-        tsdoc: eslintPluginTsdoc,
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -155,7 +153,6 @@ export const config = defineConfig({
         'sonarjs/no-nested-template-literals': 'warn',
         'sonarjs/no-redundant-type-constituents': 'off',
         'sonarjs/unnecessary-character-escapes': 'off',
-        'tsdoc/syntax': 'warn',
         'unicorn/consistent-function-scoping': 'warn',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/filename-case': [
