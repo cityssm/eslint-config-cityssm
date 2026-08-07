@@ -77,6 +77,8 @@ export const config = defineConfig({
             }
         ],
         '@eslint-community/eslint-comments/require-description': 'off',
+        'jsdoc/require-asterisk-prefix': ['error', 'always'],
+        'jsdoc/require-hyphen-before-param-description': 'error',
         'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
         'n/no-missing-import': 'off',
         'no-await-in-loop': 'warn',
