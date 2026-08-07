@@ -4,11 +4,11 @@ import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
 import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
-import eslintPluginNoSecrets from 'eslint-plugin-no-secrets'
+import eslintPluginNodeSecurity from 'eslint-plugin-node-security'
 import eslintPluginPackageJson from 'eslint-plugin-package-json'
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist'
 import eslintPluginRegexp from 'eslint-plugin-regexp'
-import eslintPluginSecurity from 'eslint-plugin-security'
+import eslintPluginSecureCoding from 'eslint-plugin-secure-coding'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
@@ -38,7 +38,8 @@ export const config = defineConfig(
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginPerfectionist.configs['recommended-natural'],
       eslintPluginRegexp.configs['flat/recommended'],
-      eslintPluginSecurity.configs.recommended,
+      eslintPluginSecureCoding.configs.recommended,
+      eslintPluginNodeSecurity.configs.recommended,
       eslintPluginSonarJs.configs.recommended,
       eslintPluginUnicorn.configs.recommended,
 
@@ -58,7 +59,6 @@ export const config = defineConfig(
     },
 
     plugins: {
-      'no-secrets': eslintPluginNoSecrets,
       'write-good-comments': eslintPluginWriteGoodComments
     },
 
@@ -109,7 +109,6 @@ export const config = defineConfig(
       'no-param-reassign': ['error', { props: false }],
 
       'no-redeclare': 'off',
-      'no-secrets/no-secrets': 'error',
       'no-undef': 'off',
 
       // checked by "@typescript-eslint/no-unused-vars"

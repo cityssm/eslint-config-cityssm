@@ -7,7 +7,14 @@ This
 
 */
 
+let pkgName = 'eslint-config-cityssm'
+const pckg = require(pkgName)
+
 /*  eslint-disable no-multi-spaces */
+
+// Reading beyond buffer length
+const buf = Buffer.from('hello');
+const byte = buf[10]; // Out of bounds!
 
 import path from 'path'
 import fs from  'fs'

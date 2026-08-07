@@ -5,6 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.test_fn = test_fn;
 exports.default = default_1;
+let pkgName = 'eslint-config-cityssm';
+const pckg = require(pkgName);
+const buf = Buffer.from('hello');
+const byte = buf[10];
 const fs_1 = __importDefault(require("fs"));
 require("missing-package");
 require("./missing");

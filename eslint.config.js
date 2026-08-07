@@ -1,7 +1,8 @@
 import eslintCss from '@eslint/css';
 import eslintHtml from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
-import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
+import eslintPluginBrowserSecurity from 'eslint-plugin-browser-security';
+import eslintPluginExpressSecurity from 'eslint-plugin-express-security';
 import { defineConfig } from 'eslint/config';
 import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
@@ -67,10 +68,13 @@ export const config = defineConfig(packageConfig, {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
     plugins: {
-        html: eslintHtml,
-        'no-unsanitized': eslintPluginNoUnsanitized
+        html: eslintHtml
     },
-    extends: ['html/recommended'],
+    extends: [
+        'html/recommended',
+        eslintPluginBrowserSecurity.configs.recommended,
+        eslintPluginExpressSecurity.configs.recommended
+    ],
     rules: {
         ...htmlEslintRulesConfig,
         '@typescript-eslint/init-declarations': 'off',
@@ -81,20 +85,10 @@ export const config = defineConfig(packageConfig, {
             }
         ],
         'jsdoc/require-jsdoc': 'off',
-        'no-unsanitized/method': [
+        'browser-security/no-innerhtml': [
             'error',
             {
-                escape: {
-                    methods: ['cityssm.escapeHTML']
-                }
-            }
-        ],
-        'no-unsanitized/property': [
-            'error',
-            {
-                escape: {
-                    methods: ['cityssm.escapeHTML']
-                }
+                trustedSanitizers: ['cityssm.escapeHTML']
             }
         ]
     }
@@ -103,9 +97,12 @@ export const config = defineConfig(packageConfig, {
     files: ['**/*.css'],
     language: 'css/css',
     rules: {
-        'css/use-baseline': ['warn', {
+        'css/use-baseline': [
+            'warn',
+            {
                 available: 2023
-            }]
+            }
+        ]
     }
 }, {
     files: ['**/*.ejs', '**/*.html'],
