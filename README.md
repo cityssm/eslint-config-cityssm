@@ -71,6 +71,7 @@ code awesome!** 😎
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
 - [eslint-plugin-security](https://www.npmjs.com/package/eslint-plugin-security)
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
+- [eslint-plugin-tsdoc](https://www.npmjs.com/package/eslint-plugin-tsdoc)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 - [eslint-plugin-write-good-comments](https://www.npmjs.com/package/eslint-plugin-write-good-comments)
 - [html-eslint](https://github.com/yeonjuan/html-eslint)

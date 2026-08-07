@@ -72,8 +72,8 @@ try {
         'regexp/',
         'security/',
         'sonarjs/',
+        'tsdoc/',
         'unicorn/',
-        // 'woke/',
         'write-good-comments/'
       ]
 
