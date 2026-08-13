@@ -6,6 +6,10 @@
   ],
   "author": "The Corporation of the City of Sault Ste. Marie ",
   "type": "module ",
+
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "scripts": {
     "test": "node ./test/runEslint.js",
     "coverage": "c8 node ./test/runEslint.js"
@@ -14,6 +18,7 @@
     "prettier-config-cityssm": "^1.0.0"
   },
   "dependencies": {
+    "@cityssm/activedirectory-authenticate": "2.0.0",
     "prettier-config-cityssm": "^1.0.0"
   }
 }

@@ -4,6 +4,7 @@ import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
 import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
+import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies'
 import eslintPluginNodeSecurity from 'eslint-plugin-node-security'
 import eslintPluginPackageJson from 'eslint-plugin-package-json'
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist'
@@ -263,7 +264,10 @@ export const config = defineConfig(
     }
   },
   {
-    extends: [eslintPluginPackageJson.configs.recommended],
+    extends: [
+      eslintPluginPackageJson.configs.recommended,
+      eslintPluginNodeDependencies.configs.recommended
+    ],
     files: ['**/package.json'],
     rules: {
       'package-json/exports-subpaths-style': [

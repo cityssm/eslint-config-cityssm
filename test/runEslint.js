@@ -39,6 +39,7 @@ try {
             'json/',
             'markdown/',
             'n/',
+            "node-dependencies/",
             'node-security/',
             'package-json/',
             'perfectionist/',
