@@ -12,12 +12,13 @@ const byte = buf[10];
 const fs_1 = __importDefault(require("fs"));
 require("missing-package");
 require("./missing");
-const FilePath = __dirname + '/file.txt';
+const FilePath = (__dirname + '/file.txt');
 const whitelist = ['a', 'b', 'c'];
 let maxVal = 50 > 100 ? 50 : 100;
 fs_1.default.exists(FilePath);
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva";
+const API_KEY = 'ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva';
+fs_1.default.writeFileSync('/tmp/credentials.json', JSON.stringify(creds));
 async function test_fn(varName) {
     varName = '';
     var VAR = /[0-9\d]/g;
@@ -37,14 +38,9 @@ async function promiseTst(param1, param2, param3, param4, param5, param6) {
         if (1 == 1)
             return 'test' + 'test' + 'test' + 'test' + 'test';
         return 'test' | 'test';
-    }).then((val) => {
-    });
+    }).then((val) => { });
 }
 let windows_path = 'C:\\windows\\path.exe';
-;
-;
-;
-;
 let a = true;
 let b = false;
 if (a === b && b === a && a) {

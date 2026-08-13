@@ -1,4 +1,4 @@
-     /*
+/*
 This
     file
       is
@@ -13,18 +13,19 @@ const pckg = require(pkgName)
 /*  eslint-disable no-multi-spaces */
 
 // Reading beyond buffer length
-const buf = Buffer.from('hello');
-const byte = buf[10]; // Out of bounds!
+const buf = Buffer.from('hello')
+const byte = buf[10] // Out of bounds!
 
 import path from 'path'
-import fs from  'fs'
+import fs from 'fs'
+import { exec } from 'child_process'
 
 import { log, error, type Console } from 'console'
 
 import 'missing-package'
 import './missing'
 
-const FilePath = __dirname + '/file.txt' as string
+const FilePath = (__dirname + '/file.txt') as string
 
 /**
  * whitelist - not blacklist
@@ -33,60 +34,54 @@ const whitelist = ['a', 'b', 'c']
 
 let maxVal = 50 > 100 ? 50 : 100 //eslint-disable-line
 
-fs.exists( FilePath)
+fs.exists(FilePath)
 
-var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+var emailExpression =
+  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 
-const API_KEY = "ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva"
+const API_KEY =
+  'ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva'
 
-export async function test_fn (varName) {
+fs.writeFileSync('/tmp/credentials.json', JSON.stringify(creds));
 
+export async function test_fn(varName) {
   // This file is formatted badly on purpose to ennsure the
-   // ESLint configuration is loadng correctly.
+  // ESLint configuration is loadng correctly.
 
-   varName = ''
-
+  varName = ''
 
   var VAR = /[0-9\d]/g
 
-  return varName + 'test' + ' ' + 2;
-
+  return varName + 'test' + ' ' + 2
 }
 
-function test_fn2 (obj: {test: string})
-{
+function test_fn2(obj: { test: string }) {
   obj.test = 'test'
 }
 
-export default function ()  {
+export default function () {
   /** test */
   return !false
 }
 
 let tmp = `test`
 
-async function promiseTst (param1, param2?
-  , param3, param4, param5, param6) {
+async function promiseTst(param1, param2?, param3, param4, param5, param6) {
   return new Promise(function (reject, resolve) {
-    for (let i = 1; i <= 1; i ++) {
+    for (let i = 1; i <= 1; i++) {
       //
     }
 
-    if (1 == 1)
-    return 'test' + 'test' + 'test' + 'test'+ 'test'
-  return 'test' | 'test'
-  }).then((val) => {
-
-  })
+    if (1 == 1) return 'test' + 'test' + 'test' + 'test' + 'test'
+    return 'test' | 'test'
+  }).then((val) => {})
 }
 
-let windows_path = 'C:\\windows\\path.exe';;
-
-;;;
+let windows_path = 'C:\\windows\\path.exe'
 
 let a: boolean = true
 let b = false
 
 if (a === b && b === a && a) {
- //  do something
+  //  do something
 }
