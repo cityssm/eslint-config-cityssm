@@ -1,4 +1,4 @@
-# Thank you for your interest in making this project better!
+# Thank you for your interest in making this project better
 
 Together, we can build high quality software that meets the needs of municipalities,
 while remaining open and budget conscious.
@@ -16,8 +16,8 @@ Being a very small team, contributions are greatly appreciated. How can you cont
 
 ## Please Read the Code of Conduct
 
-The [Code of Conduct](CODE_OF_CONDUCT.md) document describes how we should act when working together.
-Be nice! 🙂
+The [Code of Conduct](CODE_OF_CONDUCT.md) document describes how we should act
+when working together. Be nice! 🙂
 
 ## How to report a bug or suggest an enhancement
 

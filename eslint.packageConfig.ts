@@ -1,7 +1,8 @@
-import type { Plugin } from '@eslint/core'
+import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
+import type { Linter } from 'eslint'
 import eslintConfigLove from 'eslint-config-love'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies'
@@ -44,7 +45,8 @@ export const config = defineConfig(
       eslintPluginSonarJs.configs.recommended,
       eslintPluginUnicorn.configs.recommended,
 
-      eslintConfigLove
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
+      eslintConfigLove as Linter.Config<RulesConfig>
     ],
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
@@ -60,6 +62,7 @@ export const config = defineConfig(
     },
 
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'write-good-comments': eslintPluginWriteGoodComments
     },
 
