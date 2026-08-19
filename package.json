@@ -11,7 +11,6 @@
     "eslint-plugin-browser-security",
     "eslint-plugin-eslint-comments",
     "eslint-plugin-express-security",
-    "eslint-plugin-import",
     "eslint-plugin-jsdoc",
     "eslint-plugin-n",
     "eslint-plugin-node-security",

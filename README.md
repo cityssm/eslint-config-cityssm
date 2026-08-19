@@ -62,7 +62,6 @@ code awesome!** 😎
 - [@eslint-community/eslint-plugin-eslint-comments](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
 - [eslint-plugin-express-security](https://www.npmjs.com/package/eslint-plugin-express-security)
 - [eslint-plugin-browser-security](https://www.npmjs.com/package/eslint-plugin-browser-security)
-- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 - [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
 - [eslint-plugin-node-dependencies](https://www.npmjs.com/package/eslint-plugin-node-dependencies)
