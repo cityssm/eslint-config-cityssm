@@ -67,14 +67,14 @@ const htmlEslintRulesConfig = {
 export const config = defineConfig(packageConfig, {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
-    plugins: {
-        html: eslintHtml
-    },
     extends: [
         'html/recommended',
         eslintPluginBrowserSecurity.configs.recommended,
         eslintPluginExpressSecurity.configs.recommended
     ],
+    plugins: {
+        html: eslintHtml
+    },
     rules: {
         ...htmlEslintRulesConfig,
         '@typescript-eslint/init-declarations': 'off',
@@ -93,8 +93,8 @@ export const config = defineConfig(packageConfig, {
         ]
     }
 }, {
-    extends: [eslintCss.configs.recommended],
     files: ['**/*.css'],
+    extends: [eslintCss.configs.recommended],
     language: 'css/css',
     rules: {
         'css/use-baseline': [
@@ -106,10 +106,8 @@ export const config = defineConfig(packageConfig, {
     }
 }, {
     files: ['**/*.ejs', '**/*.html'],
+    extends: ['html/recommended'],
     language: 'html/html',
-    plugins: {
-        html: eslintHtml
-    },
     languageOptions: {
         parser: htmlParser,
         parserOptions: {
@@ -120,7 +118,9 @@ export const config = defineConfig(packageConfig, {
             }
         }
     },
-    extends: ['html/recommended'],
+    plugins: {
+        html: eslintHtml
+    },
     rules: {
         ...htmlEslintRulesConfig
     }

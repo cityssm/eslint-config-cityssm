@@ -31,6 +31,9 @@ export const config = defineConfig(
     }
   },
   {
+    files: ['**/*.ts'],
+    ignores: ['**/*.d.ts'],
+
     extends: [
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
@@ -48,8 +51,7 @@ export const config = defineConfig(
       // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
       eslintConfigLove as Linter.Config<RulesConfig>
     ],
-    files: ['**/*.ts'],
-    ignores: ['**/*.d.ts'],
+
     languageOptions: {
       parserOptions: {
         ecmaFeatures: { modules: true },
@@ -258,20 +260,22 @@ export const config = defineConfig(
     }
   },
   {
-    extends: [eslintJson.configs.recommended],
     files: ['**/*.json'],
     ignores: ['**/package.json', '**/package-lock.json'],
+
+    extends: [eslintJson.configs.recommended],
     language: 'json/json',
     plugins: {
       json: eslintJson as Plugin
     }
   },
   {
+    files: ['**/package.json'],
+
     extends: [
       eslintPluginPackageJson.configs.recommended,
       eslintPluginNodeDependencies.configs.recommended
     ],
-    files: ['**/package.json'],
     rules: {
       'package-json/exports-subpaths-style': [
         'error',
@@ -288,8 +292,9 @@ export const config = defineConfig(
     }
   },
   {
-    extends: [eslintMarkdown.configs.recommended],
     files: ['**/*.md'],
+
+    extends: [eslintMarkdown.configs.recommended],
     language: 'markdown/gfm',
     plugins: {
       markdown: eslintMarkdown as Plugin

@@ -22,6 +22,8 @@ export const config = defineConfig({
         reportUnusedInlineConfigs: 'error'
     }
 }, {
+    files: ['**/*.ts'],
+    ignores: ['**/*.d.ts'],
     extends: [
         tseslint.configs.recommendedTypeChecked,
         tseslint.configs.stylisticTypeChecked,
@@ -35,8 +37,6 @@ export const config = defineConfig({
         eslintPluginUnicorn.configs.recommended,
         eslintConfigLove
     ],
-    files: ['**/*.ts'],
-    ignores: ['**/*.d.ts'],
     languageOptions: {
         parserOptions: {
             ecmaFeatures: { modules: true },
@@ -198,19 +198,19 @@ export const config = defineConfig({
         ]
     }
 }, {
-    extends: [eslintJson.configs.recommended],
     files: ['**/*.json'],
     ignores: ['**/package.json', '**/package-lock.json'],
+    extends: [eslintJson.configs.recommended],
     language: 'json/json',
     plugins: {
         json: eslintJson
     }
 }, {
+    files: ['**/package.json'],
     extends: [
         eslintPluginPackageJson.configs.recommended,
         eslintPluginNodeDependencies.configs.recommended
     ],
-    files: ['**/package.json'],
     rules: {
         'package-json/exports-subpaths-style': [
             'error',
@@ -226,8 +226,8 @@ export const config = defineConfig({
         ]
     }
 }, {
-    extends: [eslintMarkdown.configs.recommended],
     files: ['**/*.md'],
+    extends: [eslintMarkdown.configs.recommended],
     language: 'markdown/gfm',
     plugins: {
         markdown: eslintMarkdown

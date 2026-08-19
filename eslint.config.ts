@@ -88,15 +88,15 @@ export const config = defineConfig(
   {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
-    plugins: {
-      html: eslintHtml
-    },
 
     extends: [
       'html/recommended',
       eslintPluginBrowserSecurity.configs.recommended,
       eslintPluginExpressSecurity.configs.recommended
     ],
+    plugins: {
+      html: eslintHtml
+    },
     rules: {
       ...htmlEslintRulesConfig,
 
@@ -120,8 +120,9 @@ export const config = defineConfig(
     }
   },
   {
-    extends: [eslintCss.configs.recommended],
     files: ['**/*.css'],
+
+    extends: [eslintCss.configs.recommended],
     language: 'css/css',
     rules: {
       'css/use-baseline': [
@@ -134,11 +135,9 @@ export const config = defineConfig(
   },
   {
     files: ['**/*.ejs', '**/*.html'],
-    language: 'html/html',
-    plugins: {
-      html: eslintHtml as Plugin
-    },
 
+    extends: ['html/recommended'],
+    language: 'html/html',
     languageOptions: {
       parser: htmlParser,
       parserOptions: {
@@ -149,8 +148,9 @@ export const config = defineConfig(
         }
       }
     },
-
-    extends: ['html/recommended'],
+    plugins: {
+      html: eslintHtml as Plugin
+    },
     rules: {
       ...htmlEslintRulesConfig
     }
