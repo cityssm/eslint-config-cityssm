@@ -13,7 +13,7 @@ import eslintPluginRegexp from 'eslint-plugin-regexp'
 import eslintPluginSecureCoding from 'eslint-plugin-secure-coding'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
-import * as eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
+import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
