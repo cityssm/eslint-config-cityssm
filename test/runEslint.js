@@ -1,13 +1,19 @@
+/* eslint-disable no-console */
 import { exec } from 'node:child_process';
 const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples';
 console.log(`Running ${eslintCommand} ...`);
 try {
-    exec(eslintCommand, {
+    exec(
+    // eslint-disable-next-line sonarjs/no-os-command-from-path
+    eslintCommand, {
         env: {
             ...process.env,
             TIMING: process.env.TIMING ?? '20'
         }
     }, (error, stdout, stderr) => {
+        /*
+         * Print output
+         */
         if (stdout !== '') {
             console.log('\nSTDOUT');
             console.log(stdout);
@@ -16,6 +22,9 @@ try {
             console.log('\nSTDERR');
             console.log(stderr);
         }
+        /*
+         * Check if processed
+         */
         if (error === null) {
             console.log('❗  ESLint did not find any errors or warnings.');
             process.exitCode = 1;
@@ -28,12 +37,16 @@ try {
             console.log('✔️  ESLint errors and warnings found. Config checked successfully.');
             process.exitCode = 0;
         }
+        /*
+         * Check if all imported plugins used
+         */
         console.log('\nPLUGINS TESTED');
         const pluginStrings = [
             '@eslint-community/eslint-comments/',
             '@typescript-eslint/',
             'browser-security/',
             'css/',
+            // 'express-security/',
             'html/',
             'jsdoc/',
             'json/',

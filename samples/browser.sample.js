@@ -20,4 +20,4 @@ else {
 const firstInputEle = document.querySelectorAll('.input')[0];
 document.write(`<p>
   Test ${'val'} `);
-const html = `<p>`;
+const html = /*html*/ `<p>`;

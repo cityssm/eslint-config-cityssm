@@ -10,7 +10,7 @@
     "isolatedModules": true,
 
     "declaration": true,
-    "removeComments": true,
+    "removeComments": false,
 
     "allowUnreachableCode": false,
     "allowSyntheticDefaultImports": true,

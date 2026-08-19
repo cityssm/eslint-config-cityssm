@@ -16,6 +16,9 @@ import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
+/**
+ * ESLint Configuration for General TypeScript/JavaScript Projects
+ */
 export const config = defineConfig({
     linterOptions: {
         reportUnusedDisableDirectives: 'error',
@@ -35,6 +38,7 @@ export const config = defineConfig({
         eslintPluginNodeSecurity.configs.recommended,
         eslintPluginSonarJs.configs.recommended,
         eslintPluginUnicorn.configs.recommended,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
         eslintConfigLove
     ],
     languageOptions: {
@@ -47,6 +51,7 @@ export const config = defineConfig({
         }
     },
     plugins: {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -87,6 +92,7 @@ export const config = defineConfig({
         'no-param-reassign': ['error', { props: false }],
         'no-redeclare': 'off',
         'no-undef': 'off',
+        // checked by "@typescript-eslint/no-unused-vars"
         'no-unused-vars': 'off',
         'perfectionist/sort-imports': [
             'error',
@@ -143,16 +149,23 @@ export const config = defineConfig({
                 groups: ['unknown', 'nullish']
             }
         ],
+        // checked by "no-useless-escape"
         'regexp/no-useless-escape': 'off',
         'require-unicode-regexp': 'warn',
+        // checked by "complexity"
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/different-types-comparison': 'off',
+        // checked by "regexp/no-dupe-characters-character-class"
         'sonarjs/duplicates-in-character-class': 'off',
+        // checked by "no-control-regex"
         'sonarjs/no-control-regex': 'off',
         'sonarjs/no-duplicate-string': 'warn',
+        // checked by "@typescript-eslint/no-misused-promises"
         'sonarjs/no-misused-promises': 'off',
+        // checked by "max-nested-callbacks"
         'sonarjs/no-nested-functions': 'off',
         'sonarjs/no-nested-template-literals': 'warn',
+        // checked by "@typescript-eslint/no-redundant-type-constituents"
         'sonarjs/no-redundant-type-constituents': 'off',
         'sonarjs/unnecessary-character-escapes': 'off',
         'unicorn/consistent-function-scoping': 'warn',
