@@ -60,6 +60,7 @@ try {
             'regexp/',
             'secure-coding/',
             'sonarjs/',
+            'sqlite-security/',
             'unicorn/',
             'write-good-comments/'
         ];

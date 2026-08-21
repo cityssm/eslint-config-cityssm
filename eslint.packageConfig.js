@@ -10,6 +10,7 @@ import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginRegexp from 'eslint-plugin-regexp';
 import eslintPluginSecureCoding from 'eslint-plugin-secure-coding';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
+import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments';
 import { defineConfig } from 'eslint/config';
@@ -37,6 +38,7 @@ export const config = defineConfig({
         eslintPluginSecureCoding.configs.recommended,
         eslintPluginNodeSecurity.configs.recommended,
         eslintPluginSonarJs.configs.recommended,
+        eslintPluginSqliteSecurity.configs.recommended,
         eslintPluginUnicorn.configs.recommended,
         // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
         eslintConfigLove

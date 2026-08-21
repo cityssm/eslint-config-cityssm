@@ -72,6 +72,7 @@ code awesome!** 😎
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
 - [eslint-plugin-secure-coding](https://www.npmjs.com/package/eslint-plugin-secure-coding)
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
+- [eslint-plugin-sqlite-security](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 - [eslint-plugin-write-good-comments](https://www.npmjs.com/package/eslint-plugin-write-good-comments)
 - [html-eslint](https://github.com/yeonjuan/html-eslint)
