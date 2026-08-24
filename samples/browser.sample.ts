@@ -32,3 +32,14 @@ document.write(`<p>
 
 const html = /*html*/`<p>`
 
+
+;(document.querySelector('main') as HTMLElement).innerHTML = /* html */ `
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>${mesageElement.value}</th>
+      <th class="has-text-right">Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+`

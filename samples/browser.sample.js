@@ -21,3 +21,13 @@ const firstInputEle = document.querySelectorAll('.input')[0];
 document.write(`<p>
   Test ${'val'} `);
 const html = /*html*/ `<p>`;
+document.querySelector('main').innerHTML = /* html */ `
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>${mesageElement.value}</th>
+      <th class="has-text-right">Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+`;
