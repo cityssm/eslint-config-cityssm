@@ -6,6 +6,7 @@ import eslintPluginExpressSecurity from 'eslint-plugin-express-security';
 import { defineConfig } from 'eslint/config';
 import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
+const baselineYear = 2024;
 const htmlEslintRulesConfig = {
     'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
     'html/head-order': 'error',
@@ -68,7 +69,12 @@ const htmlEslintRulesConfig = {
             ]
         }
     ],
-    'html/use-baseline': 'warn'
+    'html/use-baseline': [
+        'warn',
+        {
+            available: baselineYear
+        }
+    ]
 };
 /**
  * ESLint Configuration for Web Applications
@@ -109,7 +115,7 @@ export const config = defineConfig(packageConfig, {
         'css/use-baseline': [
             'warn',
             {
-                available: 2023
+                available: baselineYear
             }
         ]
     }

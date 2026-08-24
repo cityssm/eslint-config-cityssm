@@ -11,6 +11,8 @@ import noMagicNumbers, {
   httpStatusCodes
 } from './lists/noMagicNumbers.ignore.js'
 
+const baselineYear = 2024
+
 const htmlEslintRulesConfig: Partial<RulesConfig> = {
   'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
   'html/head-order': 'error',
@@ -77,7 +79,12 @@ const htmlEslintRulesConfig: Partial<RulesConfig> = {
       ]
     }
   ],
-  'html/use-baseline': 'warn'
+  'html/use-baseline': [
+    'warn',
+    {
+      available: baselineYear
+    }
+  ]
 }
 
 /**
@@ -128,7 +135,7 @@ export const config = defineConfig(
       'css/use-baseline': [
         'warn',
         {
-          available: 2023
+          available: baselineYear
         }
       ]
     }
