@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Sample HTML</title>
@@ -15,5 +16,9 @@
       <option value="1"
         _<% if (selectedOption === '1') { %> selected <% } %>>Option 1</option>
     </select>
+
+    <script>
+      exports.constants = <%- include('constants.js') %>;
+    </script>
   </body>
 </html>
