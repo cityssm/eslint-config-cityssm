@@ -164,6 +164,8 @@ export const config = defineConfig({
         // checked by "no-control-regex"
         'sonarjs/no-control-regex': 'off',
         'sonarjs/no-duplicate-string': 'warn',
+        // checked by "secure-coding/no-hardcoded-passwords"
+        'sonarjs/no-hardcoded-passwords': 'off',
         // checked by "@typescript-eslint/no-misused-promises"
         'sonarjs/no-misused-promises': 'off',
         // checked by "max-nested-callbacks"

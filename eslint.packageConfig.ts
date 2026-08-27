@@ -206,6 +206,9 @@ export const config = defineConfig(
 
       'sonarjs/no-duplicate-string': 'warn',
 
+      // checked by "secure-coding/no-hardcoded-passwords"
+      'sonarjs/no-hardcoded-passwords': 'off',
+
       // checked by "@typescript-eslint/no-misused-promises"
       'sonarjs/no-misused-promises': 'off',
 
