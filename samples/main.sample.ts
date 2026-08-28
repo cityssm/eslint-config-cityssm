@@ -36,6 +36,8 @@ let maxVal = 50 > 100 ? 50 : 100 //eslint-disable-line
 
 fs.exists(FilePath)
 
+exec('echo "Hello World"')
+
 var emailExpression =
   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 

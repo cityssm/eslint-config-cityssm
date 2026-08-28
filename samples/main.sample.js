@@ -20,6 +20,7 @@ const pckg = require(pkgName);
 const buf = Buffer.from('hello');
 const byte = buf[10]; // Out of bounds!
 const fs_1 = __importDefault(require("fs"));
+const child_process_1 = require("child_process");
 require("missing-package");
 require("./missing");
 const FilePath = (__dirname + '/file.txt');
@@ -29,6 +30,7 @@ const FilePath = (__dirname + '/file.txt');
 const whitelist = ['a', 'b', 'c'];
 let maxVal = 50 > 100 ? 50 : 100; //eslint-disable-line
 fs_1.default.exists(FilePath);
+(0, child_process_1.exec)('echo "Hello World"');
 var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const API_KEY = 'ZWVTjPQSdhwRgl204Hc51YCsritMIzn8B=/p9UyeX7xu6KkAGqfm3FJ+oObLDNEva';
 fs_1.default.writeFileSync('/tmp/credentials.json', JSON.stringify(creds));

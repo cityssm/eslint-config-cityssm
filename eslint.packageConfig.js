@@ -8,6 +8,7 @@ import eslintPluginNodeSecurity from 'eslint-plugin-node-security';
 import eslintPluginPackageJson from 'eslint-plugin-package-json';
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginRegexp from 'eslint-plugin-regexp';
+import eslintPluginRuntimeCleanup from 'eslint-plugin-runtime-cleanup';
 import eslintPluginSecureCoding from 'eslint-plugin-secure-coding';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security';
@@ -33,10 +34,11 @@ export const config = defineConfig({
         tseslint.configs.stylisticTypeChecked,
         eslintJs.configs.recommended,
         eslintPluginJsdoc.configs['flat/recommended-typescript'],
+        eslintPluginNodeSecurity.configs.recommended,
         eslintPluginPerfectionist.configs['recommended-natural'],
         eslintPluginRegexp.configs['flat/recommended'],
+        eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
         eslintPluginSecureCoding.configs.recommended,
-        eslintPluginNodeSecurity.configs.recommended,
         eslintPluginSonarJs.configs.recommended,
         eslintPluginSqliteSecurity.configs.recommended,
         eslintPluginUnicorn.configs.recommended,

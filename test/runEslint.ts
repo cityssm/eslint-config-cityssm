@@ -8,6 +8,7 @@ const eslintCommand =
 console.log(`Running ${eslintCommand} ...`)
 
 try {
+  // eslint-disable-next-line runtime-cleanup/no-floating-child-processes
   exec(
     // eslint-disable-next-line sonarjs/no-os-command-from-path
     eslintCommand,
@@ -66,12 +67,13 @@ try {
         'json/',
         'markdown/',
         'n/',
-        "node-dependencies/",
+        'node-dependencies/',
         'node-security/',
         'package-json/',
         'perfectionist/',
         'promise/',
         'regexp/',
+        'runtime-cleanup/',
         'secure-coding/',
         'sonarjs/',
         'sqlite-security/',
@@ -82,14 +84,14 @@ try {
       const outputLines = stdout.split('\n')
 
       for (const pluginString of pluginStrings) {
-        const pluginUsed = outputLines.some((outputLine) => {
+        const isPluginUsed = outputLines.some((outputLine) => {
           const possiblePluginString = outputLine.trim().split(' ').at(-1) ?? ''
           return possiblePluginString.startsWith(pluginString)
         })
 
-        console.log(` ${pluginUsed ? '✔️' : '⚠️'}  ${pluginString}`)
+        console.log(` ${isPluginUsed ? '✔️' : '⚠️'}  ${pluginString}`)
 
-        if (!pluginUsed) {
+        if (!isPluginUsed) {
           process.exitCode = 1
         }
       }

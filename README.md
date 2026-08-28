@@ -70,6 +70,7 @@ code awesome!** 😎
 - [eslint-plugin-perfectionist](https://www.npmjs.com/package/eslint-plugin-perfectionist)
 - [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
+- [eslint-plugin-runtime-cleanup](https://www.npmjs.com/package/eslint-plugin-runtime-cleanup)
 - [eslint-plugin-secure-coding](https://www.npmjs.com/package/eslint-plugin-secure-coding)
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
 - [eslint-plugin-sqlite-security](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
