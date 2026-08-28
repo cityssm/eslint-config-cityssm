@@ -74,7 +74,7 @@ code awesome!** 😎
 - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
 - [eslint-plugin-sqlite-security](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
-- [eslint-plugin-write-good-comments](https://www.npmjs.com/package/eslint-plugin-write-good-comments)
+- [eslint-plugin-write-good-comments-2](https://www.npmjs.com/package/eslint-plugin-write-good-comments-2)
 - [html-eslint](https://github.com/yeonjuan/html-eslint)
 
 ## Projects Using eslint-config-cityssm

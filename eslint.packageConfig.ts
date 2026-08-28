@@ -14,7 +14,7 @@ import eslintPluginSecureCoding from 'eslint-plugin-secure-coding'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
-import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments'
+import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments-2'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
