@@ -183,7 +183,7 @@ export const config = defineConfig({
                 ignore: ['DB', 'URL']
             }
         ],
-        'unicorn/prevent-abbreviations': [
+        'unicorn/name-replacements': [
             'error',
             {
                 replacements: {
