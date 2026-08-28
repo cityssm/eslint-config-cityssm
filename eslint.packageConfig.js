@@ -2,6 +2,7 @@ import eslintJs from '@eslint/js';
 import eslintJson from '@eslint/json';
 import eslintMarkdown from '@eslint/markdown';
 import eslintConfigLove from 'eslint-config-love';
+import eslintPluginNodeTest from 'eslint-node-test';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies';
 import eslintPluginNodeSecurity from 'eslint-plugin-node-security';
@@ -35,6 +36,7 @@ export const config = defineConfig({
         eslintJs.configs.recommended,
         eslintPluginJsdoc.configs['flat/recommended-typescript'],
         eslintPluginNodeSecurity.configs.recommended,
+        eslintPluginNodeTest.configs.recommended,
         eslintPluginPerfectionist.configs['recommended-natural'],
         eslintPluginRegexp.configs['flat/recommended'],
         eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
@@ -175,6 +177,8 @@ export const config = defineConfig({
         // checked by "@typescript-eslint/no-redundant-type-constituents"
         'sonarjs/no-redundant-type-constituents': 'off',
         'sonarjs/unnecessary-character-escapes': 'off',
+        // checked by "node-test/consistent-assert-style"
+        'unicorn/consistent-assert': 'off',
         'unicorn/consistent-function-scoping': 'warn',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/filename-case': [

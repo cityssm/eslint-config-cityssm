@@ -55,6 +55,7 @@ try {
             'n/',
             'node-dependencies/',
             'node-security/',
+            'node-test/',
             'package-json/',
             'perfectionist/',
             'promise/',

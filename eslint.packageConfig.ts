@@ -4,6 +4,7 @@ import eslintJson from '@eslint/json'
 import eslintMarkdown from '@eslint/markdown'
 import type { Linter } from 'eslint'
 import eslintConfigLove from 'eslint-config-love'
+import eslintPluginNodeTest from 'eslint-node-test'
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies'
 import eslintPluginNodeSecurity from 'eslint-plugin-node-security'
@@ -44,6 +45,7 @@ export const config = defineConfig(
 
       eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginNodeSecurity.configs.recommended,
+      eslintPluginNodeTest.configs.recommended,
       eslintPluginPerfectionist.configs['recommended-natural'],
       eslintPluginRegexp.configs['flat/recommended'],
       eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
@@ -222,6 +224,9 @@ export const config = defineConfig(
       'sonarjs/no-redundant-type-constituents': 'off',
 
       'sonarjs/unnecessary-character-escapes': 'off',
+
+      // checked by "node-test/consistent-assert-style"
+      'unicorn/consistent-assert': 'off',
 
       'unicorn/consistent-function-scoping': 'warn',
       'unicorn/empty-brace-spaces': 'off',
