@@ -81,7 +81,7 @@
     "eslint-plugin-secure-coding": "^5.1.4",
     "eslint-plugin-sonarjs": "^4.2.0",
     "eslint-plugin-sqlite-security": "^0.1.6",
-    "eslint-plugin-unicorn": "^65.0.0",
+    "eslint-plugin-unicorn": "^73.0.0",
     "eslint-plugin-write-good-comments-2": "^1.2.14",
     "typescript-eslint": "^8.68.0"
   },
