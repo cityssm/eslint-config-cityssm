@@ -53,7 +53,6 @@ export const config = defineConfig({
         }
     },
     plugins: {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         'write-good-comments': eslintPluginWriteGoodComments
     },
     rules: {
@@ -154,7 +153,7 @@ export const config = defineConfig({
         // checked by "no-useless-escape"
         'regexp/no-useless-escape': 'off',
         'require-unicode-regexp': 'warn',
-        // too many false positives
+        // lots of false positives
         'secure-coding/no-improper-sanitization': 'off',
         // checked by "complexity"
         'sonarjs/cognitive-complexity': 'off',

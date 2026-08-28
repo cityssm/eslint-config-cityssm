@@ -66,7 +66,6 @@ export const config = defineConfig(
     },
 
     plugins: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'write-good-comments': eslintPluginWriteGoodComments
     },
 
@@ -190,7 +189,7 @@ export const config = defineConfig(
 
       'require-unicode-regexp': 'warn',
 
-      // too many false positives
+      // lots of false positives
       'secure-coding/no-improper-sanitization': 'off',
 
       // checked by "complexity"

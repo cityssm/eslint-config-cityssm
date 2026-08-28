@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cityssm",
-  "version": "48.1.0",
+  "version": "49.0.0",
   "description": "ESLint rules used in the City of Sault Ste. Marie's TypeScript projects.",
   "keywords": [
     "eslint",
@@ -57,6 +57,11 @@
     "performance": "cross-env TIMING=20 eslint samples",
     "test": "node ./test/runEslint.js"
   },
+  "overrides": {
+    "eslint-config-love": {
+      "eslint": "^10.9.1"
+    }
+  },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@eslint/core": "^1.2.1",
@@ -89,10 +94,5 @@
     "@types/eslint-plugin-security": "^3.0.1",
     "@types/node": "^26.4.0",
     "prettier-config-cityssm": "^2.2.0"
-  },
-  "overrides": {
-    "eslint-config-love": {
-      "eslint": "^10.9.1"
-    }
   }
 }
