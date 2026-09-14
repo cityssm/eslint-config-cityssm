@@ -69,7 +69,7 @@
     "@html-eslint/eslint-plugin": "^0.65.0",
     "@html-eslint/parser": "^0.65.0",
     "eslint": "^10.10.0",
-    "eslint-config-love": "^156.0.0",
+    "eslint-config-love": "^157.0.0",
     "eslint-node-test": "^0.4.0",
     "eslint-plugin-browser-security": "^2.1.5",
     "eslint-plugin-express-security": "^3.2.4",
