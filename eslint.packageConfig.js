@@ -179,6 +179,7 @@ export const config = defineConfig({
         'sonarjs/unnecessary-character-escapes': 'off',
         // checked by "node-test/consistent-assert-style"
         'unicorn/consistent-assert': 'off',
+        'unicorn/consistent-boolean-name': 'warn',
         'unicorn/consistent-function-scoping': 'warn',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/filename-case': [
