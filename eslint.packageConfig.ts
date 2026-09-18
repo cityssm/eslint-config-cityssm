@@ -230,6 +230,9 @@ export const config = defineConfig(
 
       'unicorn/consistent-boolean-name': 'warn',
 
+      // checked by "perfectionist/sort-class-members"
+      'unicorn/consistent-class-member-order': 'off',
+
       'unicorn/consistent-function-scoping': 'warn',
       'unicorn/empty-brace-spaces': 'off',
       'unicorn/filename-case': [
