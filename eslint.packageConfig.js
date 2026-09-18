@@ -216,6 +216,8 @@ export const config = defineConfig({
                 }
             }
         ],
+        // checked by "perfectionist/sort-union-types"
+        'unicorn/prefer-type-literal-last': 'off',
         'write-good-comments/write-good-comments': [
             'warn',
             {
