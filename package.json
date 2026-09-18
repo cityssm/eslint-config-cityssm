@@ -66,14 +66,14 @@
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^2.1.0",
     "@eslint/markdown": "^8.0.3",
-    "@html-eslint/eslint-plugin": "^0.66.0",
-    "@html-eslint/parser": "^0.66.0",
+    "@html-eslint/eslint-plugin": "^0.66.1",
+    "@html-eslint/parser": "^0.66.1",
     "eslint": "^10.10.0",
     "eslint-config-love": "^157.0.0",
     "eslint-node-test": "^0.4.0",
     "eslint-plugin-browser-security": "^2.1.5",
     "eslint-plugin-express-security": "^3.2.4",
-    "eslint-plugin-jsdoc": "^64.5.2",
+    "eslint-plugin-jsdoc": "^64.5.3",
     "eslint-plugin-n": "^18.3.0",
     "eslint-plugin-node-dependencies": "^2.2.0",
     "eslint-plugin-node-security": "^5.6.1",
@@ -91,7 +91,7 @@
   },
   "devDependencies": {
     "@types/eslint-plugin-security": "^3.0.1",
-    "@types/node": "^26.5.1",
+    "@types/node": "^26.6.1",
     "prettier-config-cityssm": "^2.2.0"
   }
 }
