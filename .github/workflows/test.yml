@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Install ESLint
-        run: npm install -g eslint@9.x
+        run: npm install -g eslint@10.x
 
       - name: Run Test
         run: npm test
