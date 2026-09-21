@@ -68,30 +68,30 @@
     "@eslint/markdown": "^8.0.3",
     "@html-eslint/eslint-plugin": "^0.66.1",
     "@html-eslint/parser": "^0.66.1",
-    "eslint": "^10.10.0",
+    "eslint": "^10.11.0",
     "eslint-config-love": "^157.0.0",
     "eslint-node-test": "^0.4.0",
     "eslint-plugin-browser-security": "^2.1.5",
     "eslint-plugin-express-security": "^3.2.4",
-    "eslint-plugin-jsdoc": "^64.5.3",
+    "eslint-plugin-jsdoc": "^64.5.4",
     "eslint-plugin-n": "^18.3.0",
     "eslint-plugin-node-dependencies": "^2.2.0",
-    "eslint-plugin-node-security": "^5.6.1",
-    "eslint-plugin-package-json": "^1.8.1",
+    "eslint-plugin-node-security": "^5.6.2",
+    "eslint-plugin-package-json": "^1.9.0",
     "eslint-plugin-perfectionist": "^5.11.1",
     "eslint-plugin-promise": "^7.3.0",
-    "eslint-plugin-regexp": "^3.3.0",
+    "eslint-plugin-regexp": "^3.3.1",
     "eslint-plugin-runtime-cleanup": "^2.0.2",
-    "eslint-plugin-secure-coding": "^5.4.5",
+    "eslint-plugin-secure-coding": "^5.4.6",
     "eslint-plugin-sonarjs": "^4.2.1",
     "eslint-plugin-sqlite-security": "^0.1.11",
     "eslint-plugin-unicorn": "^75.0.0",
     "eslint-plugin-write-good-comments-2": "^1.2.14",
-    "typescript-eslint": "^8.70.0"
+    "typescript-eslint": "^8.70.1"
   },
   "devDependencies": {
     "@types/eslint-plugin-security": "^3.0.1",
-    "@types/node": "^26.6.1",
+    "@types/node": "^26.6.2",
     "prettier-config-cityssm": "^2.2.0"
   }
 }
