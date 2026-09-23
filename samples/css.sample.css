@@ -7,3 +7,9 @@ button:has(img) {
 }
 
 
+@media tv {
+	acronym:matches(.featured) {
+		word-wrap: break-word;
+		overflow: overlay;
+	}
+}
