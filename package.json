@@ -57,6 +57,12 @@
   "scripts": {
     "coverage": "c8 node ./test/runEslint.js",
     "performance": "cross-env TIMING=20 eslint samples",
+    "samples:css": "eslint --debug \"samples/*.css\"",
+    "samples:ejs": "eslint --debug samples/*.ejs",
+    "samples:html": "eslint --debug samples/*.html",
+    "samples:json": "eslint --debug samples/*.json",
+    "samples:md": "eslint --debug samples/*.md",
+    "samples:ts": "eslint --debug samples/*.ts",
     "test": "node ./test/runEslint.js"
   },
   "dependencies": {
