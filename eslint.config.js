@@ -165,10 +165,13 @@ export const config = defineConfig(packageConfig, {
         }
     },
     plugins: {
-        html: eslintHtml
+        html: eslintHtml,
+        unicorn: eslintPluginUnicorn
     },
     rules: {
-        ...htmlEslintRulesConfig
+        ...htmlEslintRulesConfig,
+        'unicorn/no-empty-file': 'error',
+        'unicorn/no-invalid-file-input-accept': 'error'
     }
 });
 export default config;

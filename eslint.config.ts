@@ -190,10 +190,14 @@ export const config = defineConfig(
       }
     },
     plugins: {
-      html: eslintHtml as Plugin
+      html: eslintHtml as Plugin,
+      unicorn: eslintPluginUnicorn
     },
     rules: {
-      ...htmlEslintRulesConfig
+      ...htmlEslintRulesConfig,
+
+      'unicorn/no-empty-file': 'error',
+      'unicorn/no-invalid-file-input-accept': 'error'
     }
   }
 )
