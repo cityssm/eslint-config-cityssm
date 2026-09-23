@@ -144,7 +144,7 @@ export const config = defineConfig(
       ],
 
       /*
-       * No yet available rules
+       * Not yet available rules
        */
 
       /*

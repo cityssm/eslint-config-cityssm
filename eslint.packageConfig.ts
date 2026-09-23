@@ -288,7 +288,23 @@ export const config = defineConfig(
     extends: [eslintJson.configs.recommended],
     language: 'json/json',
     plugins: {
-      json: eslintJson as Plugin
+      json: eslintJson as Plugin,
+      unicorn: eslintPluginUnicorn
+    },
+    rules: {
+      /*
+       * Not yet available rules
+       */
+
+      /*
+      'unicorn/escape-case': 'error',
+      'unicorn/indent': 'error',
+      'unicorn/key-name-casing': 'warn',
+      'unicorn/no-zero-fractions': 'error',
+      'unicorn/number-literal-case': 'error'
+      */
+
+      'unicorn/no-empty-file': 'error'
     }
   },
   {

@@ -123,7 +123,7 @@ export const config = defineConfig(packageConfig, {
             }
         ],
         /*
-         * No yet available rules
+         * Not yet available rules
          */
         /*
         'unicorn/indent': ['error', {
