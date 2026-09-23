@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 import { exec } from 'node:child_process';
-const eslintCommand = 
-//'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples'
-'eslint --config ./test/eslint.testWebappConfig.js samples';
+const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples';
 console.log(`Running ${eslintCommand} ...`);
 try {
     // eslint-disable-next-line runtime-cleanup/no-floating-child-processes
