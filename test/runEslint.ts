@@ -3,7 +3,8 @@
 import { exec } from 'node:child_process'
 
 const eslintCommand =
-  'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples'
+  //'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples'
+  'eslint --config ./test/eslint.testWebappConfig.js samples'
 
 console.log(`Running ${eslintCommand} ...`)
 
