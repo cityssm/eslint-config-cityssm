@@ -32,6 +32,7 @@ try {
         }
         else if (error.code === 2) {
             console.log('❗  Broken configuration.');
+            console.log(error);
             process.exitCode = 1;
         }
         else {
