@@ -170,7 +170,6 @@ export const config = defineConfig(packageConfig, {
     },
     rules: {
         ...htmlEslintRulesConfig,
-        'unicorn/no-empty-file': 'error',
         'unicorn/no-invalid-file-input-accept': 'error'
     }
 });

@@ -196,7 +196,6 @@ export const config = defineConfig(
     rules: {
       ...htmlEslintRulesConfig,
 
-      'unicorn/no-empty-file': 'error',
       'unicorn/no-invalid-file-input-accept': 'error'
     }
   }
