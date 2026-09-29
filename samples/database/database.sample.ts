@@ -4,6 +4,6 @@ function insertUser(userName: string): void {
 const database = sqlite3('database.db', { verbose: console.log })
 
 database.prepare(/* sql */ `
-  insert into users (username, password) values (${userName}, 'password')
+  insert into users (username, password, empty) values (${userName}, 'password', NULL)
 `).run()
 }

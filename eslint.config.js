@@ -111,6 +111,7 @@ export const config = defineConfig(packageConfig, {
 }, {
     files: ['**/database/**/*.ts'],
     rules: {
+        'unicorn/consistent-boolean-name': 'off',
         'unicorn/no-null': 'off'
     }
 }, {
