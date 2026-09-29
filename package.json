@@ -96,5 +96,8 @@
     "@types/eslint-plugin-security": "^3.0.1",
     "@types/node": "^26.6.3",
     "prettier-config-cityssm": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=22.22.2"
   }
 }

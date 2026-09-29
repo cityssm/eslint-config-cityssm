@@ -326,7 +326,9 @@ export const config = defineConfig(
         {
           order: 'sort-package-json'
         }
-      ]
+      ],
+
+      'package-json/require-engines': 'error'
     }
   },
   {
