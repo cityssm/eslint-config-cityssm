@@ -17,6 +17,8 @@ var val = 4
 
 val++
 
+var x  = null
+
 const mesageElement = document.getElementById('message')
 
 if (val >= 3) {

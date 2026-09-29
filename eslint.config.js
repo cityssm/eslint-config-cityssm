@@ -109,6 +109,11 @@ export const config = defineConfig(packageConfig, {
         ]
     }
 }, {
+    files: ['**/database/**/*.ts'],
+    rules: {
+        'unicorn/no-null': 'off'
+    }
+}, {
     files: ['**/*.css'],
     extends: [eslintCss.configs.recommended],
     language: 'css/css',
@@ -148,7 +153,7 @@ export const config = defineConfig(packageConfig, {
         'unicorn/no-unknown-pseudo-selectors': 'error',
         'unicorn/no-unscoped-css-nesting-selector': 'error',
         'unicorn/prefer-explicit-viewport-units': 'warn',
-        'unicorn/prefer-media-feature-range-syntax': 'warn',
+        'unicorn/prefer-media-feature-range-syntax': 'warn'
     }
 }, {
     files: ['**/*.ejs', '**/*.html'],
