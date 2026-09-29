@@ -110,6 +110,9 @@ export const config = defineConfig(packageConfig, {
     }
 }, {
     files: ['**/database/**/*.ts'],
+    plugins: {
+        unicorn: eslintPluginUnicorn
+    },
     rules: {
         'unicorn/consistent-boolean-name': [
             'warn',
