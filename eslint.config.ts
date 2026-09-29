@@ -130,7 +130,12 @@ export const config = defineConfig(
   {
     files: ['**/database/**/*.ts'],
     rules: {
-      'unicorn/consistent-boolean-name': 'off',
+      'unicorn/consistent-boolean-name': [
+        'warn',
+        {
+          checkFunctions: 'never'
+        }
+      ],
       'unicorn/no-null': 'off'
     }
   },
