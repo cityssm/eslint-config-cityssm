@@ -2,6 +2,7 @@ import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintCss from '@eslint/css'
 import eslintHtml from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
+import eslintPluginCssicorn from 'eslint-cssicorn'
 import eslintPluginBrowserSecurity from 'eslint-plugin-browser-security'
 import eslintPluginExpressSecurity from 'eslint-plugin-express-security'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
@@ -145,7 +146,10 @@ export const config = defineConfig(
   {
     files: ['**/*.css'],
 
-    extends: [eslintCss.configs.recommended],
+    extends: [
+      eslintCss.configs.recommended,
+      eslintPluginCssicorn.configs.recommended
+    ],
     language: 'css/css',
     plugins: {
       unicorn: eslintPluginUnicorn
@@ -158,35 +162,16 @@ export const config = defineConfig(
         }
       ],
 
-      /*
-       * Not yet available rules
-       */
-
-      /*
-      'unicorn/indent': ['error', {
-        indent: 2
-      }],
-      'unicorn/lowercase-css': 'error',
-      'unicorn/no-descending-specificity': 'error',
-      'unicorn/no-redundant-shorthand-values': 'error',
-      'unicorn/no-unknown-animations': 'error',
-      'unicorn/no-zero-fractions': 'error',
-      'unicorn/no-zero-length-unit': 'error',
-      'unicorn/number-literal-case': 'error',
-      'unicorn/prefer-short-hex-color': 'error'
-      */
-
-      'unicorn/no-deprecated-css-features': 'error',
-      'unicorn/no-duplicate-css-selectors': 'error',
-      'unicorn/no-duplicate-font-family-names': 'error',
+      'unicorn/indent': [
+        'error',
+        {
+          indent: 2
+        }
+      ],
       'unicorn/no-empty-file': 'error',
-      'unicorn/no-invalid-media-features': 'error',
       'unicorn/no-transition-all': 'error',
-      'unicorn/no-unknown-css-annotations': 'error',
-      'unicorn/no-unknown-pseudo-selectors': 'error',
-      'unicorn/no-unscoped-css-nesting-selector': 'error',
-      'unicorn/prefer-explicit-viewport-units': 'warn',
-      'unicorn/prefer-media-feature-range-syntax': 'warn'
+      'unicorn/no-zero-fractions': 'error',
+      'unicorn/number-literal-case': 'error'
     }
   },
   {
