@@ -82,7 +82,7 @@ const htmlEslintRulesConfig = {
  * ESLint Configuration for Web Applications
  */
 export default defineConfig([
-    ...packageConfig,
+    packageConfig,
     {
         files: ['**/*.ts'],
         ignores: ['**/*.d.ts'],
