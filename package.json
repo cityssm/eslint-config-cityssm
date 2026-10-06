@@ -65,6 +65,11 @@
     "samples:ts": "eslint --debug samples/*.ts",
     "test": "node ./test/runEslint.js"
   },
+  "overrides": {
+    "@eslint/markdown": {
+      "katex": "0.18.2"
+    }
+  },
   "dependencies": {
     "@eslint/core": "^1.2.1",
     "@eslint/css": "^2.0.0",
