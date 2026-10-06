@@ -120,6 +120,9 @@ export default defineConfig([
     },
     {
         files: ['**/database/**/*.ts'],
+        plugins: {
+            unicorn: eslintPluginUnicorn
+        },
         rules: {
             'unicorn/consistent-boolean-name': [
                 'warn',
@@ -132,6 +135,9 @@ export default defineConfig([
     },
     {
         files: ['**/public/javascripts/**/*.ts'],
+        plugins: {
+            unicorn: eslintPluginUnicorn
+        },
         rules: {
             'max-lines': 'off',
             'runtime-cleanup/no-unmanaged-event-listeners': 'off',
