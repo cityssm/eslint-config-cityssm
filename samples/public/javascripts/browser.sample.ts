@@ -34,6 +34,7 @@ document.write(`<p>
 
 const html = /*html*/`<p>`
 
+const addButtonElement = document.querySelector('.add-button') as HTMLElement
 
 ;(document.querySelector('main') as HTMLElement).innerHTML = /* html */ `
   <thead>

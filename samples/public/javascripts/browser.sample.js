@@ -22,6 +22,7 @@ const firstInputEle = document.querySelectorAll('.input')[0];
 document.write(`<p>
   Test ${'val'} `);
 const html = /*html*/ `<p>`;
+const addButtonElement = document.querySelector('.add-button');
 document.querySelector('main').innerHTML = /* html */ `
   <thead>
     <tr>

@@ -134,6 +134,15 @@ export default defineConfig([
         }
     },
     {
+        files: ['**/public/javascripts/**/*.ts'],
+        plugins: {
+            unicorn: eslintPluginUnicorn
+        },
+        rules: {
+            'unicorn/no-non-function-verb-prefix': 'off'
+        }
+    },
+    {
         files: ['**/*.css'],
         language: 'css/css',
         languageOptions: {
