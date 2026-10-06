@@ -126,6 +126,13 @@ export default defineConfig([
         {
           trustedSanitizers: ['cityssm.escapeHTML']
         }
+      ],
+
+      'unicorn/consistent-boolean-name': [
+        'error',
+        {
+          ignore: ['success']
+        }
       ]
     }
   },

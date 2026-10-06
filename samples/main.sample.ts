@@ -68,6 +68,10 @@ export default function () {
 
 let tmp = `test`
 
+const success = true
+
+const failure = false
+
 async function promiseTst(param1, param2?, param3, param4, param5, param6) {
   return new Promise(function (reject, resolve) {
     for (let i = 1; i <= 1; i++) {
