@@ -97,6 +97,8 @@ export default defineConfig([
             'n/no-missing-import': 'off',
             'no-await-in-loop': 'warn',
             'no-extra-semi': 'off',
+            // checked by "unicorn/no-negated-condition"
+            'no-negated-condition': 'off',
             'no-param-reassign': ['error', { props: false }],
             'no-redeclare': 'off',
             'no-undef': 'off',

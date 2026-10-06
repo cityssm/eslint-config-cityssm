@@ -119,6 +119,9 @@ export default defineConfig([
 
       'no-extra-semi': 'off',
 
+      // checked by "unicorn/no-negated-condition"
+      'no-negated-condition': 'off',
+
       'no-param-reassign': ['error', { props: false }],
 
       'no-redeclare': 'off',
