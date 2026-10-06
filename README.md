@@ -57,31 +57,32 @@ export default config
 **Thanks to all of the developers who help make the City of Sault Ste. Marie's
 code awesome!** 😎
 
-- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-- [eslint-config-love](https://www.npmjs.com/package/eslint-config-love)
-- [@eslint-community/eslint-plugin-eslint-comments](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
-- [eslint-plugin-express-security](https://www.npmjs.com/package/eslint-plugin-express-security)
-- [eslint-plugin-browser-security](https://www.npmjs.com/package/eslint-plugin-browser-security)
-- [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
-- [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
-- [eslint-plugin-node-dependencies](https://www.npmjs.com/package/eslint-plugin-node-dependencies)
-- [eslint-node-test](https://www.npmjs.com/package/eslint-node-test)
-- [eslint-plugin-node-security](https://www.npmjs.com/package/eslint-plugin-node-security)
-- [eslint-plugin-package-json](https://www.npmjs.com/package/eslint-plugin-package-json)
-- [eslint-plugin-perfectionist](https://www.npmjs.com/package/eslint-plugin-perfectionist)
-- [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
-- [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
-- [eslint-plugin-runtime-cleanup](https://www.npmjs.com/package/eslint-plugin-runtime-cleanup)
-- [eslint-plugin-secure-coding](https://www.npmjs.com/package/eslint-plugin-secure-coding)
-- [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
-- [eslint-plugin-sqlite-security](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
-- [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
-- [eslint-plugin-write-good-comments-2](https://www.npmjs.com/package/eslint-plugin-write-good-comments-2)
-- [html-eslint](https://github.com/yeonjuan/html-eslint)
+- [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
+- [**eslint-config-love**](https://www.npmjs.com/package/eslint-config-love)
+- [eslint-plugin-**browser-security**](https://www.npmjs.com/package/eslint-plugin-browser-security)
+- [eslint-**cssicorn**](https://www.npmjs.com/package/eslint-cssicorn)
+- [@eslint-community/eslint-plugin-**eslint-comments**](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
+- [eslint-plugin-**express-security**](https://www.npmjs.com/package/eslint-plugin-express-security)
+- [eslint-plugin-**jsdoc**](https://www.npmjs.com/package/eslint-plugin-jsdoc)
+- [eslint-plugin-**n**](https://www.npmjs.com/package/eslint-plugin-n)
+- [eslint-plugin-**node-dependencies**](https://www.npmjs.com/package/eslint-plugin-node-dependencies)
+- [eslint-**node-test**](https://www.npmjs.com/package/eslint-node-test)
+- [eslint-plugin-**node-security**](https://www.npmjs.com/package/eslint-plugin-node-security)
+- [eslint-plugin-**package-json**](https://www.npmjs.com/package/eslint-plugin-package-json)
+- [eslint-plugin-**perfectionist**](https://www.npmjs.com/package/eslint-plugin-perfectionist)
+- [eslint-plugin-**promise**](https://www.npmjs.com/package/eslint-plugin-promise)
+- [eslint-plugin-**regexp**](https://www.npmjs.com/package/eslint-plugin-regexp)
+- [eslint-plugin-**runtime-cleanup**](https://www.npmjs.com/package/eslint-plugin-runtime-cleanup)
+- [eslint-plugin-**secure-coding**](https://www.npmjs.com/package/eslint-plugin-secure-coding)
+- [eslint-plugin-**sonarjs**](https://www.npmjs.com/package/eslint-plugin-sonarjs)
+- [eslint-plugin-**sqlite-security**](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
+- [eslint-plugin-**unicorn**](https://www.npmjs.com/package/eslint-plugin-unicorn)
+- [eslint-plugin-**write-good-comments-2**](https://www.npmjs.com/package/eslint-plugin-write-good-comments-2)
+- [**html**-eslint](https://github.com/yeonjuan/html-eslint)
 
 ## Projects Using eslint-config-cityssm
 
-[**Used in 70+ projects**](https://github.com/search?q=eslint-config-cityssm+path%3A**%2Fpackage.json&type=code),
+[**Used in 80+ projects**](https://github.com/search?q=eslint-config-cityssm+path%3A**%2Fpackage.json&type=code),
 including:
 
 - [EMILE (Energy Monitoring in Less Effort)](https://github.com/cityssm/EMILE)
