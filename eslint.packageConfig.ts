@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
+
 import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
@@ -26,7 +28,7 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
 /**
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
-export const config = defineConfig(
+export default defineConfig([
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -335,8 +337,6 @@ export const config = defineConfig(
       markdown: eslintMarkdown as Plugin
     }
   }
-)
-
-export default config
+])
 
 export { type Config, defineConfig } from 'eslint/config'

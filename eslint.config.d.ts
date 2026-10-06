@@ -1,6 +1,6 @@
 /**
  * ESLint Configuration for Web Applications
  */
-export declare const config: import("eslint/config").ConfigObject[];
-export default config;
+declare const _default: import("eslint/config").ConfigObject[];
+export default _default;
 export { type Config, defineConfig } from 'eslint/config';

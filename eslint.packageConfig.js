@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
 import eslintJs from '@eslint/js';
 import eslintJson from '@eslint/json';
 import eslintMarkdown from '@eslint/markdown';
@@ -22,256 +23,261 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
 /**
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
-export const config = defineConfig({
-    linterOptions: {
-        reportUnusedDisableDirectives: 'error',
-        reportUnusedInlineConfigs: 'error'
-    }
-}, {
-    files: ['**/*.ts'],
-    ignores: ['**/*.d.ts'],
-    extends: [
-        tseslint.configs.recommendedTypeChecked,
-        tseslint.configs.stylisticTypeChecked,
-        eslintJs.configs.recommended,
-        eslintPluginJsdoc.configs['flat/recommended-typescript'],
-        eslintPluginNodeSecurity.configs.recommended,
-        eslintPluginNodeTest.configs.recommended,
-        eslintPluginPerfectionist.configs['recommended-natural'],
-        eslintPluginRegexp.configs['flat/recommended'],
-        eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
-        eslintPluginSecureCoding.configs.recommended,
-        eslintPluginSonarJs.configs.recommended,
-        eslintPluginSqliteSecurity.configs.recommended,
-        eslintPluginUnicorn.configs.recommended,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
-        eslintConfigLove
-    ],
-    languageOptions: {
-        parserOptions: {
-            ecmaFeatures: { modules: true },
-            ecmaVersion: 2022,
-            sourceType: 'module',
-            projectService: true,
-            tsconfigRootDir: import.meta.dirname
+export default defineConfig([
+    {
+        linterOptions: {
+            reportUnusedDisableDirectives: 'error',
+            reportUnusedInlineConfigs: 'error'
         }
     },
-    plugins: {
-        'write-good-comments': eslintPluginWriteGoodComments
-    },
-    rules: {
-        '@typescript-eslint/init-declarations': 'warn',
-        '@typescript-eslint/no-magic-numbers': [
-            'warn',
-            {
-                ignore: noMagicNumbers
-            }
+    {
+        files: ['**/*.ts'],
+        ignores: ['**/*.d.ts'],
+        extends: [
+            tseslint.configs.recommendedTypeChecked,
+            tseslint.configs.stylisticTypeChecked,
+            eslintJs.configs.recommended,
+            eslintPluginJsdoc.configs['flat/recommended-typescript'],
+            eslintPluginNodeSecurity.configs.recommended,
+            eslintPluginNodeTest.configs.recommended,
+            eslintPluginPerfectionist.configs['recommended-natural'],
+            eslintPluginRegexp.configs['flat/recommended'],
+            eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
+            eslintPluginSecureCoding.configs.recommended,
+            eslintPluginSonarJs.configs.recommended,
+            eslintPluginSqliteSecurity.configs.recommended,
+            eslintPluginUnicorn.configs.recommended,
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
+            eslintConfigLove
         ],
-        '@typescript-eslint/no-misused-promises': 'warn',
-        '@typescript-eslint/no-non-null-assertion': 'warn',
-        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-        '@typescript-eslint/no-unsafe-argument': 'warn',
-        '@typescript-eslint/no-unsafe-assignment': 'warn',
-        '@typescript-eslint/no-unsafe-call': 'warn',
-        '@typescript-eslint/no-unsafe-member-access': 'warn',
-        '@typescript-eslint/no-unsafe-type-assertion': 'warn',
-        '@typescript-eslint/non-nullable-type-assertion-style': 'off',
-        '@typescript-eslint/prefer-destructuring': 'off',
-        '@typescript-eslint/prefer-optional-chain': 'warn',
-        '@typescript-eslint/restrict-plus-operands': 'warn',
-        '@typescript-eslint/space-before-function-paren': 'off',
-        '@typescript-eslint/strict-boolean-expressions': 'warn',
-        complexity: [
-            'warn',
-            {
-                max: 20
+        languageOptions: {
+            parserOptions: {
+                ecmaFeatures: { modules: true },
+                ecmaVersion: 2022,
+                sourceType: 'module',
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname
             }
-        ],
-        '@eslint-community/eslint-comments/require-description': 'off',
-        'jsdoc/require-asterisk-prefix': ['error', 'always'],
-        'jsdoc/require-hyphen-before-param-description': 'error',
-        'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
-        'n/no-missing-import': 'off',
-        'no-await-in-loop': 'warn',
-        'no-extra-semi': 'off',
-        'no-param-reassign': ['error', { props: false }],
-        'no-redeclare': 'off',
-        'no-undef': 'off',
-        // checked by "@typescript-eslint/no-unused-vars"
-        'no-unused-vars': 'off',
-        'perfectionist/sort-imports': [
-            'error',
-            {
-                groups: [
-                    'builtin',
-                    ['external', 'internal'],
-                    'parent',
-                    'sibling',
-                    'unknown'
-                ],
-                newlinesBetween: 1
-            }
-        ],
-        'perfectionist/sort-interfaces': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
-        'perfectionist/sort-modules': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
-        'perfectionist/sort-named-exports': [
-            'error',
-            {
-                groups: ['type-export', 'unknown']
-            }
-        ],
-        'perfectionist/sort-named-imports': [
-            'error',
-            {
-                groups: ['type-import', 'unknown']
-            }
-        ],
-        'perfectionist/sort-object-types': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
-        'perfectionist/sort-objects': [
-            'warn',
-            {
-                partitionByNewLine: true
-            }
-        ],
-        'perfectionist/sort-union-types': [
-            'error',
-            {
-                groups: ['unknown', 'nullish']
-            }
-        ],
-        // checked by "no-useless-escape"
-        'regexp/no-useless-escape': 'off',
-        'require-unicode-regexp': 'warn',
-        // lots of false positives
-        'secure-coding/no-improper-sanitization': 'off',
-        // checked by "complexity"
-        'sonarjs/cognitive-complexity': 'off',
-        'sonarjs/different-types-comparison': 'off',
-        // checked by "regexp/no-dupe-characters-character-class"
-        'sonarjs/duplicates-in-character-class': 'off',
-        // checked by "no-control-regex"
-        'sonarjs/no-control-regex': 'off',
-        'sonarjs/no-duplicate-string': 'warn',
-        // checked by "secure-coding/no-hardcoded-passwords"
-        'sonarjs/no-hardcoded-passwords': 'off',
-        // checked by "@typescript-eslint/no-misused-promises"
-        'sonarjs/no-misused-promises': 'off',
-        // checked by "max-nested-callbacks"
-        'sonarjs/no-nested-functions': 'off',
-        'sonarjs/no-nested-template-literals': 'warn',
-        // checked by "@typescript-eslint/no-redundant-type-constituents"
-        'sonarjs/no-redundant-type-constituents': 'off',
-        'sonarjs/unnecessary-character-escapes': 'off',
-        // checked by "node-test/consistent-assert-style"
-        'unicorn/consistent-assert': 'off',
-        'unicorn/consistent-boolean-name': 'warn',
-        // checked by "perfectionist/sort-class-members"
-        'unicorn/consistent-class-member-order': 'off',
-        'unicorn/consistent-function-scoping': 'warn',
-        'unicorn/empty-brace-spaces': 'off',
-        'unicorn/filename-case': [
-            'error',
-            {
-                case: 'camelCase',
-                ignore: ['DB', 'URL']
-            }
-        ],
-        'unicorn/name-replacements': [
-            'error',
-            {
-                replacements: {
-                    def: {
-                        definition: true
-                    },
-                    ele: {
-                        element: true
-                    },
-                    eles: {
-                        elements: true
-                    },
-                    fns: {
-                        functions: true
-                    },
-                    res: {
-                        result: false
-                    },
-                    temp: {
-                        temporary: false
+        },
+        plugins: {
+            'write-good-comments': eslintPluginWriteGoodComments
+        },
+        rules: {
+            '@typescript-eslint/init-declarations': 'warn',
+            '@typescript-eslint/no-magic-numbers': [
+                'warn',
+                {
+                    ignore: noMagicNumbers
+                }
+            ],
+            '@typescript-eslint/no-misused-promises': 'warn',
+            '@typescript-eslint/no-non-null-assertion': 'warn',
+            '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+            '@typescript-eslint/no-unsafe-argument': 'warn',
+            '@typescript-eslint/no-unsafe-assignment': 'warn',
+            '@typescript-eslint/no-unsafe-call': 'warn',
+            '@typescript-eslint/no-unsafe-member-access': 'warn',
+            '@typescript-eslint/no-unsafe-type-assertion': 'warn',
+            '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+            '@typescript-eslint/prefer-destructuring': 'off',
+            '@typescript-eslint/prefer-optional-chain': 'warn',
+            '@typescript-eslint/restrict-plus-operands': 'warn',
+            '@typescript-eslint/space-before-function-paren': 'off',
+            '@typescript-eslint/strict-boolean-expressions': 'warn',
+            complexity: [
+                'warn',
+                {
+                    max: 20
+                }
+            ],
+            '@eslint-community/eslint-comments/require-description': 'off',
+            'jsdoc/require-asterisk-prefix': ['error', 'always'],
+            'jsdoc/require-hyphen-before-param-description': 'error',
+            'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
+            'n/no-missing-import': 'off',
+            'no-await-in-loop': 'warn',
+            'no-extra-semi': 'off',
+            'no-param-reassign': ['error', { props: false }],
+            'no-redeclare': 'off',
+            'no-undef': 'off',
+            // checked by "@typescript-eslint/no-unused-vars"
+            'no-unused-vars': 'off',
+            'perfectionist/sort-imports': [
+                'error',
+                {
+                    groups: [
+                        'builtin',
+                        ['external', 'internal'],
+                        'parent',
+                        'sibling',
+                        'unknown'
+                    ],
+                    newlinesBetween: 1
+                }
+            ],
+            'perfectionist/sort-interfaces': [
+                'warn',
+                {
+                    partitionByNewLine: true
+                }
+            ],
+            'perfectionist/sort-modules': [
+                'warn',
+                {
+                    partitionByNewLine: true
+                }
+            ],
+            'perfectionist/sort-named-exports': [
+                'error',
+                {
+                    groups: ['type-export', 'unknown']
+                }
+            ],
+            'perfectionist/sort-named-imports': [
+                'error',
+                {
+                    groups: ['type-import', 'unknown']
+                }
+            ],
+            'perfectionist/sort-object-types': [
+                'warn',
+                {
+                    partitionByNewLine: true
+                }
+            ],
+            'perfectionist/sort-objects': [
+                'warn',
+                {
+                    partitionByNewLine: true
+                }
+            ],
+            'perfectionist/sort-union-types': [
+                'error',
+                {
+                    groups: ['unknown', 'nullish']
+                }
+            ],
+            // checked by "no-useless-escape"
+            'regexp/no-useless-escape': 'off',
+            'require-unicode-regexp': 'warn',
+            // lots of false positives
+            'secure-coding/no-improper-sanitization': 'off',
+            // checked by "complexity"
+            'sonarjs/cognitive-complexity': 'off',
+            'sonarjs/different-types-comparison': 'off',
+            // checked by "regexp/no-dupe-characters-character-class"
+            'sonarjs/duplicates-in-character-class': 'off',
+            // checked by "no-control-regex"
+            'sonarjs/no-control-regex': 'off',
+            'sonarjs/no-duplicate-string': 'warn',
+            // checked by "secure-coding/no-hardcoded-passwords"
+            'sonarjs/no-hardcoded-passwords': 'off',
+            // checked by "@typescript-eslint/no-misused-promises"
+            'sonarjs/no-misused-promises': 'off',
+            // checked by "max-nested-callbacks"
+            'sonarjs/no-nested-functions': 'off',
+            'sonarjs/no-nested-template-literals': 'warn',
+            // checked by "@typescript-eslint/no-redundant-type-constituents"
+            'sonarjs/no-redundant-type-constituents': 'off',
+            'sonarjs/unnecessary-character-escapes': 'off',
+            // checked by "node-test/consistent-assert-style"
+            'unicorn/consistent-assert': 'off',
+            'unicorn/consistent-boolean-name': 'warn',
+            // checked by "perfectionist/sort-class-members"
+            'unicorn/consistent-class-member-order': 'off',
+            'unicorn/consistent-function-scoping': 'warn',
+            'unicorn/empty-brace-spaces': 'off',
+            'unicorn/filename-case': [
+                'error',
+                {
+                    case: 'camelCase',
+                    ignore: ['DB', 'URL']
+                }
+            ],
+            'unicorn/name-replacements': [
+                'error',
+                {
+                    replacements: {
+                        def: {
+                            definition: true
+                        },
+                        ele: {
+                            element: true
+                        },
+                        eles: {
+                            elements: true
+                        },
+                        fns: {
+                            functions: true
+                        },
+                        res: {
+                            result: false
+                        },
+                        temp: {
+                            temporary: false
+                        }
                     }
                 }
-            }
-        ],
-        'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
-        // checked by "perfectionist/sort-union-types"
-        'unicorn/prefer-type-literal-last': 'off',
-        'write-good-comments/write-good-comments': [
-            'warn',
-            {
-                passive: false,
-                whitelist: writeGoodCommentsAllowlist
-            }
-        ]
-    }
-}, {
-    files: ['**/*.json'],
-    ignores: ['**/package.json', '**/package-lock.json'],
-    extends: [eslintJson.configs.recommended],
-    language: 'json/json',
-    plugins: {
-        json: eslintJson,
-        unicorn: eslintPluginUnicorn
+            ],
+            'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
+            // checked by "perfectionist/sort-union-types"
+            'unicorn/prefer-type-literal-last': 'off',
+            'write-good-comments/write-good-comments': [
+                'warn',
+                {
+                    passive: false,
+                    whitelist: writeGoodCommentsAllowlist
+                }
+            ]
+        }
     },
-    rules: {
-        'unicorn/escape-case': 'error',
-        'unicorn/indent': 'error',
-        'unicorn/key-name-casing': 'warn',
-        'unicorn/no-empty-file': 'error',
-        'unicorn/no-zero-fractions': 'error',
-        'unicorn/number-literal-case': 'error'
-    }
-}, {
-    files: ['**/package.json'],
-    extends: [
-        eslintPluginPackageJson.configs.recommended,
-        eslintPluginNodeDependencies.configs.recommended
-    ],
-    rules: {
-        'package-json/exports-subpaths-style': [
-            'error',
-            {
-                prefer: 'explicit'
-            }
+    {
+        files: ['**/*.json'],
+        ignores: ['**/package.json', '**/package-lock.json'],
+        extends: [eslintJson.configs.recommended],
+        language: 'json/json',
+        plugins: {
+            json: eslintJson,
+            unicorn: eslintPluginUnicorn
+        },
+        rules: {
+            'unicorn/escape-case': 'error',
+            'unicorn/indent': 'error',
+            'unicorn/key-name-casing': 'warn',
+            'unicorn/no-empty-file': 'error',
+            'unicorn/no-zero-fractions': 'error',
+            'unicorn/number-literal-case': 'error'
+        }
+    },
+    {
+        files: ['**/package.json'],
+        extends: [
+            eslintPluginPackageJson.configs.recommended,
+            eslintPluginNodeDependencies.configs.recommended
         ],
-        'package-json/order-properties': [
-            'error',
-            {
-                order: 'sort-package-json'
-            }
-        ],
-        'package-json/require-engines': 'error'
+        rules: {
+            'package-json/exports-subpaths-style': [
+                'error',
+                {
+                    prefer: 'explicit'
+                }
+            ],
+            'package-json/order-properties': [
+                'error',
+                {
+                    order: 'sort-package-json'
+                }
+            ],
+            'package-json/require-engines': 'error'
+        }
+    },
+    {
+        files: ['**/*.md'],
+        extends: [eslintMarkdown.configs.recommended],
+        language: 'markdown/gfm',
+        plugins: {
+            markdown: eslintMarkdown
+        }
     }
-}, {
-    files: ['**/*.md'],
-    extends: [eslintMarkdown.configs.recommended],
-    language: 'markdown/gfm',
-    plugins: {
-        markdown: eslintMarkdown
-    }
-});
-export default config;
+]);
 export { defineConfig } from 'eslint/config';

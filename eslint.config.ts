@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
 import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintCss from '@eslint/css'
 import eslintHtml from '@html-eslint/eslint-plugin'
@@ -92,8 +93,8 @@ const htmlEslintRulesConfig: Partial<RulesConfig> = {
 /**
  * ESLint Configuration for Web Applications
  */
-export const config = defineConfig(
-  packageConfig,
+export default defineConfig([
+  ...packageConfig,
   {
     files: ['**/*.ts'],
     ignores: ['**/*.d.ts'],
@@ -145,15 +146,22 @@ export const config = defineConfig(
   },
   {
     files: ['**/*.css'],
+    language: 'css/css',
+    languageOptions: {
+      tolerant: true
+    },
 
     extends: [
       eslintCss.configs.recommended,
       eslintPluginCssicorn.configs.recommended
     ],
-    language: 'css/css',
+
     plugins: {
+      css: eslintCss,
+      cssicorn: eslintPluginCssicorn,
       unicorn: eslintPluginUnicorn
     },
+
     rules: {
       'css/use-baseline': [
         'warn',
@@ -199,8 +207,6 @@ export const config = defineConfig(
       'unicorn/no-invalid-file-input-accept': 'error'
     }
   }
-)
-
-export default config
+])
 
 export { type Config, defineConfig } from 'eslint/config'

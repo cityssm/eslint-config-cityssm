@@ -81,98 +81,108 @@ const htmlEslintRulesConfig = {
 /**
  * ESLint Configuration for Web Applications
  */
-export const config = defineConfig(packageConfig, {
-    files: ['**/*.ts'],
-    ignores: ['**/*.d.ts'],
-    extends: [
-        'html/recommended',
-        eslintPluginBrowserSecurity.configs.recommended,
-        eslintPluginExpressSecurity.configs.recommended
-    ],
-    plugins: {
-        html: eslintHtml
-    },
-    rules: {
-        ...htmlEslintRulesConfig,
-        '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/no-magic-numbers': [
-            'warn',
-            {
-                ignore: [...noMagicNumbers, ...httpStatusCodes]
-            }
+export default defineConfig([
+    ...packageConfig,
+    {
+        files: ['**/*.ts'],
+        ignores: ['**/*.d.ts'],
+        extends: [
+            'html/recommended',
+            eslintPluginBrowserSecurity.configs.recommended,
+            eslintPluginExpressSecurity.configs.recommended
         ],
-        'jsdoc/require-jsdoc': 'off',
-        'browser-security/no-innerhtml': [
-            'error',
-            {
-                trustedSanitizers: ['cityssm.escapeHTML']
-            }
-        ]
-    }
-}, {
-    files: ['**/database/**/*.ts'],
-    plugins: {
-        unicorn: eslintPluginUnicorn
-    },
-    rules: {
-        'unicorn/consistent-boolean-name': [
-            'warn',
-            {
-                checkFunctions: 'never'
-            }
-        ],
-        'unicorn/no-null': 'off'
-    }
-}, {
-    files: ['**/*.css'],
-    extends: [
-        eslintCss.configs.recommended,
-        eslintPluginCssicorn.configs.recommended
-    ],
-    language: 'css/css',
-    plugins: {
-        unicorn: eslintPluginUnicorn
-    },
-    rules: {
-        'css/use-baseline': [
-            'warn',
-            {
-                available: baselineYear
-            }
-        ],
-        'unicorn/indent': [
-            'error',
-            {
-                indent: 2
-            }
-        ],
-        'unicorn/no-empty-file': 'error',
-        'unicorn/no-transition-all': 'error',
-        'unicorn/no-zero-fractions': 'error',
-        'unicorn/number-literal-case': 'error'
-    }
-}, {
-    files: ['**/*.ejs', '**/*.html'],
-    extends: ['html/recommended'],
-    language: 'html/html',
-    languageOptions: {
-        parser: htmlParser,
-        parserOptions: {
-            templateEngineSyntax: {
-                '<%': '%>',
-                '<%-': '%>',
-                '<%=': '%>'
-            }
+        plugins: {
+            html: eslintHtml
+        },
+        rules: {
+            ...htmlEslintRulesConfig,
+            '@typescript-eslint/init-declarations': 'off',
+            '@typescript-eslint/no-magic-numbers': [
+                'warn',
+                {
+                    ignore: [...noMagicNumbers, ...httpStatusCodes]
+                }
+            ],
+            'jsdoc/require-jsdoc': 'off',
+            'browser-security/no-innerhtml': [
+                'error',
+                {
+                    trustedSanitizers: ['cityssm.escapeHTML']
+                }
+            ]
         }
     },
-    plugins: {
-        html: eslintHtml,
-        unicorn: eslintPluginUnicorn
+    {
+        files: ['**/database/**/*.ts'],
+        plugins: {
+            unicorn: eslintPluginUnicorn
+        },
+        rules: {
+            'unicorn/consistent-boolean-name': [
+                'warn',
+                {
+                    checkFunctions: 'never'
+                }
+            ],
+            'unicorn/no-null': 'off'
+        }
     },
-    rules: {
-        ...htmlEslintRulesConfig,
-        'unicorn/no-invalid-file-input-accept': 'error'
+    {
+        files: ['**/*.css'],
+        language: 'css/css',
+        languageOptions: {
+            tolerant: true
+        },
+        extends: [
+            eslintCss.configs.recommended,
+            eslintPluginCssicorn.configs.recommended
+        ],
+        plugins: {
+            css: eslintCss,
+            cssicorn: eslintPluginCssicorn,
+            unicorn: eslintPluginUnicorn
+        },
+        rules: {
+            'css/use-baseline': [
+                'warn',
+                {
+                    available: baselineYear
+                }
+            ],
+            'unicorn/indent': [
+                'error',
+                {
+                    indent: 2
+                }
+            ],
+            'unicorn/no-empty-file': 'error',
+            'unicorn/no-transition-all': 'error',
+            'unicorn/no-zero-fractions': 'error',
+            'unicorn/number-literal-case': 'error'
+        }
+    },
+    {
+        files: ['**/*.ejs', '**/*.html'],
+        extends: ['html/recommended'],
+        language: 'html/html',
+        languageOptions: {
+            parser: htmlParser,
+            parserOptions: {
+                templateEngineSyntax: {
+                    '<%': '%>',
+                    '<%-': '%>',
+                    '<%=': '%>'
+                }
+            }
+        },
+        plugins: {
+            html: eslintHtml,
+            unicorn: eslintPluginUnicorn
+        },
+        rules: {
+            ...htmlEslintRulesConfig,
+            'unicorn/no-invalid-file-input-accept': 'error'
+        }
     }
-});
-export default config;
+]);
 export { defineConfig } from 'eslint/config';
