@@ -33,3 +33,13 @@ document.querySelector('main').innerHTML = /* html */ `
   </thead>
   <tbody></tbody>
 `;
+addButtonElement.addEventListener('click', () => {
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+    <td>New Title</td>
+    <td>${cityssm.escapeHTML(firstInputEle.value)}</td>
+    <td class="has-text-right">
+      <button class="delete-button">Delete</button>
+    </td>
+  `(document.querySelector('tbody')).appendChild(newRow);
+});
