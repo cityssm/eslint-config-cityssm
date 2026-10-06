@@ -216,6 +216,7 @@ export const config = defineConfig({
                 }
             }
         ],
+        'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
         // checked by "perfectionist/sort-union-types"
         'unicorn/prefer-type-literal-last': 'off',
         'write-good-comments/write-good-comments': [
