@@ -300,7 +300,7 @@ export default defineConfig([
     },
     rules: {
       'unicorn/escape-case': 'error',
-      'unicorn/indent': 'error',
+      'unicorn/indent': ['error', { indent: 2 }],
       'unicorn/key-name-casing': 'warn',
       'unicorn/no-empty-file': 'error',
       'unicorn/no-zero-fractions': 'error',
