@@ -290,7 +290,11 @@ export default defineConfig([
   },
   {
     files: ['**/*.json'],
-    ignores: ['**/package.json', '**/package-lock.json'],
+    ignores: [
+      '**/.markdownlint.json',
+      '**/package.json',
+      '**/package-lock.json'
+    ],
 
     extends: [eslintJson.configs.recommended],
     language: 'json/json',
