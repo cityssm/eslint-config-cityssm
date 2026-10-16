@@ -68,6 +68,9 @@
   "overrides": {
     "@eslint/markdown": {
       "katex": "0.18.2"
+    },
+    "micromark-extension-math": {
+      "katex": "0.18.2"
     }
   },
   "dependencies": {
