@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-top-level-side-effects */
 import eslintJs from '@eslint/js';
 import eslintJson from '@eslint/json';
 import eslintMarkdown from '@eslint/markdown';

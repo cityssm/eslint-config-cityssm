@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/no-top-level-side-effects */
-
 import type { Plugin, RulesConfig } from '@eslint/core'
 import eslintJs from '@eslint/js'
 import eslintJson from '@eslint/json'
