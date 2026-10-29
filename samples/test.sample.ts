@@ -8,3 +8,9 @@ describe('basic arithmetic', () => {
     assert(1 + 1 == 2)
   })
 })
+
+describe('basic arithmetic', async() => {
+  it('should add numbers correctly', () => {
+    assert(1 + 1 == 2)
+  })
+})

@@ -11,3 +11,8 @@ assert_1.default.strictEqual(1 + 1, 2);
         (0, assert_1.default)(1 + 1 == 2);
     });
 });
+(0, node_test_1.describe)('basic arithmetic', async () => {
+    (0, node_test_1.it)('should add numbers correctly', () => {
+        (0, assert_1.default)(1 + 1 == 2);
+    });
+});

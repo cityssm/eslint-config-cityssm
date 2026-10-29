@@ -128,6 +128,8 @@ export default defineConfig([
       // checked by "@typescript-eslint/no-unused-vars"
       'no-unused-vars': 'off',
 
+      'node-test/no-async-describe': 'warn',
+
       'perfectionist/sort-imports': [
         'error',
         {
