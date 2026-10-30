@@ -71,6 +71,7 @@ export default defineConfig([
             ],
             '@typescript-eslint/no-misused-promises': 'warn',
             '@typescript-eslint/no-non-null-assertion': 'warn',
+            '@typescript-eslint/no-unnecessary-condition': 'warn',
             '@typescript-eslint/no-unnecessary-type-assertion': 'off',
             '@typescript-eslint/no-unsafe-argument': 'warn',
             '@typescript-eslint/no-unsafe-assignment': 'warn',
