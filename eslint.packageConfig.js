@@ -94,6 +94,8 @@ export default defineConfig([
             'jsdoc/require-asterisk-prefix': ['error', 'always'],
             'jsdoc/require-hyphen-before-param-description': 'error',
             'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
+            // checked by "unicorn/logical-assignment-operators"
+            'logical-assignment-operators': 'off',
             'n/no-missing-import': 'off',
             'no-await-in-loop': 'warn',
             'no-extra-semi': 'off',
