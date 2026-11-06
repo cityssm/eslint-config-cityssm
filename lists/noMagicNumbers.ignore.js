@@ -18,6 +18,7 @@ export const numbers = [
     /*
      * Time-related numbers
      */
+    24,
     60,
     1000,
     3600,
