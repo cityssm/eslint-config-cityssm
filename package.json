@@ -85,18 +85,18 @@
     "eslint-config-love": "^158.0.0",
     "eslint-cssicorn": "^0.3.0",
     "eslint-node-test": "^1.0.1",
-    "eslint-plugin-browser-security": "^2.2.2",
-    "eslint-plugin-express-security": "^3.3.0",
-    "eslint-plugin-jsdoc": "^65.4.2",
+    "eslint-plugin-browser-security": "^2.2.3",
+    "eslint-plugin-express-security": "^3.3.2",
+    "eslint-plugin-jsdoc": "^65.4.5",
     "eslint-plugin-node-dependencies": "^2.3.0",
-    "eslint-plugin-node-security": "^5.8.3",
+    "eslint-plugin-node-security": "^5.8.4",
     "eslint-plugin-package-json": "^1.14.0",
     "eslint-plugin-perfectionist": "^5.13.0",
     "eslint-plugin-regexp": "^3.3.3",
     "eslint-plugin-runtime-cleanup": "^2.0.2",
-    "eslint-plugin-secure-coding": "^5.6.2",
+    "eslint-plugin-secure-coding": "^5.6.5",
     "eslint-plugin-sonarjs": "^4.2.2",
-    "eslint-plugin-sqlite-security": "^1.1.0",
+    "eslint-plugin-sqlite-security": "^1.1.1",
     "eslint-plugin-unicorn": "^79.0.0",
     "eslint-plugin-write-good-comments-2": "^1.2.14",
     "typescript-eslint": "^8.72.1"
@@ -104,7 +104,7 @@
   "devDependencies": {
     "@types/eslint-plugin-security": "^3.0.1",
     "@types/node": "^26.6.6",
-    "prettier-config-cityssm": "^2.2.0"
+    "prettier-config-cityssm": "^2.3.0"
   },
   "engines": {
     "node": ">=22.22.2"
