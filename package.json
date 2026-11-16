@@ -94,7 +94,6 @@
     "typescript-eslint": "^8.72.2"
   },
   "devDependencies": {
-    "@types/eslint-plugin-security": "^3.0.1",
     "@types/node": "^26.6.6",
     "prettier-config-cityssm": "^2.3.0"
   },
