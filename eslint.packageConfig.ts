@@ -32,7 +32,7 @@ export default defineConfig([
     }
   },
   {
-    files: ['**/*.ts'],
+    files: ['**/*.ts', '**/*.js'],
     ignores: ['**/*.d.ts'],
 
     extends: [
@@ -105,6 +105,8 @@ export default defineConfig([
       'n/no-missing-import': 'off',
 
       'no-await-in-loop': 'warn',
+
+      'no-console': 'warn',
 
       'no-extra-semi': 'off',
 

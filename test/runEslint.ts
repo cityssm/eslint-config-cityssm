@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import { exec } from 'node:child_process'
+import process from 'node:process'
 
 const eslintCommand =
   'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples'
@@ -15,6 +16,8 @@ try {
     {
       env: {
         ...process.env,
+
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         TIMING: process.env.TIMING ?? '20'
       }
     },

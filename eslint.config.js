@@ -11,7 +11,7 @@ const baselineYear = 2024;
 export default defineConfig([
     packageConfig,
     {
-        files: ['**/*.ts'],
+        files: ['**/*.ts', '**/*.js'],
         ignores: ['**/*.d.ts'],
         extends: [
             eslintPluginBrowserSecurity.configs.recommended,
@@ -41,7 +41,7 @@ export default defineConfig([
         }
     },
     {
-        files: ['**/database/**/*.ts'],
+        files: ['**/database/**/*.ts', '**/database/**/*.js'],
         rules: {
             'unicorn/consistent-boolean-name': [
                 'warn',
@@ -53,7 +53,7 @@ export default defineConfig([
         }
     },
     {
-        files: ['**/public/javascripts/**/*.ts'],
+        files: ['**/public/javascripts/**/*.ts', '**/public/javascripts/**/*.js'],
         rules: {
             'max-lines': 'off',
             'runtime-cleanup/no-unmanaged-event-listeners': 'off',

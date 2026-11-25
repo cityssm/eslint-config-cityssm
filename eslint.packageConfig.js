@@ -30,7 +30,7 @@ export default defineConfig([
         }
     },
     {
-        files: ['**/*.ts'],
+        files: ['**/*.ts', '**/*.js'],
         ignores: ['**/*.d.ts'],
         extends: [
             eslintPluginNodeSecurity.configs.recommended,
@@ -89,6 +89,7 @@ export default defineConfig([
             'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
             'n/no-missing-import': 'off',
             'no-await-in-loop': 'warn',
+            'no-console': 'warn',
             'no-extra-semi': 'off',
             'no-param-reassign': ['error', { props: false }],
             'node-test/no-async-describe': 'warn',
