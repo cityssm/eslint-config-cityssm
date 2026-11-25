@@ -1,24 +1,14 @@
-import type { Plugin, RulesConfig } from '@eslint/core'
-import eslintJs from '@eslint/js'
-import eslintJson from '@eslint/json'
-import eslintMarkdown from '@eslint/markdown'
-import type { Linter } from 'eslint'
-import eslintConfigLove from 'eslint-config-love'
-import eslintPluginNodeTest from 'eslint-node-test'
-import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
+import eslintConfigXo from 'eslint-config-xo'
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies'
 import eslintPluginNodeSecurity from 'eslint-plugin-node-security'
-import eslintPluginPackageJson from 'eslint-plugin-package-json'
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist'
-import eslintPluginRegexp from 'eslint-plugin-regexp'
+import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginRuntimeCleanup from 'eslint-plugin-runtime-cleanup'
 import eslintPluginSecureCoding from 'eslint-plugin-secure-coding'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security'
-import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments-2'
 import { defineConfig } from 'eslint/config'
-import tseslint from 'typescript-eslint'
 
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
@@ -27,6 +17,10 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
 export default defineConfig([
+  ...eslintConfigXo(),
+  {
+    ignores: ['**/*.d.ts']
+  },
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -38,24 +32,13 @@ export default defineConfig([
     ignores: ['**/*.d.ts'],
 
     extends: [
-      tseslint.configs.recommendedTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
-
-      eslintJs.configs.recommended,
-
-      eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginNodeSecurity.configs.recommended,
-      eslintPluginNodeTest.configs.recommended,
       eslintPluginPerfectionist.configs['recommended-natural'],
-      eslintPluginRegexp.configs['flat/recommended'],
+      eslintPluginPromise.configs['flat/recommended'],
       eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
       eslintPluginSecureCoding.configs.recommended,
       eslintPluginSonarJs.configs.recommended,
-      eslintPluginSqliteSecurity.configs.recommended,
-      eslintPluginUnicorn.configs.recommended,
-
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
-      eslintConfigLove as Linter.Config<RulesConfig>
+      eslintPluginSqliteSecurity.configs.recommended
     ],
 
     languageOptions: {
@@ -300,13 +283,6 @@ export default defineConfig([
       '**/package.json',
       '**/package-lock.json'
     ],
-
-    extends: [eslintJson.configs.recommended],
-    language: 'json/json',
-    plugins: {
-      json: eslintJson as Plugin,
-      unicorn: eslintPluginUnicorn
-    },
     rules: {
       'unicorn/escape-case': 'error',
       'unicorn/indent': ['error', { indent: 2 }],
@@ -320,34 +296,11 @@ export default defineConfig([
     files: ['**/package.json'],
 
     extends: [
-      eslintPluginPackageJson.configs.recommended,
       eslintPluginNodeDependencies.configs.recommended
-    ],
-    rules: {
-      'package-json/exports-subpaths-style': [
-        'error',
-        {
-          prefer: 'explicit'
-        }
-      ],
-      'package-json/order-properties': [
-        'error',
-        {
-          order: 'sort-package-json'
-        }
-      ],
-
-      'package-json/require-engines': 'error'
-    }
+    ]
   },
   {
     files: ['**/*.md'],
-
-    extends: [eslintMarkdown.configs.recommended],
-    language: 'markdown/gfm',
-    plugins: {
-      markdown: eslintMarkdown as Plugin
-    }
   }
 ])
 

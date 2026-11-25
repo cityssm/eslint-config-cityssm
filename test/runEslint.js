@@ -50,7 +50,7 @@ try {
             'css/',
             'cssicorn/',
             'express-security/',
-            'html/',
+            '@html-eslint/',
             'jsdoc/',
             'json/',
             'markdown/',
