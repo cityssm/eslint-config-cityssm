@@ -1,5 +1,5 @@
 /**
- * ESLint Configuration for General TypeScript/JavaScript Projects
+ * ESLint Configuration for General TypeScript Projects
  */
 declare const _default: import("eslint/config").ConfigObject[];
 export default _default;

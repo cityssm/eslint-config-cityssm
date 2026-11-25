@@ -1,32 +1,29 @@
-import type { Plugin, RulesConfig } from '@eslint/core'
-import eslintJs from '@eslint/js'
-import eslintJson from '@eslint/json'
-import eslintMarkdown from '@eslint/markdown'
-import type { Linter } from 'eslint'
-import eslintConfigLove from 'eslint-config-love'
-import eslintPluginNodeTest from 'eslint-node-test'
-import eslintPluginJsdoc from 'eslint-plugin-jsdoc'
+import eslintConfigXo from 'eslint-config-xo'
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies'
 import eslintPluginNodeSecurity from 'eslint-plugin-node-security'
-import eslintPluginPackageJson from 'eslint-plugin-package-json'
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist'
-import eslintPluginRegexp from 'eslint-plugin-regexp'
+import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginRuntimeCleanup from 'eslint-plugin-runtime-cleanup'
 import eslintPluginSecureCoding from 'eslint-plugin-secure-coding'
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs'
 import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security'
-import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments-2'
-import { defineConfig } from 'eslint/config'
-import tseslint from 'typescript-eslint'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js'
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
 
 /**
- * ESLint Configuration for General TypeScript/JavaScript Projects
+ * ESLint Configuration for General TypeScript Projects
  */
 export default defineConfig([
+  globalIgnores(['**/*.js', '**/*.d.ts']),
+
+  ...eslintConfigXo({
+    prettier: 'compat',
+    semicolon: false,
+    space: true
+  }),
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -35,27 +32,15 @@ export default defineConfig([
   },
   {
     files: ['**/*.ts'],
-    ignores: ['**/*.d.ts'],
 
     extends: [
-      tseslint.configs.recommendedTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
-
-      eslintJs.configs.recommended,
-
-      eslintPluginJsdoc.configs['flat/recommended-typescript'],
       eslintPluginNodeSecurity.configs.recommended,
-      eslintPluginNodeTest.configs.recommended,
       eslintPluginPerfectionist.configs['recommended-natural'],
-      eslintPluginRegexp.configs['flat/recommended'],
+      eslintPluginPromise.configs['flat/recommended'],
       eslintPluginRuntimeCleanup.configs['recommended-type-checked'],
       eslintPluginSecureCoding.configs.recommended,
       eslintPluginSonarJs.configs.recommended,
-      eslintPluginSqliteSecurity.configs.recommended,
-      eslintPluginUnicorn.configs.recommended,
-
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
-      eslintConfigLove as Linter.Config<RulesConfig>
+      eslintPluginSqliteSecurity.configs.recommended
     ],
 
     languageOptions: {
@@ -109,29 +94,21 @@ export default defineConfig([
 
       '@eslint-community/eslint-comments/require-description': 'off',
 
+      'import-x/order': 'off',
+
       'jsdoc/require-asterisk-prefix': ['error', 'always'],
       'jsdoc/require-hyphen-before-param-description': 'error',
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
-
-      // checked by "unicorn/logical-assignment-operators"
-      'logical-assignment-operators': 'off',
 
       'n/no-missing-import': 'off',
 
       'no-await-in-loop': 'warn',
 
+      'no-console': 'warn',
+
       'no-extra-semi': 'off',
 
-      // checked by "unicorn/no-negated-condition"
-      'no-negated-condition': 'off',
-
       'no-param-reassign': ['error', { props: false }],
-
-      'no-redeclare': 'off',
-      'no-undef': 'off',
-
-      // checked by "@typescript-eslint/no-unused-vars"
-      'no-unused-vars': 'off',
 
       'node-test/no-async-describe': 'warn',
 
@@ -198,49 +175,49 @@ export default defineConfig([
         }
       ],
 
-      // checked by "no-useless-escape"
+      // Checked by "no-useless-escape"
       'regexp/no-useless-escape': 'off',
 
       'require-unicode-regexp': 'warn',
 
-      // lots of false positives
+      // Lots of false positives
       'secure-coding/no-improper-sanitization': 'off',
 
-      // checked by "complexity"
+      // Checked by "complexity"
       'sonarjs/cognitive-complexity': 'off',
 
       'sonarjs/different-types-comparison': 'off',
 
-      // checked by "regexp/no-dupe-characters-character-class"
+      // Checked by "regexp/no-dupe-characters-character-class"
       'sonarjs/duplicates-in-character-class': 'off',
 
-      // checked by "no-control-regex"
+      // Checked by "no-control-regex"
       'sonarjs/no-control-regex': 'off',
 
       'sonarjs/no-duplicate-string': 'warn',
 
-      // checked by "secure-coding/no-hardcoded-passwords"
+      // Checked by "secure-coding/no-hardcoded-passwords"
       'sonarjs/no-hardcoded-passwords': 'off',
 
-      // checked by "@typescript-eslint/no-misused-promises"
+      // Checked by "@typescript-eslint/no-misused-promises"
       'sonarjs/no-misused-promises': 'off',
 
-      // checked by "max-nested-callbacks"
+      // Checked by "max-nested-callbacks"
       'sonarjs/no-nested-functions': 'off',
 
       'sonarjs/no-nested-template-literals': 'warn',
 
-      // checked by "@typescript-eslint/no-redundant-type-constituents"
+      // Checked by "@typescript-eslint/no-redundant-type-constituents"
       'sonarjs/no-redundant-type-constituents': 'off',
 
       'sonarjs/unnecessary-character-escapes': 'off',
 
-      // checked by "node-test/consistent-assert-style"
+      // Checked by "node-test/consistent-assert-style"
       'unicorn/consistent-assert': 'off',
 
       'unicorn/consistent-boolean-name': 'warn',
 
-      // checked by "perfectionist/sort-class-members"
+      // Checked by "perfectionist/sort-class-members"
       'unicorn/consistent-class-member-order': 'off',
 
       'unicorn/consistent-function-scoping': 'warn',
@@ -280,7 +257,7 @@ export default defineConfig([
 
       'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
 
-      // checked by "perfectionist/sort-union-types"
+      // Checked by "perfectionist/sort-union-types"
       'unicorn/prefer-type-literal-last': 'off',
 
       'write-good-comments/write-good-comments': [
@@ -300,13 +277,6 @@ export default defineConfig([
       '**/package.json',
       '**/package-lock.json'
     ],
-
-    extends: [eslintJson.configs.recommended],
-    language: 'json/json',
-    plugins: {
-      json: eslintJson as Plugin,
-      unicorn: eslintPluginUnicorn
-    },
     rules: {
       'unicorn/escape-case': 'error',
       'unicorn/indent': ['error', { indent: 2 }],
@@ -319,35 +289,10 @@ export default defineConfig([
   {
     files: ['**/package.json'],
 
-    extends: [
-      eslintPluginPackageJson.configs.recommended,
-      eslintPluginNodeDependencies.configs.recommended
-    ],
-    rules: {
-      'package-json/exports-subpaths-style': [
-        'error',
-        {
-          prefer: 'explicit'
-        }
-      ],
-      'package-json/order-properties': [
-        'error',
-        {
-          order: 'sort-package-json'
-        }
-      ],
-
-      'package-json/require-engines': 'error'
-    }
+    extends: [eslintPluginNodeDependencies.configs.recommended]
   },
   {
-    files: ['**/*.md'],
-
-    extends: [eslintMarkdown.configs.recommended],
-    language: 'markdown/gfm',
-    plugins: {
-      markdown: eslintMarkdown as Plugin
-    }
+    files: ['**/*.md']
   }
 ])
 

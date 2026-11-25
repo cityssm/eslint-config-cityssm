@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import { exec } from 'node:child_process';
+import process from 'node:process';
 const eslintCommand = 'eslint --config ./test/eslint.testWebappConfig.js --exit-on-fatal-error samples';
 console.log(`Running ${eslintCommand} ...`);
 try {
@@ -9,6 +10,7 @@ try {
     eslintCommand, {
         env: {
             ...process.env,
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             TIMING: process.env.TIMING ?? '20'
         }
     }, (error, stdout, stderr) => {
@@ -50,7 +52,8 @@ try {
             'css/',
             'cssicorn/',
             'express-security/',
-            'html/',
+            '@html-eslint/',
+            'import-x/',
             'jsdoc/',
             'json/',
             'markdown/',
@@ -66,6 +69,7 @@ try {
             'secure-coding/',
             'sonarjs/',
             'sqlite-security/',
+            '@stylistic/',
             'unicorn/',
             'write-good-comments/'
         ];

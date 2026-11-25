@@ -57,12 +57,13 @@ export default config
 **Thanks to all of the developers who help make the City of Sault Ste. Marie's
 code awesome!** 😎
 
-- [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
-- [**eslint-config-love**](https://www.npmjs.com/package/eslint-config-love)
+- [**eslint-config-xo**](https://www.npmjs.com/package/eslint-config-xo)
 - [eslint-plugin-**browser-security**](https://www.npmjs.com/package/eslint-plugin-browser-security)
 - [eslint-**cssicorn**](https://www.npmjs.com/package/eslint-cssicorn)
 - [@eslint-community/eslint-plugin-**eslint-comments**](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
 - [eslint-plugin-**express-security**](https://www.npmjs.com/package/eslint-plugin-express-security)
+- [**html**-eslint](https://github.com/yeonjuan/html-eslint)
+- [eslint-plugin-**import-x**](https://www.npmjs.com/package/eslint-plugin-import-x)
 - [eslint-plugin-**jsdoc**](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 - [eslint-plugin-**n**](https://www.npmjs.com/package/eslint-plugin-n)
 - [eslint-plugin-**node-dependencies**](https://www.npmjs.com/package/eslint-plugin-node-dependencies)
@@ -76,9 +77,10 @@ code awesome!** 😎
 - [eslint-plugin-**secure-coding**](https://www.npmjs.com/package/eslint-plugin-secure-coding)
 - [eslint-plugin-**sonarjs**](https://www.npmjs.com/package/eslint-plugin-sonarjs)
 - [eslint-plugin-**sqlite-security**](https://www.npmjs.com/package/eslint-plugin-sqlite-security)
+- [@**stylistic**/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin)
+- [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-plugin-**unicorn**](https://www.npmjs.com/package/eslint-plugin-unicorn)
 - [eslint-plugin-**write-good-comments-2**](https://www.npmjs.com/package/eslint-plugin-write-good-comments-2)
-- [**html**-eslint](https://github.com/yeonjuan/html-eslint)
 
 ## Projects Using eslint-config-cityssm
 
