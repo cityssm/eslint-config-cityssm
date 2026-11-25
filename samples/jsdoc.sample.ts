@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
-
 function noJsDocs(): boolean {
   // No JS Doc error
   return false

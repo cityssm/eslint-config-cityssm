@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable unicorn/prevent-abbreviations */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.one = void 0;
 exports.exportedNoJsDocs = exportedNoJsDocs;
