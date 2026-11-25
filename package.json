@@ -38,27 +38,7 @@
   "keywords": [
     "eslint",
     "eslint-config",
-    "eslintconfig",
-    "html-eslint",
-    "eslint-plugin",
-    "eslint-plugin-browser-security",
-    "eslint-plugin-eslint-comments",
-    "eslint-plugin-express-security",
-    "eslint-plugin-jsdoc",
-    "eslint-plugin-n",
-    "eslint-plugin-node-security",
-    "eslint-node-test",
-    "eslint-plugin-package-json",
-    "eslint-plugin-perfectionist",
-    "eslint-plugin-promise",
-    "eslint-plugin-regexp",
-    "eslint-plugin-runtime-cleanup",
-    "eslint-plugin-secure-coding",
-    "eslint-plugin-sonarjs",
-    "eslint-plugin-sqlite-security",
-    "eslint-plugin-unicorn",
-    "eslint-plugin-write-good-comments-2",
-    "typescript-eslint"
+    "eslintconfig"
   ],
   "dependencies": {
     "@eslint/core": "^1.2.1",
