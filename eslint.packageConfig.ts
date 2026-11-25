@@ -102,25 +102,13 @@ export default defineConfig([
       'jsdoc/require-hyphen-before-param-description': 'error',
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
-      // Checked by "unicorn/logical-assignment-operators"
-      'logical-assignment-operators': 'off',
-
       'n/no-missing-import': 'off',
 
       'no-await-in-loop': 'warn',
 
       'no-extra-semi': 'off',
 
-      // Checked by "unicorn/no-negated-condition"
-      'no-negated-condition': 'off',
-
       'no-param-reassign': ['error', { props: false }],
-
-      'no-redeclare': 'off',
-      'no-undef': 'off',
-
-      // Checked by "@typescript-eslint/no-unused-vars"
-      'no-unused-vars': 'off',
 
       'node-test/no-async-describe': 'warn',
 
