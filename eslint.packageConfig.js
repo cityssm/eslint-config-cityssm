@@ -8,21 +8,19 @@ import eslintPluginSecureCoding from 'eslint-plugin-secure-coding';
 import eslintPluginSonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginSqliteSecurity from 'eslint-plugin-sqlite-security';
 import eslintPluginWriteGoodComments from 'eslint-plugin-write-good-comments-2';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import noMagicNumbers from './lists/noMagicNumbers.ignore.js';
 import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
 /**
- * ESLint Configuration for General TypeScript/JavaScript Projects
+ * ESLint Configuration for General TypeScript Projects
  */
 export default defineConfig([
+    globalIgnores(['**/*.js', '**/*.d.ts']),
     ...eslintConfigXo({
         prettier: 'compat',
         semicolon: false,
         space: true
     }),
-    {
-        ignores: ['**/*.d.ts']
-    },
     {
         linterOptions: {
             reportUnusedDisableDirectives: 'error',
@@ -30,8 +28,7 @@ export default defineConfig([
         }
     },
     {
-        files: ['**/*.ts', '**/*.js'],
-        ignores: ['**/*.d.ts'],
+        files: ['**/*.ts'],
         extends: [
             eslintPluginNodeSecurity.configs.recommended,
             eslintPluginPerfectionist.configs['recommended-natural'],
