@@ -17,7 +17,11 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js'
  * ESLint Configuration for General TypeScript/JavaScript Projects
  */
 export default defineConfig([
-  ...eslintConfigXo(),
+  ...eslintConfigXo({
+    space: true,
+    semicolon: false,
+    prettier: 'compat'
+  }),
   {
     ignores: ['**/*.d.ts']
   },
@@ -92,11 +96,13 @@ export default defineConfig([
 
       '@eslint-community/eslint-comments/require-description': 'off',
 
+      'import-x/order': 'off',
+
       'jsdoc/require-asterisk-prefix': ['error', 'always'],
       'jsdoc/require-hyphen-before-param-description': 'error',
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
-      // checked by "unicorn/logical-assignment-operators"
+      // Checked by "unicorn/logical-assignment-operators"
       'logical-assignment-operators': 'off',
 
       'n/no-missing-import': 'off',
@@ -105,7 +111,7 @@ export default defineConfig([
 
       'no-extra-semi': 'off',
 
-      // checked by "unicorn/no-negated-condition"
+      // Checked by "unicorn/no-negated-condition"
       'no-negated-condition': 'off',
 
       'no-param-reassign': ['error', { props: false }],
@@ -113,7 +119,7 @@ export default defineConfig([
       'no-redeclare': 'off',
       'no-undef': 'off',
 
-      // checked by "@typescript-eslint/no-unused-vars"
+      // Checked by "@typescript-eslint/no-unused-vars"
       'no-unused-vars': 'off',
 
       'node-test/no-async-describe': 'warn',
@@ -181,49 +187,49 @@ export default defineConfig([
         }
       ],
 
-      // checked by "no-useless-escape"
+      // Checked by "no-useless-escape"
       'regexp/no-useless-escape': 'off',
 
       'require-unicode-regexp': 'warn',
 
-      // lots of false positives
+      // Lots of false positives
       'secure-coding/no-improper-sanitization': 'off',
 
-      // checked by "complexity"
+      // Checked by "complexity"
       'sonarjs/cognitive-complexity': 'off',
 
       'sonarjs/different-types-comparison': 'off',
 
-      // checked by "regexp/no-dupe-characters-character-class"
+      // Checked by "regexp/no-dupe-characters-character-class"
       'sonarjs/duplicates-in-character-class': 'off',
 
-      // checked by "no-control-regex"
+      // Checked by "no-control-regex"
       'sonarjs/no-control-regex': 'off',
 
       'sonarjs/no-duplicate-string': 'warn',
 
-      // checked by "secure-coding/no-hardcoded-passwords"
+      // Checked by "secure-coding/no-hardcoded-passwords"
       'sonarjs/no-hardcoded-passwords': 'off',
 
-      // checked by "@typescript-eslint/no-misused-promises"
+      // Checked by "@typescript-eslint/no-misused-promises"
       'sonarjs/no-misused-promises': 'off',
 
-      // checked by "max-nested-callbacks"
+      // Checked by "max-nested-callbacks"
       'sonarjs/no-nested-functions': 'off',
 
       'sonarjs/no-nested-template-literals': 'warn',
 
-      // checked by "@typescript-eslint/no-redundant-type-constituents"
+      // Checked by "@typescript-eslint/no-redundant-type-constituents"
       'sonarjs/no-redundant-type-constituents': 'off',
 
       'sonarjs/unnecessary-character-escapes': 'off',
 
-      // checked by "node-test/consistent-assert-style"
+      // Checked by "node-test/consistent-assert-style"
       'unicorn/consistent-assert': 'off',
 
       'unicorn/consistent-boolean-name': 'warn',
 
-      // checked by "perfectionist/sort-class-members"
+      // Checked by "perfectionist/sort-class-members"
       'unicorn/consistent-class-member-order': 'off',
 
       'unicorn/consistent-function-scoping': 'warn',
@@ -263,7 +269,7 @@ export default defineConfig([
 
       'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
 
-      // checked by "perfectionist/sort-union-types"
+      // Checked by "perfectionist/sort-union-types"
       'unicorn/prefer-type-literal-last': 'off',
 
       'write-good-comments/write-good-comments': [
