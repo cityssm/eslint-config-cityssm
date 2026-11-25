@@ -100,6 +100,8 @@ export default defineConfig([
       'jsdoc/require-hyphen-before-param-description': 'error',
       'jsdoc/require-jsdoc': ['warn', { publicOnly: true }],
 
+      'max-lines': ['warn', { max: 500 }],
+
       'n/no-missing-import': 'off',
 
       'no-await-in-loop': 'warn',
