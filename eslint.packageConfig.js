@@ -16,9 +16,9 @@ import writeGoodCommentsAllowlist from './lists/writeGoodComments.allowlist.js';
  */
 export default defineConfig([
     ...eslintConfigXo({
-        space: true,
+        prettier: 'compat',
         semicolon: false,
-        prettier: 'compat'
+        space: true
     }),
     {
         ignores: ['**/*.d.ts']
@@ -247,12 +247,10 @@ export default defineConfig([
     },
     {
         files: ['**/package.json'],
-        extends: [
-            eslintPluginNodeDependencies.configs.recommended
-        ]
+        extends: [eslintPluginNodeDependencies.configs.recommended]
     },
     {
-        files: ['**/*.md'],
+        files: ['**/*.md']
     }
 ]);
 export { defineConfig } from 'eslint/config';
