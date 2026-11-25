@@ -68,6 +68,7 @@ try {
         'cssicorn/',
         'express-security/',
         '@html-eslint/',
+        'import-x/',
         'jsdoc/',
         'json/',
         'markdown/',
@@ -83,6 +84,7 @@ try {
         'secure-coding/',
         'sonarjs/',
         'sqlite-security/',
+        '@stylistic/',
         'unicorn/',
         'write-good-comments/'
       ]
