@@ -187,7 +187,9 @@ export default defineConfig([
     },
     plugins: { '@html-eslint': eslintHtml },
     rules: {
-      ...htmlEslintRulesConfig
+      ...htmlEslintRulesConfig,
+
+      'unicorn/filename-case': 'warn'
     }
   }
 ])
