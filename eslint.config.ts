@@ -1,3 +1,5 @@
+import { type RulesConfig } from '@eslint/core'
+import eslintHtml from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
 import eslintPluginBrowserSecurity from 'eslint-plugin-browser-security'
 import eslintPluginExpressSecurity from 'eslint-plugin-express-security'
@@ -10,6 +12,80 @@ import noMagicNumbers, {
 
 const baselineYear = 2024
 
+const htmlEslintRulesConfig: Partial<RulesConfig> = {
+  '@html-eslint/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+  '@html-eslint/head-order': 'error',
+  '@html-eslint/indent': ['warn', 2],
+  '@html-eslint/lowercase': 'error',
+  '@html-eslint/no-duplicate-class': 'error',
+  '@html-eslint/no-duplicate-in-head': 'error',
+  '@html-eslint/no-extra-spacing-tags': [
+    'error',
+    {
+      disallowInAssignment: true,
+      disallowMissing: true,
+      disallowTabs: true,
+      enforceBeforeSelfClose: true
+    }
+  ],
+  '@html-eslint/no-ineffective-attrs': 'error',
+  '@html-eslint/no-invalid-entity': 'error',
+  '@html-eslint/no-trailing-spaces': 'error',
+  '@html-eslint/require-button-type': 'error',
+  '@html-eslint/require-closing-tags': [
+    'error',
+    {
+      selfClosing: 'always'
+    }
+  ],
+  '@html-eslint/sort-attrs': [
+    'warn',
+    {
+      // https://codeguide.co/#html-attribute-order
+      priority: [
+        // Identification
+        'class',
+        'id',
+        'name',
+        { pattern: 'data-.*' },
+
+        // Unique to specific elements
+        'src',
+        'for',
+        'type',
+        'href',
+        'value',
+        'min',
+        'max',
+        'step',
+        'minlength',
+        'maxlength',
+
+        // Accessibility
+        'title',
+        'alt',
+        'role',
+        { pattern: 'aria-.*' },
+        'tabindex',
+
+        // Style
+        'placeholder',
+        'rows',
+        'style',
+
+        // JavaScript
+        { pattern: 'on.*' }
+      ]
+    }
+  ],
+  '@html-eslint/use-baseline': [
+    'warn',
+    {
+      available: baselineYear
+    }
+  ]
+}
+
 /**
  * ESLint Configuration for Web Applications
  */
@@ -19,10 +95,14 @@ export default defineConfig([
     files: ['**/*.ts'],
 
     extends: [
+      eslintHtml.configs.recommended,
       eslintPluginBrowserSecurity.configs.recommended,
       eslintPluginExpressSecurity.configs.recommended
     ],
+    plugins: { '@html-eslint': eslintHtml },
     rules: {
+      ...htmlEslintRulesConfig,
+
       '@typescript-eslint/init-declarations': 'off',
 
       '@typescript-eslint/no-magic-numbers': [
@@ -96,6 +176,8 @@ export default defineConfig([
   {
     files: ['**/*.ejs', '**/*.html'],
 
+    extends: [eslintHtml.configs.recommended],
+    language: 'html/html',
     languageOptions: {
       parser: htmlParser,
       parserOptions: {
@@ -106,7 +188,10 @@ export default defineConfig([
         }
       }
     },
-    rules: {}
+    plugins: { '@html-eslint': eslintHtml },
+    rules: {
+      ...htmlEslintRulesConfig
+    }
   }
 ])
 
