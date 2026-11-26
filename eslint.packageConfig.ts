@@ -85,14 +85,35 @@ export default defineConfig([
       '@typescript-eslint/space-before-function-paren': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
 
-      complexity: [
-        'warn',
+      '@eslint-community/eslint-comments/require-description': 'off',
+
+      'capitalized-comments': [
+        'error',
+        'always',
         {
-          max: 20
+          // You can also ignore this rule by wrapping the first word in quotes.
+          // c8 => https://github.com/bcoe/c8
+          // `\w{1,40}[-:]ignore` covers any tool's `*-ignore`/`*:ignore` directive (e.g. `prettier-ignore`, `biome-ignore`, `svelte-ignore`, `codespell:ignore`) so tools don't need to be added individually. The length is bounded to avoid a super-linear-runtime warning.
+          // JS/TS code keywords at the start of a comment prevent incorrectly capitalizing commented-out code (e.g. `// const a = 'b'` → `// Const a = 'b'`). ESLint wraps ignorePattern with `^\s*(?:…)` so no `^` is needed here.
+          ignorePattern: [
+            /pragma|\w{1,40}[\-:]ignore|ignore|webpack\w+:|c8|v8|type-coverage:/v,
+            /html|sql/v,
+            /const |let |var |import |export |function |class |if \(|for \(|while \(|switch \(/v
+          ]
+            .map((r) => r.source)
+            .join('|'),
+
+          ignoreConsecutiveComments: true,
+          ignoreInlineComments: true
         }
       ],
 
-      '@eslint-community/eslint-comments/require-description': 'off',
+      complexity: [
+        'warn',
+        {
+          max: 25
+        }
+      ],
 
       'import-x/order': 'off',
 

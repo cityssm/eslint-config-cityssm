@@ -73,13 +73,32 @@ export default defineConfig([
             '@typescript-eslint/restrict-plus-operands': 'warn',
             '@typescript-eslint/space-before-function-paren': 'off',
             '@typescript-eslint/strict-boolean-expressions': 'warn',
+            '@eslint-community/eslint-comments/require-description': 'off',
+            'capitalized-comments': [
+                'error',
+                'always',
+                {
+                    // You can also ignore this rule by wrapping the first word in quotes.
+                    // c8 => https://github.com/bcoe/c8
+                    // `\w{1,40}[-:]ignore` covers any tool's `*-ignore`/`*:ignore` directive (e.g. `prettier-ignore`, `biome-ignore`, `svelte-ignore`, `codespell:ignore`) so tools don't need to be added individually. The length is bounded to avoid a super-linear-runtime warning.
+                    // JS/TS code keywords at the start of a comment prevent incorrectly capitalizing commented-out code (e.g. `// const a = 'b'` → `// Const a = 'b'`). ESLint wraps ignorePattern with `^\s*(?:…)` so no `^` is needed here.
+                    ignorePattern: [
+                        /pragma|\w{1,40}[\-:]ignore|ignore|webpack\w+:|c8|v8|type-coverage:/v,
+                        /html|sql/v,
+                        /const |let |var |import |export |function |class |if \(|for \(|while \(|switch \(/v
+                    ]
+                        .map((r) => r.source)
+                        .join('|'),
+                    ignoreConsecutiveComments: true,
+                    ignoreInlineComments: true
+                }
+            ],
             complexity: [
                 'warn',
                 {
-                    max: 20
+                    max: 25
                 }
             ],
-            '@eslint-community/eslint-comments/require-description': 'off',
             'import-x/order': 'off',
             'jsdoc/require-asterisk-prefix': ['error', 'always'],
             'jsdoc/require-hyphen-before-param-description': 'error',

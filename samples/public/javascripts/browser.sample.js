@@ -19,7 +19,7 @@ else {
     messageElement.classList.remove('is-active');
 }
 const firstInputEle = document.querySelectorAll('.input')[0];
-document.write(`<p>
+document.write(/* html */ `<p>
   Test ${'val'} `);
 const html = /*html*/ `<p>`;
 const addButtonElement = document.querySelector('.add-button');
@@ -35,11 +35,18 @@ document.querySelector('main').innerHTML = /* html */ `
 `;
 addButtonElement.addEventListener('click', () => {
     const newRow = document.createElement('tr');
-    newRow.innerHTML = `
+    newRow.innerHTML = /* html */ `
     <td>New Title</td>
     <td>${cityssm.escapeHTML(firstInputEle.value)}</td>
     <td class="has-text-right">
       <button class="delete-button">Delete</button>
     </td>
-  `(document.querySelector('tbody')).appendChild(newRow);
+  `;
+    newRow.insertAdjacentHTML('beforeend', /* html */ `
+    <td>New Title</td>
+    <td>${cityssm.escapeHTML(firstInputEle.value)}</td>
+    <td class="has-text-right">
+      <button class="delete-button">Delete</button>
+    </td>
+  `)(document.querySelector('tbody')).appendChild(newRow);
 });
