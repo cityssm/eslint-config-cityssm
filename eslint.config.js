@@ -42,6 +42,7 @@ export default defineConfig([
     {
         files: ['**/database/**/*.ts'],
         rules: {
+            '@typescript-eslint/no-restricted-types': 'off',
             'unicorn/consistent-boolean-name': [
                 'warn',
                 {

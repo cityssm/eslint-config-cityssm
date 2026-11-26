@@ -1,5 +1,10 @@
 import sqlite3 from 'better-sqlite3'
 
+type Result = {
+  recordId: number
+  recordValue: string | null
+}
+
 function insertUser(userName: string): void {
 const database = sqlite3('database.db', { verbose: console.log })
 
