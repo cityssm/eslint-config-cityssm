@@ -7,13 +7,13 @@ import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
 const baselineYear = 2024;
 const htmlEslintRulesConfig = {
-    'html/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
-    'html/head-order': 'error',
-    'html/indent': ['warn', 2],
-    'html/lowercase': 'error',
-    'html/no-duplicate-class': 'error',
-    'html/no-duplicate-in-head': 'error',
-    'html/no-extra-spacing-tags': [
+    '@html-eslint/attrs-newline': ['warn', { ifAttrsMoreThan: 3 }],
+    '@html-eslint/head-order': 'error',
+    '@html-eslint/indent': ['warn', 2],
+    '@html-eslint/lowercase': 'error',
+    '@html-eslint/no-duplicate-class': 'error',
+    '@html-eslint/no-duplicate-in-head': 'error',
+    '@html-eslint/no-extra-spacing-tags': [
         'error',
         {
             disallowInAssignment: true,
@@ -22,17 +22,17 @@ const htmlEslintRulesConfig = {
             enforceBeforeSelfClose: true
         }
     ],
-    'html/no-ineffective-attrs': 'error',
-    'html/no-invalid-entity': 'error',
-    'html/no-trailing-spaces': 'error',
-    'html/require-button-type': 'error',
-    'html/require-closing-tags': [
+    '@html-eslint/no-ineffective-attrs': 'error',
+    '@html-eslint/no-invalid-entity': 'error',
+    '@html-eslint/no-trailing-spaces': 'error',
+    '@html-eslint/require-button-type': 'error',
+    '@html-eslint/require-closing-tags': [
         'error',
         {
             selfClosing: 'always'
         }
     ],
-    'html/sort-attrs': [
+    '@html-eslint/sort-attrs': [
         'warn',
         {
             // https://codeguide.co/#html-attribute-order
@@ -68,7 +68,7 @@ const htmlEslintRulesConfig = {
             ]
         }
     ],
-    'html/use-baseline': [
+    '@html-eslint/use-baseline': [
         'warn',
         {
             available: baselineYear
@@ -86,7 +86,7 @@ export default defineConfig([
             eslintPluginBrowserSecurity.configs.recommended,
             eslintPluginExpressSecurity.configs.recommended
         ],
-        plugins: { html: eslintHtml },
+        plugins: { '@html-eslint': eslintHtml },
         rules: {
             ...htmlEslintRulesConfig,
             '@typescript-eslint/init-declarations': 'off',
@@ -155,7 +155,6 @@ export default defineConfig([
     },
     {
         files: ['**/*.ejs', '**/*.html'],
-        language: 'html/html',
         languageOptions: {
             parser: htmlParser,
             parserOptions: {
@@ -166,7 +165,7 @@ export default defineConfig([
                 }
             }
         },
-        plugins: { html: eslintHtml },
+        plugins: { '@html-eslint': eslintHtml },
         rules: {
             ...htmlEslintRulesConfig
         }

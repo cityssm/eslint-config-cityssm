@@ -53,7 +53,6 @@ try {
             'cssicorn/',
             'express-security/',
             '@html-eslint/',
-            'html/',
             'import-x/',
             'jsdoc/',
             'json/',
