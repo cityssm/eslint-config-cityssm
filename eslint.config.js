@@ -24,6 +24,7 @@ const htmlEslintRulesConfig = {
         }
     ],
     '@html-eslint/no-ineffective-attrs': 'error',
+    '@html-eslint/no-inline-styles': 'warn',
     '@html-eslint/no-invalid-entity': 'error',
     '@html-eslint/no-trailing-spaces': 'error',
     '@html-eslint/require-button-type': 'error',
