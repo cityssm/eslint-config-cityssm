@@ -2,6 +2,7 @@ import eslintHtml from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
 import eslintPluginBrowserSecurity from 'eslint-plugin-browser-security';
 import eslintPluginExpressSecurity from 'eslint-plugin-express-security';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import { defineConfig } from 'eslint/config';
 import packageConfig from './eslint.packageConfig.js';
 import noMagicNumbers, { httpStatusCodes } from './lists/noMagicNumbers.ignore.js';
@@ -165,7 +166,7 @@ export default defineConfig([
                 }
             }
         },
-        plugins: { '@html-eslint': eslintHtml },
+        plugins: { '@html-eslint': eslintHtml, unicorn: eslintPluginUnicorn },
         rules: {
             ...htmlEslintRulesConfig,
             'unicorn/filename-case': 'warn'
